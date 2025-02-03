@@ -62,7 +62,58 @@ export const DATA = {
     summary: "To leverage my skills in IoT, robotics, and programming to contribute effectively to innovative projects, while continuously enhancing my technical expertise and problem-solving abilities in a dynamic work environment.",
     avatarUrl: "/me.png",
 
-  //skills section
+    //work section
+    work: [
+      {
+        company: "Alpha EV Technologies PVT. LTD.",
+        href: "https://www.zaubacorp.com/ALPHAEV-TECHNOLOGIES-PRIVATE-LIMITED-U34300OR2019PTC032057",
+        badges: [],
+        location: "Remote",
+        title: "IoT And Robotics Intern",
+        logoUrl: "/alphaev.png",
+        start: "May 2024",
+        end: "Jun 2024",
+        description: "Made a Power and Cost Calculation system for EV Charging Station, Assembled and Tested an IoT based Vending Machine, Assembled and Tested and IoT Based Survellance Rover, Acquired Industry level knowledge on IoT and Robotics.",
+      },
+    ],
+  
+    //education section
+    education: [
+      {
+        school: "DRIEMS Polytechnic",
+        href: "https://www.driemspolytechnic.org/",
+        degree: "Diploma In CSE [8.21 CGPA]",
+        logoUrl: "/driems.png",
+        start: "2022",
+        end: "2025",
+      },
+      {
+        school: "ST Xavier's High School",
+        href: "https://stxaviersbarabati.org/",
+        degree: "Matriculation [6.5 CGPA]",
+        logoUrl: "/stxavier.png",
+        start: "2012",
+        end: "2022",
+      },
+      {
+        school: "Sri Satya Sai School",
+        href: "https://sathyasaischoolcuttack.in/",
+        degree: "Secondary Schooling",
+        logoUrl: "/satyasai.png",
+        start: "2009",
+        end: "2012",
+      },
+      {
+        school: "MYCA Public School",
+        href: "https://www.facebook.com/p/MYCA-Public-School-100076661226390/",
+        degree: "Junior Schooling",
+        logoUrl: "/myca.png",
+        start: "2007",
+        end: "2009",
+      },
+    ],
+
+  //skill section
   skills: [
     "Git",
     "React",
@@ -80,58 +131,10 @@ export const DATA = {
     "Raspberry Pi",
   ],
 
-
- 
-
-  work: [
-    {
-      company: "Alpha EV Technologies PVT. LTD.",
-      href: "https://www.zaubacorp.com/ALPHAEV-TECHNOLOGIES-PRIVATE-LIMITED-U34300OR2019PTC032057",
-      badges: [],
-      location: "Remote",
-      title: "IoT And Robotics Intern",
-      logoUrl: "/alphaev.png",
-      start: "May 2024",
-      end: "Jun 2024",
-      description: "Made a Power and Cost Calculation system for EV Charging Station, Assembled and Tested an IoT based Vending Machine, Assembled and Tested and IoT Based Survellance Rover, Acquired Industry level knowledge on IoT and Robotics.",
-    },
-  ],
-
-  education: [
-    {
-      school: "DRIEMS Polytechnic",
-      href: "https://www.driemspolytechnic.org/",
-      degree: "Diploma In CSE [8.21 CGPA]",
-      logoUrl: "/driems.png",
-      start: "2022",
-      end: "2025",
-    },
-    {
-      school: "ST Xavier's High School",
-      href: "https://stxaviersbarabati.org/",
-      degree: "Matriculation [6.5 CGPA]",
-      logoUrl: "/stxavier.png",
-      start: "2012",
-      end: "2022",
-    },
-    {
-      school: "Sri Satya Sai School",
-      href: "https://sathyasaischoolcuttack.in/",
-      degree: "Secondary Schooling",
-      logoUrl: "/satyasai.png",
-      start: "2009",
-      end: "2012",
-    },
-    {
-      school: "MYCA Public School",
-      href: "https://www.facebook.com/p/MYCA-Public-School-100076661226390/",
-      degree: "Junior Schooling",
-      logoUrl: "/myca.png",
-      start: "2007",
-      end: "2009",
-    },
-  ],
+  //projects section
   projects: [
+
+    //1st project
     {
       title: "Chat Collect",
       href: "https://chatcollect.com",
@@ -160,6 +163,8 @@ export const DATA = {
       video:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
+
+    //2nd project
     {
       title: "Magic UI",
       href: "https://magicui.design",
@@ -192,6 +197,8 @@ export const DATA = {
       image: "",
       video: "https://cdn.magicui.design/bento-grid.mp4",
     },
+
+    //3rd project
     {
       title: "llm.report",
       href: "https://llm.report",
@@ -225,6 +232,8 @@ export const DATA = {
       image: "",
       video: "https://cdn.llm.report/openai-demo.mp4",
     },
+
+    //4th project
     {
       title: "Automatic Chat",
       href: "https://automatic.chat",
@@ -255,6 +264,8 @@ export const DATA = {
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
     },
   ],
+
+  //hackathons section
   hackathons: [
     {
       title: "Hack Western 5",
