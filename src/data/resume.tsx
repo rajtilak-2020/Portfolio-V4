@@ -191,7 +191,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
+          icon: <Icons.github1 className="size-3" />,
         },
       ],
       image: "",
@@ -226,7 +226,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
+          icon: <Icons.github1 className="size-3" />,
         },
       ],
       image: "",
@@ -267,6 +267,7 @@ export const DATA = {
 
   //hackathons section
   hackathons: [
+
     {
       title: "Hack Western 5",
       dates: "November 23rd - 25th, 2018",
@@ -278,6 +279,7 @@ export const DATA = {
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     },
+
     {
       title: "Hack The North",
       dates: "September 14th - 16th, 2018",
@@ -289,6 +291,7 @@ export const DATA = {
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     },
+
     {
       title: "FirstNet Public Safety Hackathon",
       dates: "March 23rd - 24th, 2018",
@@ -300,6 +303,7 @@ export const DATA = {
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
       links: [],
     },
+
     {
       title: "DeveloperWeek Hackathon",
       dates: "February 3rd - 4th, 2018",
@@ -311,7 +315,7 @@ export const DATA = {
       links: [
         {
           title: "Github",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/cryptotrends/cryptotrends",
         },
       ],
@@ -334,17 +338,17 @@ export const DATA = {
         },
         {
           title: "ML",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/Wallet6/my6footprint-machine-learning",
         },
         {
           title: "iOS",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/Wallet6/CarbonWallet",
         },
         {
           title: "Server",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/Wallet6/wallet6-server",
         },
       ],
@@ -360,7 +364,7 @@ export const DATA = {
       links: [
         {
           title: "Organization",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/ethdocnet",
         },
       ],
@@ -377,12 +381,12 @@ export const DATA = {
       links: [
         {
           title: "Streamer Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/justinmichaud/htn2017",
         },
         {
           title: "Client Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/dillionverma/RTSPClient",
         },
       ],
@@ -399,7 +403,7 @@ export const DATA = {
       links: [
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/ShareShip/ShareShip",
         },
         {
@@ -420,7 +424,7 @@ export const DATA = {
       links: [
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/nsagirlfriend/nsagirlfriend",
         },
       ],
@@ -442,7 +446,7 @@ export const DATA = {
         },
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/TinySamosas/",
         },
       ],
@@ -469,7 +473,7 @@ export const DATA = {
       links: [
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/dillionverma/genecis",
         },
       ],
@@ -500,7 +504,7 @@ export const DATA = {
         },
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/dillionverma/pocketdoc-react-native",
         },
       ],
@@ -535,7 +539,7 @@ export const DATA = {
         },
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/dillionverma/pocketdoc-react-native",
         },
       ],
@@ -551,7 +555,7 @@ export const DATA = {
       links: [
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/dillionverma/earthwatch",
         },
       ],
@@ -568,7 +572,7 @@ export const DATA = {
       links: [
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/dillionverma/threejs-planes",
         },
       ],
@@ -586,12 +590,12 @@ export const DATA = {
       links: [
         {
           title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/mattBlackDesign/recipic-ionic",
         },
         {
           title: "Source (Server)",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/mattBlackDesign/recipic-rails",
         },
       ],
@@ -608,12 +612,12 @@ export const DATA = {
       links: [
         {
           title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/dillionverma/human-huntr-react-native",
         },
         {
           title: "Source (API)",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/mattBlackDesign/human-huntr-rails",
         },
       ],
@@ -629,7 +633,7 @@ export const DATA = {
       links: [
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11",
         },
       ],
@@ -645,7 +649,7 @@ export const DATA = {
       links: [
         {
           title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
+          icon: <Icons.github1 className="h-4 w-4" />,
           href: "https://github.com/UWPortalSDK/crowmark",
         },
       ],
