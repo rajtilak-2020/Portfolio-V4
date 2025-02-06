@@ -225,7 +225,7 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
+          href: "https://github1.com/dillionverma/llm.report",
           icon: <Icons.github1 className="size-3" />,
         },
       ],
@@ -314,9 +314,9 @@ export const DATA = {
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg",
       links: [
         {
-          title: "Github",
+          title: "github1",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/cryptotrends/cryptotrends",
+          href: "https://github1.com/cryptotrends/cryptotrends",
         },
       ],
     },
@@ -339,17 +339,17 @@ export const DATA = {
         {
           title: "ML",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/my6footprint-machine-learning",
+          href: "https://github1.com/Wallet6/my6footprint-machine-learning",
         },
         {
           title: "iOS",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/CarbonWallet",
+          href: "https://github1.com/Wallet6/CarbonWallet",
         },
         {
           title: "Server",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/wallet6-server",
+          href: "https://github1.com/Wallet6/wallet6-server",
         },
       ],
     },
@@ -365,7 +365,7 @@ export const DATA = {
         {
           title: "Organization",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/ethdocnet",
+          href: "https://github1.com/ethdocnet",
         },
       ],
     },
@@ -382,12 +382,12 @@ export const DATA = {
         {
           title: "Streamer Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/justinmichaud/htn2017",
+          href: "https://github1.com/justinmichaud/htn2017",
         },
         {
           title: "Client Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/RTSPClient",
+          href: "https://github1.com/dillionverma/RTSPClient",
         },
       ],
     },
@@ -404,7 +404,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/ShareShip/ShareShip",
+          href: "https://github1.com/ShareShip/ShareShip",
         },
         {
           title: "Site",
@@ -425,7 +425,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/nsagirlfriend/nsagirlfriend",
+          href: "https://github1.com/nsagirlfriend/nsagirlfriend",
         },
       ],
     },
@@ -447,7 +447,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/TinySamosas/",
+          href: "https://github1.com/TinySamosas/",
         },
       ],
     },
@@ -474,7 +474,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/genecis",
+          href: "https://github1.com/dillionverma/genecis",
         },
       ],
     },
@@ -505,7 +505,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
+          href: "https://github1.com/dillionverma/pocketdoc-react-native",
         },
       ],
     },
@@ -540,7 +540,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
+          href: "https://github1.com/dillionverma/pocketdoc-react-native",
         },
       ],
     },
@@ -556,7 +556,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/earthwatch",
+          href: "https://github1.com/dillionverma/earthwatch",
         },
       ],
     },
@@ -573,7 +573,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/threejs-planes",
+          href: "https://github1.com/dillionverma/threejs-planes",
         },
       ],
     },
@@ -591,12 +591,12 @@ export const DATA = {
         {
           title: "Source (Mobile)",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-ionic",
+          href: "https://github1.com/mattBlackDesign/recipic-ionic",
         },
         {
           title: "Source (Server)",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-rails",
+          href: "https://github1.com/mattBlackDesign/recipic-rails",
         },
       ],
     },
@@ -613,12 +613,12 @@ export const DATA = {
         {
           title: "Source (Mobile)",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/human-huntr-react-native",
+          href: "https://github1.com/dillionverma/human-huntr-react-native",
         },
         {
           title: "Source (API)",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/human-huntr-rails",
+          href: "https://github1.com/mattBlackDesign/human-huntr-rails",
         },
       ],
     },
@@ -634,7 +634,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11",
+          href: "https://github1.com/justinmichaud/TerribleHacks2016-Windows11",
         },
       ],
     },
@@ -650,7 +650,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github1 className="h-4 w-4" />,
-          href: "https://github.com/UWPortalSDK/crowmark",
+          href: "https://github1.com/UWPortalSDK/crowmark",
         },
       ],
     },
