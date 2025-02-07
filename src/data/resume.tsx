@@ -139,7 +139,7 @@ export const DATA = {
     //1st project
     {
       title: "Chat Collect",
-      href: "https://chatcollect.com",
+      href: "",
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
@@ -187,7 +187,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
+          href: "#",
           icon: <Icons.globe className="size-3" />,
         },
         {

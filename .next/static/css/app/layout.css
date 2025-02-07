@@ -1791,7 +1791,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   padding: 12px;
   font-size: 1rem;
   color: #ffffff;
-  border: 1px solid #ffffff81;
+  border: 1px solid #969696f1;
   background-color: transparent;
   border-radius: 0.5rem;
   outline: none;
@@ -1800,7 +1800,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 
 .input-field:focus {
   border-color: #c5c5c5;
-  box-shadow: 0 0 10px rgba(0, 212, 35, 0.8);
+  box-shadow: 0 0 10px rgba(0, 67, 212, 0.8);
 }
 
 .input-field:focus::placeholder {
