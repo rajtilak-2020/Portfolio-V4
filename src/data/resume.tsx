@@ -117,7 +117,7 @@ export const DATA = {
 
   //skill section
   skills: [
-    "Git",
+    "Git" ,
     "React",
     "Next.js",
     "Typescript",
@@ -163,7 +163,7 @@ export const DATA = {
       ],
       image: "",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "https://media-hosting.imagekit.io//70c2f7af75ef4087/robotui.mp4?Expires=1833548490&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QgcL1XQOXs6t01f3~4Pcwb8fDOYMbQXnP5Poxa~dRkMrrUu2I5RyqBorNZFp8C1qyxqwlu7IDkUG1~QXkFiilrs6mCfp0PL7rfLlQ-nLmPp-NEiYCkd3PhnaC1fVK0OEbXPQYPwHxjlsd7klxDsT8bkjkIO7ihQ0r8T80y2DaSlB9srWwXhVCUq4PFKK8FHoBpaxguSHtK7lE7GEgLaIrwhq9jVy8f8D2g3W6LY5cJCfrq~P6g7f0slpIUW9TppmAh8zHuyybazTflXNbfV~nEMGswy4fw0nGpOJxBJKm5f6bKNPj1LpmaicEd1jBT4HNrgWpzjplaAiLqKsoPgNGg__",
     },
 
     //2nd project
@@ -197,7 +197,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      video: "https://media-hosting.imagekit.io//412365c8b3d8465d/news.mp4?Expires=1833548490&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=okx8i6gVgKFaTg9wKVm~JjoFckpr1AiWTSK3dBOrz6EtRGRX3wf4-I5Lsjut4993QOvgo9SKqODGOn3fwzYoEw39Xzl5S43fkL-eTQDyKQM8v8GeDeVfOHdNgwJtiwBHhqq4j-TtGlzdWdBmN3jNjpr9tAV8bZV~7wW3nZofyzoUNQpcDoEraV1QPItaKHhGqhY5YI6mVt~CSS9ii1kLujvaiB-Vj4LS6xJ5djWvi7Nklr9cr6b8R6T6WO1Om3A~XcPSNPQF6QTtYeKy2TpJLqq4FJpj6UU7Bo3rTzEqVp~FDarwqWWk7--Bwef0XsOYuE~dz-k0eXDPsC6ZrnV~4Q__",
     },
 
     //3rd project
@@ -232,7 +232,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      video: "https://media-hosting.imagekit.io//956cfd9f72b144f1/joke.mp4?Expires=1833548490&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=loeOzFMkPYyFsVdr0VmlYqMrbwNW~ol2CIpAhcAtqjq2BPd98QCFp5~haXgGZWaeV0RRUxUukG55wh7YTSzwXpqMOCaktauYZdOfZ0t5D7wBLRw6-HWkjW0TJydiuj7CXCQ5bSsVDhMUGcqsgbv1j20Ngvd7bHHBJJVmyA-Z-Vs~3lDzq9Ew2dnTUNP38-iCvqGRuXlqJCcCYTRmUYxV7FxVWCVzRXURKOypotRe4RVjnh932X6xibegeZvv9q~DZ7axdMC7C6dzyF0xzHXypvDGsNVGrfOEEzKJQhc~R7Q5zxeUFTTEVq1xEFayhunVR77YjTT70Qu3OiXmoc0vVQ__",
     },
 
     //4th project
@@ -263,7 +263,7 @@ export const DATA = {
       ],
       image: "",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+        "https://media-hosting.imagekit.io//a1cf134d99ef4a7e/compiler.mp4?Expires=1833548490&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=o-mVBnuIa9CLfOhggp0sVYW6osvUPt~rNXavqQxpYAquSiklOIvh1r2nfSBC4RNapQvcy1iAwtkdC7-1xm2uZ7fXEF1xm7SE6Cyz~SopjwkCGzBIKAnzxE9Z7YfmIAZwSqNMheQb5xNTv4fNMTqtMnWkfrQZpTQbc5muLkTZbwXtTyVEVOW236EpDYRQYbzr3YcIFIve7kXr40S3QyT60jA3BbIG8QOmsjH4tXozG8p70EJYi~D0~87EBwfX2pVcRbOoqLxIAWm2xke1B-6Q8D8hs-nZ8QT-safen8IQq21r~Hl7od8PsbI6Y5e21A~l9W2yd8ed82VRxnxlmR1W3Q__",
     },
   ],
 
