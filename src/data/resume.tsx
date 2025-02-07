@@ -138,7 +138,7 @@ export const DATA = {
 
     //1st project
     {
-      title: "Chat Collect",
+      title: "Institution-Robot-UI",
       href: "",
       dates: "Jan 2024 - Feb 2024",
       active: true,
