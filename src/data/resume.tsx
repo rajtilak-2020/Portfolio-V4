@@ -7,7 +7,7 @@ export const DATA = {
     navbar: [
       { href: "/", icon: HomeIcon, label: "Home" },
       { href: "/blog", icon: NotebookIcon, label: "Blog" },
-      { href: "/projects", icon: Icons.react, label: "Projects" },
+     // { href: "/projects", icon: Icons.react, label: "Projects" },
     ],
 
     contact: {

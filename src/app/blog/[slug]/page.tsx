@@ -4,28 +4,21 @@ import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import Image from "next/image";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: {
-    slug: string;
-  };
-}): Promise<Metadata | undefined> {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
   let post = await getPost(params.slug);
 
-  let {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  if (!post) return;
+
+  let { title, publishedAt: publishedTime, summary: description, image } = post.metadata;
+  let ogImage = image?.startsWith("http") ? image : `${DATA.url}${image}`;
 
   return {
     title,
@@ -36,11 +29,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime,
       url: `${DATA.url}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      images: [{ url: ogImage }],
     },
     twitter: {
       card: "summary_large_image",
@@ -51,18 +40,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Blog({
-  params,
-}: {
-  params: {
-    slug: string;
-  };
-}) {
+export default async function Blog({ params }: { params: { slug: string } }) {
   let post = await getPost(params.slug);
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound();
 
   return (
     <section id="blog">
@@ -77,9 +58,9 @@ export default async function Blog({
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${DATA.url}${post.metadata.image}`
-              : `${DATA.url}/og?title=${post.metadata.title}`,
+            image: post.metadata.image?.startsWith("http")
+              ? post.metadata.image
+              : `${DATA.url}${post.metadata.image}`,
             url: `${DATA.url}/blog/${post.slug}`,
             author: {
               "@type": "Person",
@@ -88,9 +69,12 @@ export default async function Blog({
           }),
         }}
       />
+      {/* Blog Title */}
       <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
         {post.metadata.title}
       </h1>
+
+      {/* Blog Meta Info */}
       <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
         <Suspense fallback={<p className="h-5" />}>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
@@ -98,10 +82,22 @@ export default async function Blog({
           </p>
         </Suspense>
       </div>
-      <article
-        className="prose dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: post.source }}
-      ></article>
+
+      {/* Blog Cover Image */}
+      {post.metadata.image && (
+        <Image
+          src={post.metadata.image}
+          width={800}
+          height={400}
+          alt={post.metadata.title}
+          className="rounded-lg mb-6"
+        />
+      )}
+
+      {/* Blog Content */}
+      <article className="prose dark:prose-invert">
+        <MDXRemote source={post.source} />
+      </article>
     </section>
   );
 }

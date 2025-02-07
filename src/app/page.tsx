@@ -165,15 +165,15 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to connect? Just shoot me an email{" "}
+                Want to connect? Just shoot me an {" "}
                 <Link
                   href={DATA.contact.social.Email.url}
                   className="text-cyan-500 hover:italic"
                 >
-                  with a direct question or topic
+                 email with a direct question or topic
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I&apos;ll respond whenever I can. I&apos;m always open to new opportunities and collaborations.
+                
               </p>
             </div>
             <ContactSection />
