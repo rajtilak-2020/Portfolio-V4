@@ -48,7 +48,7 @@ export const DATA = {
           name: "Mail Me",
           url: "mailto:rajtilak1062020@gmail.com",
           icon: Icons.Email,
-          navbar: true,
+          navbar: false,
         },
 
       },
@@ -139,60 +139,53 @@ export const DATA = {
     //1st project
     {
       title: "Institution-Robot-UI",
-      href: "",
+      href: "https://rajtilak-2020.github.io/Institution-Robot-UI/",
       dates: "Jan 2024 - Feb 2024",
       active: true,
-      description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+      description: "This project is focused on creating an interactive UI for a robot designed to operate on a college campus. The robot will be able to interact with four distinct user types: Admin, Faculty, Students, and Visitors.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "HTML",
+        "CSS",
+        "Javascript",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://chatcollect.com",
+          type: "Preview",
+          href: "https://rajtilak-2020.github.io/Institution-Robot-UI/",
           icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source Code",
+          href: "https://github.com/rajtilak-2020/Institution-Robot-UI.git",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video:
-        "https://media-hosting.imagekit.io//70c2f7af75ef4087/robotui.mp4?Expires=1833548490&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QgcL1XQOXs6t01f3~4Pcwb8fDOYMbQXnP5Poxa~dRkMrrUu2I5RyqBorNZFp8C1qyxqwlu7IDkUG1~QXkFiilrs6mCfp0PL7rfLlQ-nLmPp-NEiYCkd3PhnaC1fVK0OEbXPQYPwHxjlsd7klxDsT8bkjkIO7ihQ0r8T80y2DaSlB9srWwXhVCUq4PFKK8FHoBpaxguSHtK7lE7GEgLaIrwhq9jVy8f8D2g3W6LY5cJCfrq~P6g7f0slpIUW9TppmAh8zHuyybazTflXNbfV~nEMGswy4fw0nGpOJxBJKm5f6bKNPj1LpmaicEd1jBT4HNrgWpzjplaAiLqKsoPgNGg__",
+      video: "https://media-hosting.imagekit.io//70c2f7af75ef4087/robotui.mp4?Expires=1833548490&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QgcL1XQOXs6t01f3~4Pcwb8fDOYMbQXnP5Poxa~dRkMrrUu2I5RyqBorNZFp8C1qyxqwlu7IDkUG1~QXkFiilrs6mCfp0PL7rfLlQ-nLmPp-NEiYCkd3PhnaC1fVK0OEbXPQYPwHxjlsd7klxDsT8bkjkIO7ihQ0r8T80y2DaSlB9srWwXhVCUq4PFKK8FHoBpaxguSHtK7lE7GEgLaIrwhq9jVy8f8D2g3W6LY5cJCfrq~P6g7f0slpIUW9TppmAh8zHuyybazTflXNbfV~nEMGswy4fw0nGpOJxBJKm5f6bKNPj1LpmaicEd1jBT4HNrgWpzjplaAiLqKsoPgNGg__",
     },
 
     //2nd project
     {
-      title: "Magic UI",
-      href: "https://magicui.design",
+      title: "News-Portal",
+      href: "https://krajtilak-news-portal.vercel.app/",
       dates: "June 2023 - Present",
       active: true,
       description:
-        "Designed, developed and sold animated UI components for developers.",
+        "A responsive news portal built with modern web technologies, providing users with the latest updates in a clean and intuitive interface.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "HTML",
+        "CSS",
+        "Javascript",
       ],
       links: [
         {
-          type: "Website",
-          href: "#",
+          type: "Preview",
+          href: "https://krajtilak-news-portal.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          type: "Source Code",
+          href: "https://github.com/rajtilak-2020/News-Portal.git",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -202,32 +195,25 @@ export const DATA = {
 
     //3rd project
     {
-      title: "llm.report",
-      href: "https://llm.report",
+      title: "Joke-Generator",
+      href: "https://rajtilak-2020.github.io/Joke-Generator/",
       dates: "April 2023 - September 2023",
       active: true,
-      description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+      description: "A Dynamic Joke Generator with a sleek and interactive user interface, designed to entertain and impress. It uses JavaScript to fetch random jokes from an API.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        "HTML",
+        "CSS",
+        "Javascript",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://llm.report",
+          type: "Preview",
+          href: "https://rajtilak-2020.github.io/Joke-Generator/",
           icon: <Icons.globe className="size-3" />,
         },
         {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
+          type: "Source Code",
+          href: "https://github.com/rajtilak-2020/Joke-Generator.git",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -237,28 +223,26 @@ export const DATA = {
 
     //4th project
     {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
+      title: "Web Compiler",
+      href: "https://html-cse.netlify.app/",
       dates: "April 2023 - March 2024",
       active: true,
-      description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+      description: "A web-based compiler designed for writing and executing HTML, CSS, and JavaScript code directly in the browser.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        "HTML",
+        "CSS",
+        "Javascript",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://automatic.chat",
+          type: "Preview",
+          href: "https://html-cse.netlify.app/",
           icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source Code",
+          href: "https://github.com/rajtilak-2020/HTML-CSS-JS-compiler.git",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
