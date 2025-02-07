@@ -7,6 +7,7 @@ export const DATA = {
     navbar: [
       { href: "/", icon: HomeIcon, label: "Home" },
       { href: "/blog", icon: NotebookIcon, label: "Blog" },
+      { href: "/projects", icon: Icons.react, label: "Projects" },
     ],
 
     contact: {
@@ -50,13 +51,6 @@ export const DATA = {
           navbar: true,
         },
 
-        contact: {
-          name: "Contact Me",
-          url: "https://x.com/2020rajtilak",
-          navbar: true,
-          icon: Icons.X,
-        },
-
       },
     },
 
@@ -79,8 +73,8 @@ export const DATA = {
         location: "Remote",
         title: "IoT And Robotics Intern",
         logoUrl: "/alphaev.png",
-        start: "May 2024",
-        end: "Jun 2024",
+        start: "1",
+        end: "Month",
         description: "Made a Power and Cost Calculation system for EV Charging Station, Assembled and Tested an IoT based Vending Machine, Assembled and Tested and IoT Based Survellance Rover, Acquired Industry level knowledge on IoT and Robotics.",
       },
     ],
@@ -199,7 +193,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github1 className="size-3" />,
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
@@ -233,8 +227,8 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://github1.com/dillionverma/llm.report",
-          icon: <Icons.github1 className="size-3" />,
+          href: "https://github.com/dillionverma/llm.report",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
