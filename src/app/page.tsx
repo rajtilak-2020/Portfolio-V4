@@ -165,12 +165,12 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to connect? Just shoot me an {" "}
+                Want to connect? Just shoot me a {" "}
                 <Link
                   href={DATA.contact.social.Email.url}
                   className="text-cyan-500 hover:italic"
                 >
-                 email with a direct question or topic
+                 message with a direct question or topic
                 </Link>{" "}
                 and I&apos;ll respond whenever I can. I&apos;m always open to new opportunities and collaborations.
                 

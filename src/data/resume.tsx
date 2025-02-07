@@ -60,8 +60,8 @@ export const DATA = {
     url: "https://krajtilak.vercel.app",
     location: "Odisha, India",
     locationLink: "https://www.google.com/maps/place/india",
-    description: "A passionate Computer Science Engineering student, I strive to bridge the gap between innovative ideas and transformative technologies. I focus on crafting solutions that redefine possibilities.",
-    summary: "To leverage my skills in IoT, robotics, and programming to contribute effectively to innovative projects, while continuously enhancing my technical expertise and problem-solving abilities in a dynamic work environment.",
+    description: "I am a 19yo student with expertise in Web Development, Robotics, IoT, and AI, specializing in full-stack development and cutting-edge technology integration. My projects range from IoT systems to responsive webpages, delivering innovative, efficient, and scalable results.",
+    summary: "I'm a passionate developer, freelancer, and designer currently studying Computer Science Engineering. With a strong interest in Robotics, IoT, Web Development , and Artificial Intelligence, I enjoy blending technology with creativity to build innovative solutions. I’m always curious about new technologies and constantly honing my skills to stay on top of industry trends. Whether it’s designing a sleek UI, crafting a functional backend, or experimenting with robotics, I enjoy bringing ideas to life through code. In addition to my academic work, I’ve had hands-on experience through an internship at Alpha EV, where I worked on IoT and Robotics projects, including developing a power and cost calculation system for an EV charging station and assembling an IoT-based vending machine. If you’re looking for a dedicated and versatile developer who thrives in both the technical and creative aspects of projects, feel free to get in touch. Let’s build something amazing together!",
     avatarUrl: "/me.png",
 
     //work section
@@ -84,7 +84,7 @@ export const DATA = {
       {
         school: "DRIEMS Polytechnic",
         href: "https://www.driemspolytechnic.org/",
-        degree: "Diploma In CSE [8.21 CGPA]",
+        degree: "Diploma In CSE [8.21 SCGPA]",
         logoUrl: "/driems.png",
         start: "2022",
         end: "2025",
