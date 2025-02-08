@@ -12,7 +12,7 @@ export const Icons = {
   ),
 
   linkedin: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" id="linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" id="linkedin">
   <g>
     <g>
       <path fill="none" d="M0 0h24v24H0z"></path>
@@ -24,7 +24,7 @@ export const Icons = {
   ),
   
   Instagram: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 102 102" id="instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 102 102" id="instagram">
 <defs>
 <radialGradient id="a" cx="6.601" cy="99.766" r="129.502" gradientUnits="userSpaceOnUse">
 <stop offset=".09" stopColor="#fa8f21"></stop>
@@ -42,7 +42,7 @@ export const Icons = {
   ),
   
   X: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30"  viewBox="0 0 48 48">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25"  viewBox="0 0 48 48">
 <path fill="#00000" fillRule="evenodd" d="M38,42H10c-2.209,0-4-1.791-4-4V10c0-2.209,1.791-4,4-4h28	c2.209,0,4,1.791,4,4v28C42,40.209,40.209,42,38,42z" clipRule="evenodd"></path><path fill="#fff" d="M34.257,34h-6.437L13.829,14h6.437L34.257,34z M28.587,32.304h2.563L19.499,15.696h-2.563 L28.587,32.304z"></path><polygon fill="#fff" points="15.866,34 23.069,25.656 22.127,24.407 13.823,34"></polygon><polygon fill="#fff" points="24.45,21.721 25.355,23.01 33.136,14 31.136,14"></polygon>
 </svg>
   ),
@@ -144,6 +144,7 @@ export const Icons = {
       ></path>
     </svg>
  ),
+
 
   notion: (props: IconProps) => (
     <svg
