@@ -81,6 +81,7 @@ export const DATA = {
   
     //education section
     education: [
+
       {
         school: "DRIEMS Polytechnic",
         href: "https://www.driemspolytechnic.org/",
@@ -89,6 +90,7 @@ export const DATA = {
         start: "2022",
         end: "2025",
       },
+
       {
         school: "ST Xavier's High School",
         href: "https://stxaviersbarabati.org/",
@@ -97,6 +99,7 @@ export const DATA = {
         start: "2012",
         end: "2022",
       },
+
       {
         school: "Sri Satya Sai School",
         href: "https://sathyasaischoolcuttack.in/",
@@ -105,6 +108,7 @@ export const DATA = {
         start: "2009",
         end: "2012",
       },
+
       {
         school: "MYCA Public School",
         href: "https://www.facebook.com/p/MYCA-Public-School-100076661226390/",
@@ -113,6 +117,7 @@ export const DATA = {
         start: "2007",
         end: "2009",
       },
+      
     ],
 
   //skill section
