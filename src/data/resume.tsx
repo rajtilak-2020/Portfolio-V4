@@ -86,7 +86,7 @@ export const DATA = {
         school: "DRIEMS Polytechnic",
         href: "https://www.driemspolytechnic.org/",
         degree: "Diploma In CSE [8.21 SGPA]",
-        logoUrl: "/driems.png",
+        logoUrl: "/stxavier.png",
         start: "2022",
         end: "2025",
       },
@@ -117,7 +117,7 @@ export const DATA = {
         start: "2007",
         end: "2009",
       },
-      
+
     ],
 
   //skill section
