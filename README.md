@@ -121,7 +121,7 @@ pnpm start
 
 ---
 
-## 🔗 Live Demo  
+## 🔗 Live Preview  
 
 <div align="center">
 <img alt="Preview" src="/public/preview.gif" width="90%">
