@@ -124,7 +124,7 @@ pnpm start
 ## 🔗 Live Demo  
 
 <div align="center">
-<img alt="Preview" src="/public/preview.mp4" width="90%">
+<img alt="Preview" src="/public/preview.gif" width="90%">
 </div>
 
 🔹 [Visit Live Website](https://krajtilak.vercel.app)  
