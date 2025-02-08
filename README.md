@@ -1,1 +1,162 @@
+# 🚀 K Rajtilak's Portfolio (V4)  
 
+[![Website](https://img.shields.io/badge/Live%20Website-krajtilak.vercel.app-blue?style=flat-square&logo=vercel)](https://krajtilak.vercel.app)  [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)  [![ShadCN/UI](https://img.shields.io/badge/ShadCN/UI-Stylish-blueviolet?style=flat-square)](https://ui.shadcn.com/)  [![Magic UI](https://img.shields.io/badge/Magic%20UI-Dynamic-purple?style=flat-square)](https://magicui.design/)  [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)  
+
+🎯 **A high-performance, visually appealing, and feature-rich portfolio website showcasing my skills, projects, and achievements. Built with modern web technologies, optimized for responsiveness, and deployed on Vercel.**  
+
+---
+
+## 🏗️ Tech Stack  
+| **Category**     | **Technology Used** |
+|-----------------|---------------------|
+| **Framework**    | Next.js 14 |
+| **UI Framework** | ShadCN/UI, Magic UI |
+| **Styling**      | Tailwind CSS, PostCSS |
+| **Markdown Handling** | MDX |
+| **Package Manager** | PNPM |
+| **Deployment**   | Vercel |
+
+---
+
+## 📌 Features  
+✅ **Modern UI** – Aesthetic and responsive design powered by **ShadCN/UI & Magic UI**.  
+✅ **Optimized Performance** – Built with **Next.js 14** for blazing-fast performance.  
+✅ **Dynamic Blog System** – Supports **.mdx** files for seamless content management.  
+✅ **Dark Mode** – Integrated with ShadCN's theme toggle.  
+✅ **Social Links** – GitHub, LinkedIn, Twitter, and Instagram embedded.  
+✅ **Fast & Secure Deployment** – Hosted on **Vercel** with optimized configurations.  
+✅ **Custom Animations** – Smooth UI/UX using **Magic UI animations**.  
+✅ **Reusable Components** – Well-structured component library for scalability.  
+
+---
+
+## 🏛️ Project Structure  
+
+```mermaid
+graph TD;
+    A[Root Directory] --> B[content] 
+    A --> C[public] 
+    A --> D[src] 
+
+    D --> D1[app] 
+    D --> D2[components] 
+    D --> D3[data] 
+    D --> D4[lib] 
+
+    D1 --> D1a[globals.css]
+    D1 --> D1b[layout.tsx]
+    D1 --> D1c[page.tsx]
+    D1 --> D1d[blog/page.tsx]
+    D1 --> D1e[blog/slug/page.tsx]
+
+    D2 --> D2a[ContactSection.tsx]
+    D2 --> D2b[Sharebutton.tsx]
+    D2 --> D2c[Navbar.tsx]
+    D2 --> D2d[ThemeProvider.tsx]
+    D2 --> D2e[ProjectCard.tsx]
+    
+    D2 --> D2f[MagicUI]
+    D2f --> D2f1[BlurFade.tsx]
+    D2f --> D2f2[Dock.tsx]
+
+    D2 --> D2g[UI Components]
+    D2g --> D2g1[Avatar.tsx]
+    D2g --> D2g2[Badge.tsx]
+    D2g --> D2g3[Button.tsx]
+    D2g --> D2g4[Card.tsx]
+
+    D3 --> D3a[blog.ts]
+    D3 --> D3b[resume.tsx]
+
+    D4 --> D4a[utils.ts]
+```
+
+---
+
+## 📂 Directory Overview  
+
+- **`content/`** – Stores `.mdx` blog posts.  
+- **`public/`** – Static assets (images, icons, etc.).  
+- **`src/app/`** – Main application logic and routing.  
+- **`src/components/`** – Modular UI components.  
+- **`src/data/`** – Data files for blog and resume.  
+- **`src/lib/`** – Utility functions.  
+- **`tailwind.config.ts`** – Tailwind CSS configuration.  
+- **`next.config.mjs`** – Next.js configuration.  
+
+---
+
+## 📦 Installation & Setup  
+
+1️⃣ **Clone the Repository**  
+```bash
+git clone https://github.com/rajtilak-2020/K-Rajtilak_s-Portfolio-V4.git
+cd K-Rajtilak_s-Portfolio-V4
+```
+
+2️⃣ **Install Dependencies**  
+```bash
+pnpm install
+```
+
+3️⃣ **Run the Development Server**  
+```bash
+npm run dev
+```
+🔹 Open [localhost:3000](http://localhost:3000) in your browser.
+
+4️⃣ **Build & Deploy**  
+```bash
+pnpm build
+pnpm start
+```
+
+---
+
+## 🖼️ Screenshots  
+
+| **Light Mode** | **Dark Mode** |
+|---------------|--------------|
+| ![Light Mode](https://github.com/user-attachments/assets/1973c047-0b45-45e0-ba9d-fe7559cc3cab) | ![Dark Mode](https://github.com/user-attachments/assets/4fe7bc81-e7bd-419a-b47f-6c47b91c7481) |
+
+---
+
+## 🔗 Live Demo  
+
+<div align="center">
+<img alt="Preview" src="#" width="90%">
+</div>
+
+🔹 [Visit Live Website](https://krajtilak.vercel.app)  
+
+---
+
+## 💡 Future Enhancements  
+🔹 **SEO Optimization** – Improve visibility with metadata and structured data.  
+🔹 **Custom Animations** – Enhance UI interactivity.  
+🔹 **CMS Integration** – Connect with Notion or Strapi for content management.  
+🔹 **More Blog Features** – Categories, tags, and search functionality.  
+
+---
+
+## 📜 License  
+This project is licensed under the **MIT License** – feel free to use and modify.   
+
+---
+
+# Credits
+
+- Special thanks to [Dillion Verma](https://github.com/dillionverma/portfolio) for his base template!
+
+---
+
+## 📞 Contact  
+📩 **Email:** [Your Email]  
+🔗 **GitHub:** [rajtilak-2020](https://github.com/rajtilak-2020)  
+🔗 **LinkedIn:** [Your LinkedIn Profile]  
+
+---
+
+### 🌟 If you like this project, don't forget to star ⭐ it on GitHub!  
+
+---
