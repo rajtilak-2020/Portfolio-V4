@@ -82,12 +82,12 @@ export const DATA = {
     //education section
     education: [
       {
-        school: "ST Xavier's High School",
-        href: "https://stxaviersbarabati.org/",
-        degree: "Matriculation [6.5 CGPA]",
-        logoUrl: "/stxavier.png",
-        start: "2012",
-        end: "2022",
+        school: "DRIEMS Polytechnic",
+        href: "https://www.driemspolytechnic.org/",
+        degree: "Diploma In CSE [8.21 SGPA]",
+        logoUrl: "/driems.png",
+        start: "2022",
+        end: "2025",
       },
       {
         school: "ST Xavier's High School",
