@@ -12,9 +12,14 @@ export const Icons = {
   ),
 
   linkedin: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" id="linkedin">
-<rect width="10" ></rect>
-<path fill="#0177b5" d="M92 32H36a4 4 0 0 0-4 4v56a4 4 0 0 0 4 4h56a4 4 0 0 0 4-4V36a4 4 0 0 0-4-4ZM52 86H42V56h10Zm-5-34a6 6 0 1 1 6-6 6 6 0 0 1-6 6Zm39 34H76V66c0-1.66-2.24-3-5-3-4 0-5 5.34-5 7v16H56V56h10v7c0-5 4.48-7 10-7a10 10 0 0 1 10 10Z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" id="linkedin">
+  <g>
+    <g>
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path fill="#0079bd" d="M1 12C1 4 4 1 12 1s11 3 11 11-3 11-11 11S1 20 1 12"></path>
+      <path fill="#fff" d="M4.96 9.22h3.12v9.92H4.96V9.22zM6.52 4.38a1.8 1.8 0 1 1-1.8 1.8 1.8 1.8 0 0 1 1.8-1.8zm9.13 4.84a3.94 3.94 0 0 0-2.85 1.43V9.22H9.68v9.92h3.12v-5.65a1.68 1.68 0 1 1 3.36 0v5.65h3.12v-5.32c0-2.5-.28-4.6-3.63-4.6z"></path>
+    </g>
+  </g>
 </svg>
   ),
   
