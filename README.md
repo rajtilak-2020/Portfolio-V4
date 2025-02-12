@@ -115,9 +115,9 @@ pnpm start
 
 ## 🖼️ Screenshots  
 
-| **Light Mode** | **Dark Mode** |
+| **Dark Mode** | **Light Mode** |
 |---------------|--------------|
-| ![Light Mode](https://github.com/user-attachments/assets/1973c047-0b45-45e0-ba9d-fe7559cc3cab) | ![Dark Mode](https://github.com/user-attachments/assets/4fe7bc81-e7bd-419a-b47f-6c47b91c7481) |
+| ![Dark Mode](https://github.com/user-attachments/assets/4fe7bc81-e7bd-419a-b47f-6c47b91c7481) | ![Light Mode](https://github.com/user-attachments/assets/1973c047-0b45-45e0-ba9d-fe7559cc3cab) |
 
 ---
 
@@ -151,9 +151,9 @@ This project is licensed under the **MIT License** – feel free to use and modi
 ---
 
 ## 📞 Contact  
-📩 **Email:** [Your Email]  
-🔗 **GitHub:** [rajtilak-2020](https://github.com/rajtilak-2020)  
-🔗 **LinkedIn:** [Your LinkedIn Profile]  
+📩 **Email:** [Click Here](mailto:rajtilak1062020@gmail.com)  
+🔗 **GitHub:** [Click Here](https://github.com/rajtilak-2020)  
+🔗 **LinkedIn:** [Click Here](www.linkedin.com/in/krajtilak2020)  
 
 ---
 
