@@ -27,10 +27,10 @@ export default function ContactSection() {
     });
 
     if (response.ok) {
-      setStatus("Message sent! ✅");
+      setStatus("Message sent successfully! ✅");
       setFormData({ name: "", email: "", message: "" });
     } else {
-      setStatus("Failed to send. ❌ Server error.");
+      setStatus("Failed to send the message. ❌ Server error.");
     }
   };
 
