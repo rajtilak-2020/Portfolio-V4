@@ -105,12 +105,6 @@ npm run dev
 ```
 🔹 Open [localhost:3000](http://localhost:3000) in your browser.
 
-4️⃣ **Build & Deploy**  
-```bash
-pnpm build
-pnpm start
-```
-
 ---
 
 ## 🖼️ Screenshots  
@@ -128,14 +122,6 @@ pnpm start
 </div>
 
 🔹 [Visit Live Website](https://krajtilak.vercel.app)  
-
----
-
-## 💡 Future Enhancements  
-🔹 **SEO Optimization** – Improve visibility with metadata and structured data.  
-🔹 **Custom Animations** – Enhance UI interactivity.  
-🔹 **CMS Integration** – Connect with Notion or Strapi for content management.  
-🔹 **More Blog Features** – Categories, tags, and search functionality.  
 
 ---
 
