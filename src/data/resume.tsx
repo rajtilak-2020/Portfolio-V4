@@ -51,6 +51,13 @@ export const DATA = {
           navbar: false,
         },
 
+        Resume: {
+          name: "View My Resume",
+          url: "https://drive.google.com/file/d/1S5rTR2MIT-CCaEkv8pt9ROsAHOYshzJ_/view?usp=drive_link",
+          icon: Icons.Resume,
+          navbar: true,
+        },
+
       },
     },
 
