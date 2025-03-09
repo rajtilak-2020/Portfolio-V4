@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -7,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -40,11 +43,17 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const { theme } = useTheme();
   return (
+    // <Card
+    //   className={
+    //     "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+    //   }
+    // >
     <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
+      className={`flex flex-col overflow-hidden border transition-all duration-300 ease-out h-full ${
+        theme === "dark" ? "hover:shadow-white" : "hover:shadow-lg"
+      }`} // Conditional class for shadow
     >
       <Link
         href={href || "#"}
@@ -66,7 +75,7 @@ export function ProjectCard({
             alt={title}
             width={500}
             height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            className="h-45 w-full overflow-hidden object-cover object-top"
           />
         )}
       </Link>
@@ -102,7 +111,7 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[12px]">
                   {link.icon}
                   {link.type}
                 </Badge>

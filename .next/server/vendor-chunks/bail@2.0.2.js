@@ -11,6 +11,16 @@ exports.id = "vendor-chunks/bail@2.0.2";
 exports.ids = ["vendor-chunks/bail@2.0.2"];
 exports.modules = {
 
+/***/ "(ssr)/./node_modules/.pnpm/bail@2.0.2/node_modules/bail/index.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/.pnpm/bail@2.0.2/node_modules/bail/index.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   bail: () => (/* binding */ bail)\n/* harmony export */ });\n/**\n * Throw a given error.\n *\n * @param {Error|null|undefined} [error]\n *   Maybe error.\n * @returns {asserts error is null|undefined}\n */\nfunction bail(error) {\n  if (error) {\n    throw error\n  }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvLnBucG0vYmFpbEAyLjAuMi9ub2RlX21vZHVsZXMvYmFpbC9pbmRleC5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBQUE7QUFDQTtBQUNBO0FBQ0EsV0FBVyxzQkFBc0I7QUFDakM7QUFDQSxhQUFhO0FBQ2I7QUFDTztBQUNQO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcG9yZm9saW8vLi9ub2RlX21vZHVsZXMvLnBucG0vYmFpbEAyLjAuMi9ub2RlX21vZHVsZXMvYmFpbC9pbmRleC5qcz9iODhlIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogVGhyb3cgYSBnaXZlbiBlcnJvci5cbiAqXG4gKiBAcGFyYW0ge0Vycm9yfG51bGx8dW5kZWZpbmVkfSBbZXJyb3JdXG4gKiAgIE1heWJlIGVycm9yLlxuICogQHJldHVybnMge2Fzc2VydHMgZXJyb3IgaXMgbnVsbHx1bmRlZmluZWR9XG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBiYWlsKGVycm9yKSB7XG4gIGlmIChlcnJvcikge1xuICAgIHRocm93IGVycm9yXG4gIH1cbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/.pnpm/bail@2.0.2/node_modules/bail/index.js\n");
+
+/***/ }),
+
 /***/ "(rsc)/./node_modules/.pnpm/bail@2.0.2/node_modules/bail/index.js":
 /*!******************************************************************!*\
   !*** ./node_modules/.pnpm/bail@2.0.2/node_modules/bail/index.js ***!

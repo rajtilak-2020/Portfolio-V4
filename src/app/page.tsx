@@ -8,22 +8,34 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import Particles from "@/components/magicui/particles";
+import { Meteors } from "@/components/magicui/meteors";
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <Particles className="hidden md:block fixed inset-0 -z-10" quantity={50} />
+      <Meteors className="fixed inset-0 -z-100" number={10} />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                yOffset={8}
-                text={`Hi, I'm K Rajtilak👋`}
-              />
+            <BlurFadeText
+  delay={BLUR_FADE_DELAY}
+  className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+  yOffset={8}
+  text={
+    <>
+      Hi, I'm <AuroraText className="inline-block">K Rajtilak</AuroraText>
+    </>
+  }
+/>
+
+
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
@@ -168,12 +180,10 @@ export default function Page() {
                 Want to connect? Just shoot me a {" "}
                 <Link
                   href={DATA.contact.social.Email.url}
-                  className="text-cyan-500 hover:italic"
-                >
+                  className="text-green-500 hover:italic">
                  message with a direct question or topic
                 </Link>{" "}
                 and I&apos;ll respond whenever I can. I&apos;m always open to new opportunities and collaborations.
-                
               </p>
             </div>
             <ContactSection />

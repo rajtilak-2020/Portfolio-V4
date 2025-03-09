@@ -7,6 +7,7 @@ export const DATA = {
     navbar: [
       { href: "/", icon: HomeIcon, label: "Home" },
       { href: "/blog", icon: NotebookIcon, label: "Blog" },
+      { href: "/projects", icon: Icons.react, label: "Projects" },
     ],
 
     contact: {
@@ -46,13 +47,6 @@ export const DATA = {
           url: "mailto:rajtilak1062020@gmail.com",
           icon: Icons.Email,
           navbar: false,
-        },
-
-        Resume: {
-          name: "View My Resume",
-          url: "https://drive.google.com/file/d/1S5rTR2MIT-CCaEkv8pt9ROsAHOYshzJ_/view?usp=drive_link",
-          icon: Icons.Resume,
-          navbar: true,
         },
 
       },

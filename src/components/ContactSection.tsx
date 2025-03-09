@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { RainbowButton } from "@/components/magicui/rainbow-button"; // Ensure correct import
 import BlurFade from "@/components/magicui/blur-fade";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -44,7 +44,7 @@ export default function ContactSection() {
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -55,7 +55,7 @@ export default function ContactSection() {
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -66,19 +66,19 @@ export default function ContactSection() {
           <textarea
             name="message"
             placeholder="Your Message..."
-            rows={5}
+            rows={6}
             value={formData.message}
             onChange={handleChange}
             required
             className="input-field"
           />
         </div>
-        <button
-          type="submit"
-          className={`send-button ${status === "Message sent! ✅" ? "success" : status === "Failed to send. ❌ Server error." ? "error" : ""}`}
-        >
-          Send Message
-        </button>
+        <RainbowButton 
+            type="submit" 
+            className="block w-full text-lg font-semibold opacity-100"
+            style={{ display: "block", position: "relative" }}>
+            Send Message
+      </RainbowButton>
         {status && <p className="status-text">{status}</p>}
       </form>
     </section>
