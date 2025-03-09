@@ -1319,9 +1319,6 @@ video {
 .mb-6 {
   margin-bottom: 1.5rem;
 }
-.mb-8 {
-  margin-bottom: 2rem;
-}
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -1492,9 +1489,6 @@ video {
 .max-w-5xl {
   max-width: 64rem;
 }
-.max-w-7xl {
-  max-width: 80rem;
-}
 .max-w-\[600px\] {
   max-width: 600px;
 }
@@ -1591,9 +1585,6 @@ video {
 }
 .gap-4 {
   gap: 1rem;
-}
-.gap-6 {
-  gap: 1.5rem;
 }
 .gap-8 {
   gap: 2rem;
@@ -1712,10 +1703,6 @@ video {
 }
 .bg-foreground {
   background-color: hsl(var(--foreground));
-}
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 .bg-muted {
   background-color: hsl(var(--muted));
@@ -1951,10 +1938,6 @@ video {
 }
 .text-foreground {
   color: hsl(var(--foreground));
-}
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 .text-muted-foreground {
   color: hsl(var(--muted-foreground));
@@ -2613,19 +2596,9 @@ input, textarea, button {
   background-color: hsl(var(--foreground));
 }
 
-.dark\:bg-gray-900:is(.dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
 .dark\:text-neutral-200:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(229 229 229 / var(--tw-text-opacity));
-}
-
-.dark\:text-white:is(.dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .dark\:\[border\:1px_solid_rgba\(255\2c 255\2c 255\2c \.1\)\]:is(.dark *) {
@@ -2648,11 +2621,6 @@ input, textarea, button {
 
   .sm\:items-center {
     align-items: center;
-  }
-
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .sm\:py-24 {
@@ -2686,10 +2654,6 @@ input, textarea, button {
     width: 18rem;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2720,15 +2684,6 @@ input, textarea, button {
 }
 
 @media (min-width: 1024px) {
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 
   .lg\:text-6xl {
     font-size: 3.75rem;
