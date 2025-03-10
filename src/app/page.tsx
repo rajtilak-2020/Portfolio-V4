@@ -28,14 +28,8 @@ export default function Page() {
   delay={BLUR_FADE_DELAY}
   className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
   yOffset={8}
-  text={
-    <>
-      Hi, I'm <AuroraText className="inline-block">K Rajtilak</AuroraText>
-    </>
-  }
+  text={`Hi, I'm K Rajtilak`}
 />
-
-
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
