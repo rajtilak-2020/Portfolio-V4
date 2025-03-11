@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
-import { ProjectCard } from "@/components/project-card";
 import BlurFade from "@/components/magicui/blur-fade";
+import { AnimatedBeamDemo } from "@/components/magicui/integration";
+import Particles from "@/components/magicui/particles";
+import { ProjectCard } from "@/components/project-card";
 import { DATA } from "@/data/data";
 import Link from "next/link";
 import { useEffect, useRef } from 'react';
 import { annotate } from 'rough-notation';
-import Particles from "@/components/magicui/particles";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -55,6 +55,11 @@ const Page = () => {
             </div>
           </div>
         </BlurFade>
+
+        <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+          <AnimatedBeamDemo />
+        </BlurFade>
+
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
           {DATA.more_projects.map((project, id) => (
             <BlurFade
