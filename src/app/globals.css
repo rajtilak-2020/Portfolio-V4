@@ -204,7 +204,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 }
 
 .send-button {
-  width: 100%;
+  width: 80%;
   padding: 14px;
   background-color: rgba(0, 67, 212, 0.8);
   color: rgb(255, 255, 255);

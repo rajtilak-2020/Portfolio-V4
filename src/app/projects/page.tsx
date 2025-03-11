@@ -17,8 +17,8 @@ const Page = () => {
   useEffect(() => {
     if (recentProjectsRef.current) {
       const annotation = annotate(recentProjectsRef.current, {
-        type: 'underline',
-        color: '#3C82F6',
+        type: 'box',
+        color: '#FF0000',
         strokeWidth: 3,
       });
       annotation.show();
@@ -46,8 +46,8 @@ const Page = () => {
                 the past few years. View{" "}
                 <Link
                   href="/#projects"
-                  className="text-red-500 underline-a hover:italic"
-                  // ref={recentProjectsRef}
+                  className="text-white-500 underline-a hover:italic, hover:italic"
+                   ref={recentProjectsRef}
                 >
                   my most recent work.
                 </Link>

@@ -1263,6 +1263,12 @@ video {
 .bottom-0 {
   bottom: 0px;
 }
+.left-0 {
+  left: 0px;
+}
+.top-0 {
+  top: 0px;
+}
 .top-1\/2 {
   top: 50%;
 }
@@ -1864,6 +1870,9 @@ video {
 .stroke-gray-400\/30 {
   stroke: rgb(156 163 175 / 0.3);
 }
+.stroke-2 {
+  stroke-width: 2;
+}
 .object-contain {
   object-fit: contain;
 }
@@ -2064,10 +2073,6 @@ video {
 }
 .text-primary-foreground {
   color: hsl(var(--primary-foreground));
-}
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
@@ -2391,7 +2396,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 }
 
 .send-button {
-  width: 100%;
+  width: 80%;
   padding: 14px;
   background-color: rgba(0, 67, 212, 0.8);
   color: rgb(255, 255, 255);

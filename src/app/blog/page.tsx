@@ -37,7 +37,7 @@ export default async function BlogPage() {
         <div className="grid gap-8 md:gap-12">
           {posts.map((post, id) => (
             <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug}>
-              <MagicCard gradientSize={250} gradientFrom="#9E7AFF" gradientTo="#FE8BBB"> {/* Apply MagicCard */}
+              <MagicCard gradientSize={250} gradientFrom="#9E7AFF" gradientTo="#FE8BBB">
                 <Link className="group block" href={`/blog/${post.slug}`}>
                   <article className="relative flex flex-col md:flex-row gap-8 p-6 bg-card hover:bg-accent/50 rounded-2xl transition-all duration-300 hover:shadow-xl border border-border/50 hover:border-primary/20">
                     {post.metadata.image && (
