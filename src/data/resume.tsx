@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, ImageIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
 
@@ -59,7 +59,7 @@ export const DATA = {
     location: "Odisha, India",
     locationLink: "https://www.google.com/maps/place/india",
     description: "I am a 19yo student with expertise in Web Development, Robotics, IoT, and AI, specializing in full-stack development and cutting-edge technology integration. My projects range from IoT systems to responsive webpages, delivering innovative, efficient, and scalable results.",
-    summary: "I'm a passionate developer, freelancer, and designer currently studying Computer Science Engineering. With a strong interest in Robotics, IoT, Web Development , and Artificial Intelligence, I enjoy blending technology with creativity to build innovative solutions. I’m always curious about new technologies and constantly honing my skills to stay on top of industry trends. Whether it’s designing a sleek UI, crafting a functional backend, or experimenting with robotics, I enjoy bringing ideas to life through code. In addition to my academic work, I’ve had hands-on experience through an internship at Alpha EV, where I worked on IoT and Robotics projects, including developing a power and cost calculation system for an EV charging station and assembling an IoT-based vending machine. If you’re looking for a dedicated and versatile developer who thrives in both the technical and creative aspects of projects, feel free to get in touch. Let’s build something amazing together!",
+    summary: "I'm a passionate developer, freelancer, and designer currently studying Computer Science Engineering. With a strong interest in Robotics, IoT, Web Development , and Artificial Intelligence, I enjoy blending technology with creativity to build innovative solutions. I'm always curious about new technologies and constantly honing my skills to stay on top of industry trends. Whether it's designing a sleek UI, crafting a functional backend, or experimenting with robotics, I enjoy bringing ideas to life through code. In addition to my academic work, I've had hands-on experience through an internship at Alpha EV, where I worked on IoT and Robotics projects, including developing a power and cost calculation system for an EV charging station and assembling an IoT-based vending machine. If you're looking for a dedicated and versatile developer who thrives in both the technical and creative aspects of projects, feel free to get in touch. Let's build something amazing together!",
     avatarUrl: "/me.png",
 
     //work section
