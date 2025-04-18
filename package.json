@@ -1,6 +1,6 @@
 {
-  "name": "porfolio",
-  "version": "0.1.0",
+  "name": "K Rajtilak's Portfolio ",
+  "version": "4.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
