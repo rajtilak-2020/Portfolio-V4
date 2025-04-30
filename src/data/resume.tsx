@@ -3,7 +3,7 @@ import { HomeIcon, ImageIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
 
-    //navbar
+    //Navbar
     navbar: [
       { href: "/", icon: HomeIcon, label: "Home" },
       { href: "/blog", icon: NotebookIcon, label: "Blog" },
