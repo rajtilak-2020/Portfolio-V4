@@ -49,7 +49,7 @@ export const DATA = {
               },
             ],
       image: "",
-      video: "https://media-hosting.imagekit.io//412365c8b3d8465d/news.mp4?Expires=1833548490&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=okx8i6gVgKFaTg9wKVm~JjoFckpr1AiWTSK3dBOrz6EtRGRX3wf4-I5Lsjut4993QOvgo9SKqODGOn3fwzYoEw39Xzl5S43fkL-eTQDyKQM8v8GeDeVfOHdNgwJtiwBHhqq4j-TtGlzdWdBmN3jNjpr9tAV8bZV~7wW3nZofyzoUNQpcDoEraV1QPItaKHhGqhY5YI6mVt~CSS9ii1kLujvaiB-Vj4LS6xJ5djWvi7Nklr9cr6b8R6T6WO1Om3A~XcPSNPQF6QTtYeKy2TpJLqq4FJpj6UU7Bo3rTzEqVp~FDarwqWWk7--Bwef0XsOYuE~dz-k0eXDPsC6ZrnV~4Q__",
+      video: "https://media-hosting.imagekit.io/d9664115bce64899/news.mp4?Expires=1840708345&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=sbwxmUofY5hgt3rUWdsIfOeF~xumy0Zq2Th5~hjo-zRle8y4O9dmXP5W1l03D1l7mwiVG~tyweR9BCT75aT6eigxJWgO~IoA92-ZVDNUsnUfHUK-bjY7CGuElgPrhLq7UrhiGZ8GHhBhf2T2t1xAp2QoBePg77YN7MGfF6xA8y-NsrGd0Q~SqXFi837DGXZ-T3LRT9qzPwYI1PCG9levCItHe62Mj-kdriRCbwFbDOuXy60je7Cu79m~R-tQHBbLerRHqDtCCVdDendl96WnVbk-n4XxhegLDOuHLcgNYTIKrwnuiFvIETMhe4At8mRpZaA3m0XfkFMQIJAhKHL71w__",
     },
 
     //Project-2
