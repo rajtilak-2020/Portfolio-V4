@@ -75,6 +75,30 @@ export const DATA = {
       image: "",
       video: "",
     },
+
+    //Project-2
+    {
+      title: "#",
+      href: "#",
+      dates: "MMMM YYYY - MMMM YYYY",
+      active: true,
+      description: "Hello, World!",
+      technologies: ["#", "#","#",],
+      links: [
+                {
+                  type: "Preview",
+                  href: "#",
+                  icon: <Icons.globe className="size-3" />,
+                },
+                {
+                  type: "Source Code",
+                  href: "#",
+                  icon: <Icons.github className="size-3" />,
+                },
+      ],
+      image: "",
+      video: "",
+    },
     
   ],
 };

@@ -47,8 +47,7 @@ const Page = () => {
                 <Link
                   href="/#projects"
                   className="text-white-500 underline-a hover:italic, hover:italic"
-                   ref={recentProjectsRef}
-                >
+                  ref={recentProjectsRef}>
                   my most recent work.
                 </Link>
               </p>
@@ -64,8 +63,7 @@ const Page = () => {
           {DATA.more_projects.map((project, id) => (
             <BlurFade
               key={project.title}
-              delay={BLUR_FADE_DELAY * 11 + id * 0.05}
-            >
+              delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
               <ProjectCard
                 href={project.href}
                 key={project.title}
