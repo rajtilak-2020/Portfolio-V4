@@ -39,17 +39,11 @@ const Page = () => {
                 My Projects
               </div>
               <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
-                Explore my projects(⚠️This Page is Under Maintenance)
+                Explore my projects
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Below are the rest of the projects that I&apos;ve developed over
-                the past few years. View{" "}
-                <Link
-                  href="/#projects"
-                  className="text-white-500 underline-a hover:italic, hover:italic"
-                  ref={recentProjectsRef}>
-                  my most recent work.
-                </Link>
+                Below are the projects that I&apos;ve developed over
+                the past few years.
               </p>
             </div>
           </div>
