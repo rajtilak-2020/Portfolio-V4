@@ -76,7 +76,7 @@ export const DATA = {
       video: "",
     },
 
-    //Project-2
+    //Project-3
     {
       title: "#",
       href: "#",
