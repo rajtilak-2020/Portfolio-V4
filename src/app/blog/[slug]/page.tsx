@@ -84,7 +84,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
               className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors group"
             >
               <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-              Back to all posts
+              Back
             </Link>
 
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
