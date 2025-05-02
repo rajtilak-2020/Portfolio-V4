@@ -79,7 +79,7 @@ export default async function BlogPage() {
                           <time dateTime={post.metadata.publishedAt} className="font-medium">
                             {new Date(post.metadata.publishedAt).toLocaleDateString('en-US', {
                               year: 'numeric',
-                              month: 'long',
+                              month: 'short',
                               day: 'numeric'
                             })}
                           </time>
