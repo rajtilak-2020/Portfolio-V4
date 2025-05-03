@@ -1,15 +1,15 @@
-import { getBlogPosts, getPost } from "@/data/blog";
-import { DATA } from "@/data/resume";
-import { formatDate, formatFullDate, cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { Suspense } from "react";
-import Image from "next/image";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
 import BlurFade from "@/components/magicui/blur-fade";
 import { ShareButton } from "@/components/Sharebutton";
+import { getBlogPosts, getPost } from "@/data/blog";
+import { DATA } from "@/data/resume";
+import { cn, formatDate, formatFullDate } from "@/lib/utils";
+import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
+import type { Metadata } from "next";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Suspense } from "react";
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
@@ -52,8 +52,8 @@ export default async function Blog({ params }: { params: { slug: string } }) {
       <article className="relative min-h-screen">
         {/* Hero Section with Full-width Image */}
         {post.metadata.image && (
-          <div className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <div className="absolute inset-0">
+          <div className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] px-4 py-6">
+            <div className="absolute inset-0 rounded-2xl overflow-hidden">
               <Image
                 src={post.metadata.image}
                 fill
@@ -62,11 +62,17 @@ export default async function Blog({ params }: { params: { slug: string } }) {
                 priority
                 quality={100}
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background dark:from-background/90 dark:via-background/80 dark:to-background" />
+              <div 
+                className="absolute inset-0" 
+                style={{ 
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.85) 10%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0) 100%)',
+                  pointerEvents: 'none'
+                }}
+              />
             </div>
             <div className="relative h-full flex flex-col justify-end">
-              <div className="container max-w-4xl mx-auto px-4 pb-8 md:pb-12 lg:pb-16">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-foreground">
+              <div className="container max-w-4xl mx-auto px-6 pb-8 md:pb-12">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
                   {post.metadata.title}
                 </h1>
               </div>
