@@ -1,10 +1,10 @@
 import BlurFade from "@/components/magicui/blur-fade";
-import { getBlogPosts } from "@/data/blog";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, BookOpen } from "lucide-react";
-import Particles from "@/components/magicui/particles";
 import { MagicCard } from "@/components/magicui/magic-card";
+import Particles from "@/components/magicui/particles";
+import { getBlogPosts } from "@/data/blog";
+import { ArrowRight, BookOpen } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = {
   title: "Blog",
@@ -63,7 +63,7 @@ export default async function BlogPage() {
                         )}
                         {post.metadata.tags && (
                           <div className="flex flex-wrap gap-2">
-                            {post.metadata.tags.map((tag) => (
+                            {post.metadata.tags.slice(0, 3).map((tag) => (
                               <span
                                 key={tag}
                                 className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground hover:bg-primary/10 transition-colors duration-200"
@@ -71,6 +71,11 @@ export default async function BlogPage() {
                                 {tag}
                               </span>
                             ))}
+                            {post.metadata.tags.length > 3 && (
+                              <span className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground">
+                                +{post.metadata.tags.length - 3}
+                              </span>
+                            )}
                           </div>
                         )}
                       </div>
