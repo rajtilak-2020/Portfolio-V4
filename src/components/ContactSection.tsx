@@ -1,10 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { RainbowButton } from "@/components/magicui/rainbow-button"; // Ensure correct import
-import BlurFade from "@/components/magicui/blur-fade";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 
 const BLUR_FADE_DELAY = 0.04;
 
