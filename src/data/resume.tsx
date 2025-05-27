@@ -231,7 +231,7 @@ export const DATA = {
                 },
       ],
       image: "",
-      video: "https://media-hosting.imagekit.io/70189d5fff5e4634/compiler.mp4?Expires=1840708345&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=WthC~IwdGf5u84ZvP6GUSYHnf45pDnhe7k5oTqw6Svsdgol4T4RxsFk5sXuSaIZqZ8dHC~hM1IXwdsSiWIL65jtw3O8oQU~RsnjFvJ7j99XsZO3pe-f7B3QmavDARvHxh4y~YZpV6dMugkbyPgzfCMa6Uh4aUqNv6mBXcrl~ajPmF6JYUPN-4HqzwbH2VgWGlZbN~6GGn87D~Wip6-z4wkL0PWMHG36j6pPbe7dkCAS2vbd1w~lPIzFzrUP~GP17HYuFmqbxJG4NBUjutReMzHXMU6duo6kHnNF77tUYzC6sL8GIY8OySGpPXSP-p2kLnGUb1qmKipS4odz0ldju~A__",
+      video: "https://player.vimeo.com/video/1087639374?h=3592922f29",// to fix
     },
 
   ],
