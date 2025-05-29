@@ -5,6 +5,8 @@ import { getBlogPosts } from "@/data/blog";
 import { ArrowRight, BookOpen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { VideoText } from "@/components/magicui/video-text";
+
 
 export const metadata = {
   title: "Blog",
@@ -23,17 +25,15 @@ export default async function BlogPage() {
         <BlurFade delay={BLUR_FADE_DELAY}>
           <div className="space-y-6 mb-20 text-center">
             <div className="flex items-center justify-center">
-              <BookOpen className="h-12 w-12 text-primary mb-4" />
             </div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl xl:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/90 to-primary/70">
-              Latest Articles
+            <h1 className="relative h-[159px] w-full overflow-hidden">✰
+            <VideoText src="https://cdn.magicui.design/ocean-small.webm">Blogs</VideoText>
             </h1>
             <h2 className="max-w-2xl mx-auto text-lg text-muted-foreground md:text-xl">
               Exploring tech, life, and everything in between. Dive into a collection of thoughtfully crafted articles.
             </h2>
           </div>
         </BlurFade>
-
         <div className="grid gap-8 md:gap-12">
           {posts.map((post, id) => (
             <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug}>

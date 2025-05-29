@@ -1522,6 +1522,51 @@ video {
 .h-px {
   height: 1px;
 }
+.h-\[500px\] {
+  height: 500px;
+}
+.h-\[200px\] {
+  height: 200px;
+}
+.h-\[100px\] {
+  height: 100px;
+}
+.h-\[150px\] {
+  height: 150px;
+}
+.h-\[00px\] {
+  height: 00px;
+}
+.h-\[110px\] {
+  height: 110px;
+}
+.h-\[90px\] {
+  height: 90px;
+}
+.h-\[140px\] {
+  height: 140px;
+}
+.h-\[160px\] {
+  height: 160px;
+}
+.h-\[130px\] {
+  height: 130px;
+}
+.h-\[120px\] {
+  height: 120px;
+}
+.h-\[155px\] {
+  height: 155px;
+}
+.h-\[157px\] {
+  height: 157px;
+}
+.h-\[158px\] {
+  height: 158px;
+}
+.h-\[159px\] {
+  height: 159px;
+}
 .max-h-14 {
   max-height: 3.5rem;
 }

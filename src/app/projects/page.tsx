@@ -8,6 +8,7 @@ import { DATA } from "@/data/data";
 import Link from "next/link";
 import { useEffect, useRef } from 'react';
 import { annotate } from 'rough-notation';
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -39,11 +40,11 @@ const Page = () => {
                 My Projects
               </div>
               <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
-                Explore my projects
+                Explore <AuroraText className="font-bold">My Projects</AuroraText>
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Below are the projects that I&apos;ve developed over
-                the past few years.
+                the past few months.
               </p>
             </div>
           </div>
