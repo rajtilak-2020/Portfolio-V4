@@ -1854,6 +1854,9 @@ video {
 .border-white\/10 {
   border-color: rgb(255 255 255 / 0.1);
 }
+.border-white\/20 {
+  border-color: rgb(255 255 255 / 0.2);
+}
 .bg-background {
   background-color: hsl(var(--background));
 }
@@ -1881,6 +1884,9 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-white\/10 {
+  background-color: rgb(255 255 255 / 0.1);
 }
 .bg-white\/5 {
   background-color: rgb(255 255 255 / 0.05);
@@ -2214,6 +2220,11 @@ video {
 .shadow-\[0_0_20px_-12px_rgba\(0\2c 0\2c 0\2c 0\.8\)\] {
   --tw-shadow: 0 0 20px -12px rgba(0,0,0,0.8);
   --tw-shadow-colored: 0 0 20px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_4px_30px_rgba\(0\2c 0\2c 0\2c 0\.1\)\] {
+  --tw-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  --tw-shadow-colored: 0 4px 30px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-\[0px_2px_3px_-1px_rgba\(0\2c 0\2c 0\2c 0\.1\)\2c 0px_1px_0px_0px_rgba\(25\2c 28\2c 33\2c 0\.02\)\2c 0px_0px_0px_1px_rgba\(25\2c 28\2c 33\2c 0\.08\)\] {
@@ -2954,6 +2965,10 @@ input, textarea, button {
   display: none;
 }
 
+.dark\:border-white\/10:is(.dark *) {
+  border-color: rgb(255 255 255 / 0.1);
+}
+
 .dark\:border-white\/\[0\.2\]:is(.dark *) {
   border-color: rgb(255 255 255 / 0.2);
 }
@@ -2968,6 +2983,10 @@ input, textarea, button {
 
 .dark\:bg-transparent:is(.dark *) {
   background-color: transparent;
+}
+
+.dark\:bg-white\/5:is(.dark *) {
+  background-color: rgb(255 255 255 / 0.05);
 }
 
 .dark\:bg-\[linear-gradient\(\#fff\2c \#fff\)\2c linear-gradient\(\#fff_50\%\2c rgba\(255\2c 255\2c 255\2c 0\.6\)_80\%\2c rgba\(0\2c 0\2c 0\2c 0\)\)\2c linear-gradient\(90deg\2c hsl\(var\(--color-1\)\)\2c hsl\(var\(--color-5\)\)\2c hsl\(var\(--color-3\)\)\2c hsl\(var\(--color-4\)\)\2c hsl\(var\(--color-2\)\)\)\]:is(.dark *) {
