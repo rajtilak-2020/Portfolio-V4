@@ -1319,8 +1319,14 @@ video {
 .bottom-0 {
   bottom: 0px;
 }
+.bottom-20 {
+  bottom: 5rem;
+}
 .left-0 {
   left: 0px;
+}
+.right-5 {
+  right: 1.25rem;
 }
 .top-0 {
   top: 0px;
@@ -2210,6 +2216,11 @@ video {
   --tw-shadow-colored: 0 0 20px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-\[0px_2px_3px_-1px_rgba\(0\2c 0\2c 0\2c 0\.1\)\2c 0px_1px_0px_0px_rgba\(25\2c 28\2c 33\2c 0\.02\)\2c 0px_0px_0px_1px_rgba\(25\2c 28\2c 33\2c 0\.08\)\] {
+  --tw-shadow: 0px 2px 3px -1px rgba(0,0,0,0.1),0px 1px 0px 0px rgba(25,28,33,0.02),0px 0px 0px 1px rgba(25,28,33,0.08);
+  --tw-shadow-colored: 0px 2px 3px -1px var(--tw-shadow-color), 0px 1px 0px 0px var(--tw-shadow-color), 0px 0px 0px 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -2656,6 +2667,10 @@ input, textarea, button {
   filter: blur(calc(0.8 * 1rem));
 }
 
+.hover\:w-auto:hover {
+  width: auto;
+}
+
 .hover\:border-primary\/20:hover {
   border-color: hsl(var(--primary) / 0.2);
 }
@@ -2698,6 +2713,11 @@ input, textarea, button {
 
 .hover\:bg-white\/10:hover {
   background-color: rgb(255 255 255 / 0.1);
+}
+
+.hover\:px-4:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .hover\:italic:hover {
@@ -2784,6 +2804,10 @@ input, textarea, button {
 
 .disabled\:opacity-50:disabled {
   opacity: 0.5;
+}
+
+.group\/cal:hover .group-hover\/cal\:block {
+  display: block;
 }
 
 .group:hover .group-hover\:-translate-x-1 {
@@ -2930,12 +2954,20 @@ input, textarea, button {
   display: none;
 }
 
+.dark\:border-white\/\[0\.2\]:is(.dark *) {
+  border-color: rgb(255 255 255 / 0.2);
+}
+
 .dark\:bg-background:is(.dark *) {
   background-color: hsl(var(--background));
 }
 
 .dark\:bg-foreground:is(.dark *) {
   background-color: hsl(var(--foreground));
+}
+
+.dark\:bg-transparent:is(.dark *) {
+  background-color: transparent;
 }
 
 .dark\:bg-\[linear-gradient\(\#fff\2c \#fff\)\2c linear-gradient\(\#fff_50\%\2c rgba\(255\2c 255\2c 255\2c 0\.6\)_80\%\2c rgba\(0\2c 0\2c 0\2c 0\)\)\2c linear-gradient\(90deg\2c hsl\(var\(--color-1\)\)\2c hsl\(var\(--color-5\)\)\2c hsl\(var\(--color-3\)\)\2c hsl\(var\(--color-4\)\)\2c hsl\(var\(--color-2\)\)\)\]:is(.dark *) {
@@ -3000,6 +3032,10 @@ input, textarea, button {
 }
 
 @media (min-width: 768px) {
+
+  .md\:bottom-5 {
+    bottom: 1.25rem;
+  }
 
   .md\:block {
     display: block;
