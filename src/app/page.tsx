@@ -178,19 +178,26 @@ export default function Page() {
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to connect? Just shoot me a {" "}
-                <Link
-                  href={DATA.contact.social.Email.url}
-                  className="text-green-500 hover:italic">
-                 message with a direct question or topic
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I&apos;m always open to new opportunities and collaborations.
-              </p>
+                <span
+                  className="text-green-500 hover:italic">message with a direct question or topic</span>{" "}
+                  and I&apos;ll respond whenever I can. You can also{" "}
+                <span className="text-red-500 hover:italic">schedule a meeting directly</span> from here.
+                </p>
             </div>
             <ContactSection />
           </BlurFade>
         </div>
       </section>
-      <section></section>
+      <section className="text-center text-muted-foreground py-4 text-sm">
+      © {new Date().getFullYear()}{" "}
+      <a
+      href="https://github.com/rajtilak-2020"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-green-500 hover:bold">
+      K Rajtilak
+      </a>. All rights reserved.
+      </section>
     </main>
   );
 }

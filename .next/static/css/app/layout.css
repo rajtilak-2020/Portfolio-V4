@@ -2052,6 +2052,10 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -2177,6 +2181,10 @@ video {
 }
 .text-primary-foreground {
   color: hsl(var(--primary-foreground));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
@@ -2485,8 +2493,8 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 }
 
 .input-field:focus {
-  border-color: #888;
-  box-shadow: 0 0 10px rgba(0, 67, 212, 0.8);
+  border-color: #3e3e3e;
+  box-shadow: 0 0 5px rgba(201, 201, 201, 0.8);
 }
 
 .input-field:focus::placeholder {

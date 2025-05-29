@@ -15,9 +15,7 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
 const DEFAULT_MAGNIFICATION = 50;
 const DEFAULT_DISTANCE = 80;
 
-const dockVariants = cva(
-  "mx-auto w-max h-full p-2 flex items-end rounded-full border border-white/20 bg-white/10 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:bg-white/5 dark:border-white/10"
-);
+const dockVariants = cva("mx-auto w-max h-full p-2 flex items-end rounded-full border border-white/20 bg-white/10 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:bg-white/5 dark:border-white/10");
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   (

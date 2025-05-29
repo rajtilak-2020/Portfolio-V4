@@ -175,8 +175,8 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 }
 
 .input-field:focus {
-  border-color: #888;
-  box-shadow: 0 0 10px rgba(0, 67, 212, 0.8);
+  border-color: #3e3e3e;
+  box-shadow: 0 0 5px rgba(201, 201, 201, 0.8);
 }
 
 .input-field:focus::placeholder {

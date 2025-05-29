@@ -27,7 +27,7 @@ export default function ContactSection() {
       setStatus("Message sent successfully! ✅");
       setFormData({ name: "", email: "", message: "" });
     } else {
-      setStatus("Failed to send the message. ❌ Server error.");
+      setStatus("Failed to send the message. ❌ Please try again.");
     }
   };
 
@@ -63,7 +63,7 @@ export default function ContactSection() {
           <textarea
             name="message"
             placeholder="Your Message..."
-            rows={6}
+            rows={5}
             value={formData.message}
             onChange={handleChange}
             required
