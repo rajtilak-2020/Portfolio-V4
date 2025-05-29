@@ -188,16 +188,6 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      <section className="text-center text-muted-foreground py-4 text-sm">
-      © {new Date().getFullYear()}{" "}
-      <a
-      href="https://github.com/rajtilak-2020"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-green-500 hover:bold">
-      K Rajtilak
-      </a>. All rights reserved.
-      </section>
     </main>
   );
 }
