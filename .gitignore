@@ -1,18 +1,19 @@
-# Node modules
+# Dependency directories
 node_modules/
+.pnpm-store/
 
-# Output folders
+# Build output
 .next/
 out/
 dist/
 
-# Lock files (if you want to ignore other lock files when using pnpm)
-package-lock.json
-yarn.lock
-
-# System files
+# System and editor settings
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # Logs
 npm-debug.log*
@@ -20,25 +21,16 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Env files (important: NEVER commit secrets)
+# Environment variables
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# IDE/editor folders
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# OS-specific files
-*.swp
-*.swo
-
-# Optional: ignore pnpm-store if not needed in repo
-.pnpm-store/
-
-# TypeScript build output (if any)
+# TypeScript
 *.tsbuildinfo
+
+# Other lockfiles
+package-lock.json
+pnpm-lock.yaml
