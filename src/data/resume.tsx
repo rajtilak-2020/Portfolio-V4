@@ -159,7 +159,7 @@ export const DATA = {
                     },
           ],
           image: "",
-          video: "https://media-hosting.imagekit.io/aed6f139472547d3/robotui.mp4?Expires=1840708345&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Lr0XPedhB1VALY2-1jTaSfIfZ54XH2eVuy7pelcih2XbxEjwFIg4R5OrDPCqxjEyk6KW6pwzBEixLUNvKnNM~c0S4GZdngBaauYHXuIqO3EseUpJN1RFJ16uAVsNwBLgCqdFaSBaBCLaMyMnxG5FhXOEV-ouesvEQqVxii68IehaQfUeW5OOKHzcCt-MHjPKK--SDrVrYSqV9XAexX6MSHjXo9Q0RSFpFr957181NNSa5rT~T81h~BrOh0w5dNJqqUxzZFyS35VdomfciFyN~DNSlHIye3wjJmQzgUQNn0hd31nJdmxwpeihu3UnTlCAbT0cZxnT8YmRaJCPQNdyhw__",
+          video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/robotui.mp4",
         },
 
     //2nd project
@@ -183,7 +183,7 @@ export const DATA = {
                   },
                 ],
           image: "",
-          video: "https://media-hosting.imagekit.io/d9664115bce64899/news.mp4?Expires=1840708345&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=sbwxmUofY5hgt3rUWdsIfOeF~xumy0Zq2Th5~hjo-zRle8y4O9dmXP5W1l03D1l7mwiVG~tyweR9BCT75aT6eigxJWgO~IoA92-ZVDNUsnUfHUK-bjY7CGuElgPrhLq7UrhiGZ8GHhBhf2T2t1xAp2QoBePg77YN7MGfF6xA8y-NsrGd0Q~SqXFi837DGXZ-T3LRT9qzPwYI1PCG9levCItHe62Mj-kdriRCbwFbDOuXy60je7Cu79m~R-tQHBbLerRHqDtCCVdDendl96WnVbk-n4XxhegLDOuHLcgNYTIKrwnuiFvIETMhe4At8mRpZaA3m0XfkFMQIJAhKHL71w__",
+          video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/news.mp4",
         },
 
     //3rd project
@@ -207,7 +207,7 @@ export const DATA = {
                 },
       ],
       image: "",
-      video: "https://media-hosting.imagekit.io/2b120391d7c948c8/joke.mp4?Expires=1840708345&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=1sRq~WxdXEYBDdpcpkYPBYqSk6Gg0clZjdNL1w8go0lGqzLWwPXDeqJYE3B3KmB8FkuZCAgpaXZg-lIBwQ4Ygy1Hp20SvFHaVWEvEYp2l45yoHy5gszmpBlI2j~DAIJ~Mrj9i8Jr7Y~AJ0OZ~0RY0Ze8n83sWkJxrV66buz-uN3l5cVe~FZ87pGOLKxFMpIrGGBWub~d80QJdWNyJiLXE~AACRzRAHqRCMSbYkpPak0l-0pmFWRmv~2zmIICWyTVKAWXoUGE9F03s52xMZslfNqftXzVydHxEOFevp6U9DJptJXWGafHWHz-NdqoQD-ZrF0UkSy7MppeHgEThzsIsg__",
+      video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/joke.mp4",
     },
 
     //4th project
@@ -231,7 +231,7 @@ export const DATA = {
                 },
       ],
       image: "",
-      video: "https://player.vimeo.com/video/1087639374?h=3592922f29",// to fix
+      video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/compiler.mp4",
     },
 
   ],
