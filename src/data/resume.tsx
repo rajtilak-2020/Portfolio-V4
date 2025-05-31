@@ -159,7 +159,7 @@ export const DATA = {
                     },
           ],
           image: "",
-          video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/robotui.mp4",
+          video: "/robotui.mp4",
         },
 
     //2nd project
@@ -183,7 +183,7 @@ export const DATA = {
                   },
                 ],
           image: "",
-          video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/news.mp4",
+          video: "/news.mp4",
         },
 
     //3rd project
@@ -207,7 +207,7 @@ export const DATA = {
                 },
       ],
       image: "",
-      video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/joke.mp4",
+      video: "/joke.mp4",
     },
 
     //4th project
@@ -231,7 +231,7 @@ export const DATA = {
                 },
       ],
       image: "",
-      video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/compiler.mp4",
+      video: "/compiler.mp4",
     },
 
   ],

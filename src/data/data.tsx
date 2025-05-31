@@ -50,7 +50,7 @@ export const DATA = {
               },
             ],
       image: "",
-      video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/news.mp4",
+      video: "/news.mp4",
     },
 
     //Project-2
@@ -74,7 +74,7 @@ export const DATA = {
                 },
       ],
       image: "",
-      video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/robotui.mp4",
+      video: "/robotui.mp4",
     },
 
     //Project-3
@@ -98,7 +98,7 @@ export const DATA = {
                 },
       ],
       image: "",
-      video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/compiler.mp4",
+      video: "/compiler.mp4",
     },
 
     //Project-4
@@ -122,7 +122,7 @@ export const DATA = {
                 },
       ],
       image: "",
-      video: "https://cdn.jsdelivr.net/gh/rajtilak-2020/K-Rajtilak_s-Portfolio-V4@main/assets/videos/joke.mp4",
+      video: "/joke.mp4",
     },
     
   ],
