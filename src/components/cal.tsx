@@ -7,21 +7,19 @@ import { CalendarDays } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export function ScheduleCallFloat() {
-  const { theme } = useTheme();
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "k-rajtilak" });
       cal("ui", {
-        theme: theme === "dark" ? "dark" : "light",
         cssVarsPerTheme: {
-          dark: { "--brand-color": "#000000" },
-          light: { "--brand-color": "#000000" },
+          dark: { "--brand-color": "#ffffff" },
+          light: { "--brand-color": "#ffffff" },
         },
         hideEventTypeDetails: false,
         layout: "month_view",
       });
-    })();
-  }, [theme]);
+    });
+  },);
   return (
     <Button
       variant={"ghost"}

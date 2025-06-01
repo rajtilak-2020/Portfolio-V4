@@ -4,63 +4,18 @@ import { cn } from "@/lib/utils";
 import React, { ElementType, ReactNode, useEffect, useState } from "react";
 
 export interface VideoTextProps {
-  /**
-   * The video source URL
-   */
   src: string;
-  /**
-   * Additional className for the container
-   */
   className?: string;
-  /**
-   * Whether to autoplay the video
-   */
   autoPlay?: boolean;
-  /**
-   * Whether to mute the video
-   */
   muted?: boolean;
-  /**
-   * Whether to loop the video
-   */
   loop?: boolean;
-  /**
-   * Whether to preload the video
-   */
   preload?: "auto" | "metadata" | "none";
-  /**
-   * The content to display (will have the video "inside" it)
-   */
   children: ReactNode;
-  /**
-   * Font size for the text mask (in viewport width units)
-   * @default 10
-   */
   fontSize?: string | number;
-  /**
-   * Font weight for the text mask
-   * @default "bold"
-   */
   fontWeight?: string | number;
-  /**
-   * Text anchor for the text mask
-   * @default "middle"
-   */
   textAnchor?: string;
-  /**
-   * Dominant baseline for the text mask
-   * @default "middle"
-   */
   dominantBaseline?: string;
-  /**
-   * Font family for the text mask
-   * @default "sans-serif"
-   */
   fontFamily?: string;
-  /**
-   * The element type to render for the text
-   * @default "div"
-   */
   as?: ElementType;
 }
 
@@ -93,13 +48,11 @@ export function VideoText({
     updateSvgMask();
     window.addEventListener("resize", updateSvgMask);
     return () => window.removeEventListener("resize", updateSvgMask);
-  }, [content, fontSize, fontWeight, textAnchor, dominantBaseline, fontFamily]);
-
+  },
+  [content, fontSize, fontWeight, textAnchor, dominantBaseline, fontFamily]);
   const dataUrlMask = `url("data:image/svg+xml,${encodeURIComponent(svgMask)}")`;
-
   return (
     <Component className={cn(`relative size-full`, className)}>
-      {/* Create a container that masks the video to only show within text */}
       <div
         className="absolute inset-0 flex items-center justify-center"
         style={{
@@ -126,7 +79,6 @@ export function VideoText({
         </video>
       </div>
 
-      {/* Add a backup text element for SEO/accessibility */}
       <span className="sr-only">{content}</span>
     </Component>
   );
