@@ -111,7 +111,7 @@ npm run dev
 
 | **Dark Mode** | **Light Mode** |
 |---------------|--------------|
-| ![Dark Mode](https://github.com/user-attachments/assets/4fe7bc81-e7bd-419a-b47f-6c47b91c7481) | ![Light Mode](https://github.com/user-attachments/assets/1973c047-0b45-45e0-ba9d-fe7559cc3cab) |
+| ![Dark Mode](https://github.com/user-attachments/assets/5ec8fc81-e08b-47bb-a178-4266adafee1e) | ![Light Mode](https://github.com/user-attachments/assets/f0616c28-7d44-4817-a4ec-b097ba15a40e) |
 
 ---
 
