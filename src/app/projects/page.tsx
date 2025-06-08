@@ -4,7 +4,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { AnimatedBeamDemo } from "@/components/magicui/integration";
 import Particles from "@/components/magicui/particles";
 import { ProjectCard } from "@/components/project-card";
-import { DATA } from "@/data/data";
+import { DATA } from "@/data/project-cards";
 import Link from "next/link";
 import { useEffect, useRef } from 'react';
 import { annotate } from 'rough-notation';

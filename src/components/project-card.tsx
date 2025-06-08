@@ -45,15 +45,10 @@ export function ProjectCard({
 }: Props) {
   const { theme } = useTheme();
   return (
-    // <Card
-    //   className={
-    //     "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-    //   }
-    // >
     <Card
       className={`flex flex-col overflow-hidden border transition-all duration-300 ease-out h-full ${
-        theme === "dark" ? "hover:shadow-white" : "hover:shadow-lg"
-      }`} // Conditional class for shadow
+        theme === "dark" ? "hover:shadow-black" : "hover:shadow-lg"
+      }`}
     >
       <Link
         href={href || "#"}
@@ -66,7 +61,7 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover "
           />
         )}
         {image && (
