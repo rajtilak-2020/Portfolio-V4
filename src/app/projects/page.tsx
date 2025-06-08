@@ -1,14 +1,13 @@
 "use client";
 
+import { AuroraText } from "@/components/magicui/aurora-text";
 import BlurFade from "@/components/magicui/blur-fade";
 import { AnimatedBeamDemo } from "@/components/magicui/integration";
 import Particles from "@/components/magicui/particles";
 import { ProjectCard } from "@/components/project-card";
 import { DATA } from "@/data/project-cards";
-import Link from "next/link";
 import { useEffect, useRef } from 'react';
 import { annotate } from 'rough-notation';
-import { AuroraText } from "@/components/magicui/aurora-text";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -28,7 +27,7 @@ const Page = () => {
 
   return (
     <>
-    <Particles className="hidden md:block fixed inset-0 -z-10" quantity={100} />
+    <Particles className="md:block fixed inset-0 -z-10" quantity={100} />
 
     <section id="more_projects">
 
@@ -50,9 +49,23 @@ const Page = () => {
           </div>
         </BlurFade>
 
-        <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
-          <AnimatedBeamDemo />
-        </BlurFade>
+        <div className="flex flex-col gap-8 max-w-[800px] mx-auto">
+          <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+            <div className="h-[300px] w-full">
+              <AnimatedBeamDemo />
+            </div>
+          </BlurFade>
+          
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="h-[300px] w-full bg-background/80 rounded-lg overflow-hidden flex items-center justify-center">
+              <img 
+                src="https://raw.githubusercontent.com/rajtilak-2020/rajtilak-2020/main/profile-3d-contrib/profile-night-rainbow.svg"
+                alt="GitHub Contributions"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </BlurFade>
+        </div>
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
           {DATA.more_projects.map((project, id) => (

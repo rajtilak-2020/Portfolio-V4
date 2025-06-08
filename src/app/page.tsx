@@ -20,7 +20,7 @@ export default function Page() {
   
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <Particles className="hidden md:block fixed inset-0 -z-10" quantity={50} />   
+      <Particles className="md:block fixed inset-0 -z-10" quantity={50} />   
       <Meteors className="fixed inset-0 -z-100" number={10} />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">

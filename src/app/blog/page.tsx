@@ -20,7 +20,7 @@ export default async function BlogPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-background/95">
-      <Particles className="hidden md:block fixed inset-0 -z-10" quantity={300} />
+      <Particles className="md:block fixed inset-0 -z-10" quantity={300} />
       <section className="container max-w-5xl mx-auto px-4 py-16 sm:py-24">
         <BlurFade delay={BLUR_FADE_DELAY}>
           <div className="space-y-6 mb-20 text-center">
