@@ -1,5 +1,5 @@
 import ContactSection from "@/components/ContactSection";
-import { LocationButton } from "@/components/info-button";
+import { InfoButton } from "@/components/info-button";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Meteors } from "@/components/magicui/meteors";
@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { InteractiveHoverButton } from "@/components/magicui/IHButton";
 
 
 const BLUR_FADE_DELAY = 0.04;
@@ -42,17 +43,16 @@ export default function Page() {
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
-              
             </BlurFade>
           </div>
           <div className="flex flex-wrap gap-1 items-left justify-left">
-          <BlurFade delay={BLUR_FADE_DELAY}><LocationButton className="mt-4" /></BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY}><InfoButton className="mt-4" /></BlurFade>
           </div>
         </div>
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-        <hr className="my-3 border-gray-100" />
+        <hr className="my-1 border-black-100" />
           <h2 className="text-xl font-bold">About Me</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
@@ -110,7 +110,7 @@ export default function Page() {
         </div>
       </section>
       <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
+        <div className="flex min-h-0 flex-col gap-y-2">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
@@ -124,9 +124,9 @@ export default function Page() {
         </div>
       </section>
       <section id="projects">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-12 w-full py-1">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
-          <hr className="my-3 border-gray-100" />
+          <hr className="my-3 border-black-100" />
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -180,7 +180,8 @@ export default function Page() {
                 <span
                   className="text-green-500 hover:italic">message with a direct question or topic</span>{" "}
                   and I&apos;ll respond whenever I can. You can also{" "}
-                <span className="text-red-500 hover:italic">schedule a meeting directly</span> from here.
+                <span className="text-red-500 hover:italic">schedule a meeting directly</span> from
+                <a href="https://cal.com/k-rajtilak" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:italic"> here</a>.
                 </p>
             </div>
             <ContactSection />

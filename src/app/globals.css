@@ -282,3 +282,14 @@ input, textarea, button {
     opacity: 1;
   }
 }
+
+@keyframes rippling {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.animate-rippling {
+  animation: rippling 0.6s linear;
+}

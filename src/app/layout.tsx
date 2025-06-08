@@ -101,10 +101,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
   <TooltipProvider delayDuration={0}>
     {children}
-    <Navbar />
+      <Navbar />
   </TooltipProvider>
-</ThemeProvider>
-<ScheduleCallFloat />
+      </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
