@@ -59,7 +59,7 @@ const Page = () => {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="h-[300px] w-full bg-background/80 rounded-lg overflow-hidden flex items-center justify-center">
               <img 
-                src="https://raw.githubusercontent.com/rajtilak-2020/rajtilak-2020/main/profile-3d-contrib/profile-night-rainbow.svg"
+                src="https://raw.githubusercontent.com/rajtilak-2020/rajtilak-2020/main/profile-3d-contrib/profile-night-green.svg"
                 alt="GitHub Contributions"
                 className="w-full h-full object-contain"
               />
