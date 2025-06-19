@@ -63,11 +63,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
                 quality={100}
               />
               <div 
-                className="absolute inset-0" 
-                style={{ 
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.85) 10%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0) 100%)',
-                  pointerEvents: 'none'
-                }}
+                className="absolute inset-0 blog-hero-gradient"
               />
             </div>
             <div className="relative h-full flex flex-col justify-end">
