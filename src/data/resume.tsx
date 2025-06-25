@@ -83,7 +83,7 @@ export const DATA = {
       {
         school: "DRIEMS Polytechnic",
         href: "https://www.driemspolytechnic.org/",
-        degree: "Diploma In CSE [8.33 SGPA]",
+        degree: "Diploma In CSE [8.2 CGPA]",
         logoUrl: "/driemspoly.png",
         start: "2022",
         end: "2025",
