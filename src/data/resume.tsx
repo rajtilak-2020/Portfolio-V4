@@ -60,7 +60,7 @@ export const DATA = {
     locationLink: "https://www.google.com/maps/place/india",
     description: "I am a 19yo student with expertise in Web Development, Robotics, IoT, and AI, specializing in full-stack development and cutting-edge technology integration. My projects range from IoT systems to responsive webpages, delivering innovative, efficient, and scalable results.",
     summary: "I'm a passionate developer, freelancer, and designer currently studying Computer Science Engineering. With a strong interest in Robotics, IoT, Web Development , and Artificial Intelligence, I enjoy blending technology with creativity to build innovative solutions. I'm always curious about new technologies and constantly honing my skills to stay on top of industry trends. Whether it's designing a sleek UI, crafting a functional backend, or experimenting with robotics, I enjoy bringing ideas to life through code. In addition to my academic work, I've had hands-on experience through an internship at Alpha EV, where I worked on IoT and Robotics projects, including developing a power and cost calculation system for an EV charging station and assembling an IoT-based vending machine. If you're looking for a dedicated and versatile developer who thrives in both the technical and creative aspects of projects, feel free to get in touch. Let's build something amazing together!",
-    avatarUrl: "/me.png",
+    avatarUrl: "/me.webp",
 
     //work section
     work: [
@@ -70,7 +70,7 @@ export const DATA = {
         badges: [],
         location: "Remote",
         title: "IoT And Robotics Intern",
-        logoUrl: "/alphaev.png",
+        logoUrl: "/alphaev.webp",
         start: "1",
         end: "Month",
         description: "Made a Power and Cost Calculation system for EV Charging Station, Assembled and Tested an IoT based Vending Machine, Assembled and Tested and IoT Based Survellance Rover, Acquired Industry level knowledge on IoT and Robotics.",
@@ -81,37 +81,37 @@ export const DATA = {
     education: [
 
       {
-        school: "DRIEMS Polytechnic",
+        institute: "DRIEMS Polytechnic",
         href: "https://www.driemspolytechnic.org/",
         degree: "Diploma In CSE [8.2 CGPA]",
-        logoUrl: "/driemspoly.png",
+        logoUrl: "/driemspoly.webp",
         start: "2022",
         end: "2025",
       },
 
       {
-        school: "ST Xavier's High School",
+        institute: "ST Xavier's High School",
         href: "https://stxaviersbarabati.org/",
         degree: "Matriculation [6.5 CGPA]",
-        logoUrl: "/stxavier.png",
+        logoUrl: "/stxavier.webp",
         start: "2012",
         end: "2022",
       },
 
       {
-        school: "Sri Satya Sai School",
+        institute: "Sri Satya Sai School",
         href: "https://sathyasaischoolcuttack.in/",
         degree: "Secondary Schooling",
-        logoUrl: "/satyasai.png",
+        logoUrl: "/satyasai.webp",
         start: "2009",
         end: "2012",
       },
 
       {
-        school: "MYCA Public School",
+        institute: "MYCA Public School",
         href: "https://www.facebook.com/p/MYCA-Public-School-100076661226390/",
         degree: "Junior Schooling",
-        logoUrl: "/myca.png",
+        logoUrl: "/myca.webp",
         start: "2007",
         end: "2009",
       },

@@ -92,15 +92,15 @@ export default function Page() {
           </BlurFade>
           {DATA.education.map((education, id) => (
             <BlurFade
-              key={education.school}
+              key={education.institute}
               delay={BLUR_FADE_DELAY * 8 + id * 0.05}
             >
               <ResumeCard
-                key={education.school}
+                key={education.institute}
                 href={education.href}
                 logoUrl={education.logoUrl}
-                altText={education.school}
-                title={education.school}
+                altText={education.institute}
+                title={education.institute}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
               />
