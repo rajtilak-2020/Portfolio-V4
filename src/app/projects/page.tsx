@@ -28,9 +28,7 @@ const Page = () => {
   return (
     <>
     <Particles className="md:block fixed inset-0 -z-10" quantity={100} />
-
     <section id="more_projects">
-
       <div className="-mt-12 space-y-12 w-full py-12">
         <BlurFade delay={BLUR_FADE_DELAY * 10}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -39,10 +37,10 @@ const Page = () => {
                 Projects
               </div>
               <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
-                Explore <AuroraText className="font-bold">My Projects</AuroraText>
+                Check out <AuroraText className="font-bold">My Projects</AuroraText>
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Below are the projects that I&apos;ve developed over
+                Below are some works that I&apos;ve developed over
                 the past few months.
               </p>
             </div>
@@ -53,16 +51,6 @@ const Page = () => {
           <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
             <div className="h-[300px] w-full">
               <AnimatedBeamDemo />
-            </div>
-          </BlurFade>
-          
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="h-[300px] w-full bg-background/80 rounded-lg overflow-hidden flex items-center justify-center">
-              <img 
-                src="https://raw.githubusercontent.com/rajtilak-2020/rajtilak-2020/main/profile-3d-contrib/profile-night-green.svg"
-                alt="GitHub Contributions"
-                className="w-full h-full object-contain"
-              />
             </div>
           </BlurFade>
         </div>

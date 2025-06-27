@@ -58,22 +58,22 @@ export const DATA = {
     url: "https://krajtilak.vercel.app",
     location: "Odisha, India",
     locationLink: "https://www.google.com/maps/place/india",
-    description: "I am a 19yo student with expertise in Web Development, Robotics, IoT, and AI, specializing in full-stack development and cutting-edge technology integration. My projects range from IoT systems to responsive webpages, delivering innovative, efficient, and scalable results.",
-    summary: "I'm a passionate developer, freelancer, and designer currently studying Computer Science Engineering. With a strong interest in Robotics, IoT, Web Development , and Artificial Intelligence, I enjoy blending technology with creativity to build innovative solutions. I'm always curious about new technologies and constantly honing my skills to stay on top of industry trends. Whether it's designing a sleek UI, crafting a functional backend, or experimenting with robotics, I enjoy bringing ideas to life through code. In addition to my academic work, I've had hands-on experience through an internship at Alpha EV, where I worked on IoT and Robotics projects, including developing a power and cost calculation system for an EV charging station and assembling an IoT-based vending machine. If you're looking for a dedicated and versatile developer who thrives in both the technical and creative aspects of projects, feel free to get in touch. Let's build something amazing together!",
+    description: "I’m into building clean, functional, and creative tech whether it’s on the web or something experimental. Always exploring, always creating.🧑‍💻☕📈",
+    summary: "I’m a developer from **India** exploring the world of tech, from creative designs to cybersecurity. Always building, always learning. I enjoy crafting smooth, meaningful **digital experiences** that are both functional and fun. Tech excites me because there's always something new to create or improve. Check out my [GitHub](https://github.com/rajtilak-2020) to see what I’ve been working on. Or connect with me on [LinkedIn](https://www.linkedin.com/in/krajtilak2020) for collaborations and updates!",
     avatarUrl: "/me.webp",
 
     //work section
     work: [
       {
-        company: "Alpha EV Technologies PVT. LTD.",
+        company: "Alpha EV Technologies",
         href: "https://www.zaubacorp.com/ALPHAEV-TECHNOLOGIES-PRIVATE-LIMITED-U34300OR2019PTC032057",
         badges: [],
         location: "Remote",
-        title: "IoT And Robotics Intern",
+        title: "Internship",
         logoUrl: "/alphaev.webp",
         start: "1",
         end: "Month",
-        description: "Made a Power and Cost Calculation system for EV Charging Station, Assembled and Tested an IoT based Vending Machine, Assembled and Tested and IoT Based Survellance Rover, Acquired Industry level knowledge on IoT and Robotics.",
+        description: "Worked as an Intern, contributing to real-world tech applications in EV and automation. Built and tested IoT-based systems like smart vending machines and surveillance rovers. Gained hands-on exposure to industry-grade hardware, software tools, and project development processes.",
       },
     ],
   
@@ -83,37 +83,41 @@ export const DATA = {
       {
         institute: "DRIEMS Polytechnic",
         href: "https://www.driemspolytechnic.org/",
-        degree: "Diploma In CSE [8.2 CGPA]",
+        degree: "Diploma In CSE",
         logoUrl: "/driemspoly.webp",
         start: "2022",
         end: "2025",
+        description: "Completed a Diploma in Computer Science and Engineering with a CGPA of 8.2. Served as a Student Innovation Ambassador and represented the college at multiple state-level events. Gained hands-on experience in software development, IoT, and robotics through impactful projects and internships.",
       },
 
       {
         institute: "ST Xavier's High School",
         href: "https://stxaviersbarabati.org/",
-        degree: "Matriculation [6.5 CGPA]",
+        degree: "Matriculation",
         logoUrl: "/stxavier.webp",
         start: "2012",
         end: "2022",
+        description: "Completed matriculation with a CGPA of 6.5, emphasizing core subjects like science, mathematics, and English. Actively participated in school-level science exhibitions and computer-based learning. Built foundational academic and technical knowledge for future studies.",
       },
 
       {
         institute: "Sri Satya Sai School",
         href: "https://sathyasaischoolcuttack.in/",
-        degree: "Secondary Schooling",
+        degree: "Middle School",
         logoUrl: "/satyasai.webp",
         start: "2009",
         end: "2012",
+        description: "Received a strong grounding in secondary education, developing discipline and time management. Focused on subjects like science, mathematics, and social studies. Developed early interest in technology and logical reasoning.",
       },
 
       {
         institute: "MYCA Public School",
         href: "https://www.facebook.com/p/MYCA-Public-School-100076661226390/",
-        degree: "Junior Schooling",
+        degree: "Junior School",
         logoUrl: "/myca.webp",
         start: "2007",
         end: "2009",
+        description: "Started my academic journey here with foundational education in reading, writing, and communication. Built early curiosity through engaging classroom activities and learning games. Laid the base for academic and social skills.",
       },
 
     ],
@@ -135,105 +139,7 @@ export const DATA = {
     "Arduino",
   ],
 
-  //projects section
-  projects: [
+ 
 
-    //1st project
-    {
-          title: "Institution-Robot-UI",
-          href: "https://rajtilak-2020.github.io/Institution-Robot-UI/",
-          dates: "Jan 2024 - Feb 2024",
-          active: true,
-          description: "This project is focused on creating an interactive UI for a robot designed to operate on a college campus. The robot will be able to interact with four distinct user types: Admin, Faculty, Students, and Visitors.",
-          technologies: ["HTML", "CSS","Javascript"],
-          links: [
-                    {
-                      type: "Preview",
-                      href: "https://rajtilak-2020.github.io/Institution-Robot-UI/",
-                      icon: <Icons.globe className="size-3" />,
-                    },
-                    {
-                      type: "Source Code",
-                      href: "https://github.com/rajtilak-2020/Institution-Robot-UI.git",
-                      icon: <Icons.github className="size-3" />,
-                    },
-          ],
-          image: "",
-          video: "/robotui.mp4",
-        },
-
-    //2nd project
-        {
-          title: "News-Portal",
-          href: "https://krajtilak-news-portal.vercel.app/",
-          dates: "Jan 2025",
-          active: true,
-          description: "A responsive news portal built with modern web technologies, providing users with the latest updates in a clean and intuitive interface.",
-          technologies: ["HTML","CSS","Javascript",],
-          links: [
-                  {
-                    type: "Preview",
-                    href: "https://krajtilak-news-portal.vercel.app/",
-                    icon: <Icons.globe className="size-3" />,
-                  },
-                  {
-                    type: "Source Code",
-                    href: "https://github.com/rajtilak-2020/News-Portal.git",
-                    icon: <Icons.github className="size-3" />,
-                  },
-                ],
-          image: "",
-          video: "/news.mp4",
-        },
-
-    //3rd project
-    {
-      title: "Joke-Generator",
-      href: "https://rajtilak-2020.github.io/Joke-Generator/",
-      dates: "Feb 2024 - Mar 2024",
-      active: true,
-      description: "A Dynamic Joke Generator with a sleek and interactive user interface, designed to entertain and impress. It uses JavaScript to fetch random jokes from an API.",
-      technologies: ["HTML", "CSS","Javascript"],
-      links: [
-                {
-                  type: "Preview",
-                  href: "https://rajtilak-2020.github.io/Joke-Generator/",
-                  icon: <Icons.globe className="size-3" />,
-                },
-                {
-                  type: "Source Code",
-                  href: "https://github.com/rajtilak-2020/Joke-Generator.git",
-                  icon: <Icons.github className="size-3" />,
-                },
-      ],
-      image: "",
-      video: "/joke.mp4",
-    },
-
-    //4th project
-    {
-      title: "Web Compiler",
-      href: "https://html-cse.netlify.app/",
-      dates: "Feb 2024 - Mar 2024",
-      active: true,
-      description: "A web-based compiler designed for writing and executing HTML, CSS, and JavaScript code directly in the browser.",
-      technologies: ["HTML", "CSS","Javascript"],
-      links: [
-                {
-                  type: "Preview",
-                  href: "https://html-cse.netlify.app/",
-                  icon: <Icons.globe className="size-3" />,
-                },
-                {
-                  type: "Source Code",
-                  href: "https://github.com/rajtilak-2020/HTML-CSS-JS-compiler.git",
-                  icon: <Icons.github className="size-3" />,
-                },
-      ],
-      image: "",
-      video: "/compiler.mp4",
-    },
-
-  ],
   
 } as const;
