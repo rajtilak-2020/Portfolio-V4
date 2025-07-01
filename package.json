@@ -64,6 +64,7 @@
     "eslint": "^8.x",
     "eslint-config-next": "14.2.4",
     "jest": "^30.0.3",
+    "jest-environment-jsdom": "^30.0.2",
     "linkinator": "^3.x",
     "postcss": "^8",
     "source-map-explorer": "^2.5.3",
