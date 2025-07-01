@@ -63,15 +63,18 @@ jobs:
           echo "### ❌ Broken Links" >> "Daily audits/link-check-$DATE.md"
           jq -r '.[] | select(.state != "OK") | "- \(.state) – \(.url)"' link-report.json >> "Daily audits/link-check-$DATE.md"
 
-
-
-
-
       - name: Commit report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "Daily audits/link-check-$(date +%F).md"
-          git commit -m "Daily Link Check" || echo "No changes"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git push
+          FILE="Daily audits/link-check-$(date +%F).md"
+          
+          if [ -f "$FILE" ]; then
+            git add "$FILE"
+            git commit -m "Daily Link Check" || echo "No changes"
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+            git push
+          else
+            echo "❌ Report file not found. Skipping commit."
+          fi
+

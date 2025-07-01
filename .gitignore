@@ -33,4 +33,4 @@ yarn-error.log*
 
 # Other lockfiles
 package-lock.json
-pnpm-lock.yaml
+pnpm-lock.yamllink-report.json
