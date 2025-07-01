@@ -12,7 +12,7 @@ jobs:
         run: |
           mkdir -p "Daily audits"
           DATE=$(date +%F)
-          npm ci
+          npm install
           npx webpack --json > stats.json
           npx webpack-bundle-analyzer stats.json --mode static --report "Daily audits/bundle-size-report-$DATE.html"
       - name: Commit report
