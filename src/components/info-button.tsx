@@ -12,7 +12,7 @@ export const InfoButton = ({ className }: InfoButtonProps) => {
     <div className={cn("flex flex-wrap items-center gap-2", className)}>
       {/* Location Button with Map Link */}
       <a
-        href="https://maps.app.goo.gl/K27UNokhDKpizhuZ6"
+        href="https://maps.app.goo.gl/9SZiDJMvxfUuq5yu5"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-2 rounded-md border px-4 py-1.5 text-sm text-foreground transition-colors hover:bg-accent"
