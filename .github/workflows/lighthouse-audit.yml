@@ -41,14 +41,8 @@ jobs:
           echo "URL: https://krajtilak.vercel.app" >> "Daily audits/lighthouse-audit-$DATE.md"
           echo "" >> "Daily audits/lighthouse-audit-$DATE.md"
 
-          jq -r '
-            {
-              Performance: (.categories.performance.score * 100) | floor,
-              Accessibility: (.categories.accessibility.score * 100) | floor,
-              "Best Practices": (.categories["best-practices"].score * 100) | floor,
-              SEO: (.categories.seo.score * 100) | floor
-            } | to_entries[] | "- \(.key): \(.value)%"
-          ' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md"
+          jq -r '{Performance: ((.categories.performance.score // 0) * 100) | floor, Accessibility: ((.categories.accessibility.score // 0) * 100) | floor, "Best Practices": ((.categories["best-practices"].score // 0) * 100) | floor, SEO: ((.categories.seo.score // 0) * 100) | floor} | to_entries[] | "- \\(.key): \\(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md"
+
 
       - name: Commit the report
         run: |
