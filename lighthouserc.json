@@ -1,0 +1,16 @@
+{
+  "ci": {
+    "collect": {
+      "url": ["https://krajtilak.vercel.app"],
+      "numberOfRuns": 1,
+      "settings": {
+        "output": ["json"]
+      },
+      "outputDir": "./.lighthouseci"
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./.lighthouseci"
+    }
+  }
+}

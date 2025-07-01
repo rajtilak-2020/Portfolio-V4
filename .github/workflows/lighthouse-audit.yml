@@ -27,17 +27,13 @@ jobs:
       - name: Install Lighthouse CI CLI
         run: pnpm add -D @lhci/cli
 
-      - name: Run Lighthouse and generate Markdown report
+      - name: Run Lighthouse CI and create Markdown report
         run: |
           mkdir -p .lighthouseci
           mkdir -p "Daily audits"
           DATE=$(date +%F)
 
-          pnpm lhci collect \
-            --url=https://krajtilak.vercel.app \
-            --numberOfRuns=1 \
-            --outputPath=./.lighthouseci \
-            --settings.output=json
+          pnpm lhci autorun
 
           REPORT=$(ls .lighthouseci/*.report.json | head -n 1)
 
@@ -49,7 +45,7 @@ jobs:
             {
               Performance: (.categories.performance.score * 100) | floor,
               Accessibility: (.categories.accessibility.score * 100) | floor,
-              "Best Practices": (.categories."best-practices".score * 100) | floor,
+              "Best Practices": (.categories["best-practices"].score * 100) | floor,
               SEO: (.categories.seo.score * 100) | floor
             } | to_entries[] | "- \(.key): \(.value)%"
           ' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md"
