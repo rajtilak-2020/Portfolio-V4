@@ -33,12 +33,13 @@ jobs:
           mkdir -p "Daily audits"
           DATE=$(date +%F)
 
-          pnpm lhci autorun \
-            --collect.url=https://krajtilak.vercel.app \
-            --upload.target=filesystem \
-            --upload.outputDir="./.lighthouseci"
+          pnpm lhci collect \
+            --url=https://krajtilak.vercel.app \
+            --numberOfRuns=1 \
+            --outputPath=./.lighthouseci \
+            --settings.output=json
 
-          REPORT=$(ls .lighthouseci/lhr-*.report.json | head -n 1)
+          REPORT=$(ls .lighthouseci/*.report.json | head -n 1)
 
           echo "## Lighthouse Report – $DATE" > "Daily audits/lighthouse-audit-$DATE.md"
           echo "URL: https://krajtilak.vercel.app" >> "Daily audits/lighthouse-audit-$DATE.md"
