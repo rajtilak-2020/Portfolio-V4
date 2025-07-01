@@ -2,7 +2,7 @@ name: Daily Lighthouse Audit
 
 on:
   schedule:
-    - cron: '30 21 * * *'  # 03:00 IST
+    - cron: '30 21 * * *'  # 03:00 AM IST
   workflow_dispatch:
 
 jobs:
@@ -24,25 +24,40 @@ jobs:
           node-version: 18
           cache: 'pnpm'
 
-      - name: Install LHCI CLI locally
+      - name: Install Lighthouse CI CLI
         run: pnpm add -D @lhci/cli
 
-      - name: Run Lighthouse CI
+      - name: Run Lighthouse and generate Markdown report
         run: |
           mkdir -p .lighthouseci
           mkdir -p "Daily audits"
           DATE=$(date +%F)
+
           pnpm lhci autorun \
             --collect.url=https://krajtilak.vercel.app \
             --upload.target=filesystem \
             --upload.outputDir="./.lighthouseci"
-          mv .lighthouseci/lhr-*.html "Daily audits/lighthouse-audit-$DATE.html"
+
+          REPORT=$(ls .lighthouseci/lhr-*.report.json | head -n 1)
+
+          echo "## Lighthouse Report – $DATE" > "Daily audits/lighthouse-audit-$DATE.md"
+          echo "URL: https://krajtilak.vercel.app" >> "Daily audits/lighthouse-audit-$DATE.md"
+          echo "" >> "Daily audits/lighthouse-audit-$DATE.md"
+
+          jq -r '
+            {
+              Performance: (.categories.performance.score * 100) | floor,
+              Accessibility: (.categories.accessibility.score * 100) | floor,
+              "Best Practices": (.categories."best-practices".score * 100) | floor,
+              SEO: (.categories.seo.score * 100) | floor
+            } | to_entries[] | "- \(.key): \(.value)%"
+          ' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md"
 
       - name: Commit the report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "Daily audits/lighthouse-audit-$(date +%F).html"
+          git add "Daily audits/lighthouse-audit-$(date +%F).md"
           git commit -m "Daily Lighthouse Audit" || echo "No changes to commit"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git push
