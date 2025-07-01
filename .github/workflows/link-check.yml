@@ -2,6 +2,8 @@ name: Daily Link Check
 on:
   schedule:
     - cron: '0 22 * * *'  # 03:30 IST
+  workflow_dispatch:
+    
 jobs:
   report:
     runs-on: ubuntu-latest

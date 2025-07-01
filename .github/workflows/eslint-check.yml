@@ -2,6 +2,8 @@ name: ESLint Code Check
 on:
   schedule:
     - cron: '0 23 * * *'  # 04:30 IST
+  workflow_dispatch:
+    
 jobs:
   report:
     runs-on: ubuntu-latest

@@ -2,6 +2,7 @@ name: Code Coverage Report
 on:
   schedule:
     - cron: '0 21 * * *'  # 02:30 IST
+  workflow_dispatch:
 jobs:
   report:
     runs-on: ubuntu-latest

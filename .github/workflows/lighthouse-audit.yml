@@ -3,6 +3,7 @@ name: Daily Lighthouse Audit
 on:
   schedule:
     - cron: '30 21 * * *'  # 03:00 IST
+  workflow_dispatch:
 
 jobs:
   lighthouse-audit:

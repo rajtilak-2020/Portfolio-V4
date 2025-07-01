@@ -2,6 +2,8 @@ name: Dead Image Check
 on:
   schedule:
     - cron: '30 23 * * *'  # 05:00 IST
+  workflow_dispatch: 
+  
 jobs:
   report:
     runs-on: ubuntu-latest
