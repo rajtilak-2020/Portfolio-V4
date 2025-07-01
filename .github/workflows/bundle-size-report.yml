@@ -6,18 +6,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  report:
+  bundle-report:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js and pnpm
+      - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8 # You can change this to the version you're using
+          version: 8
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -26,18 +27,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build Next.js app with source maps
+        run: pnpm run build
+
       - name: Generate Bundle Size Report
         run: |
           mkdir -p "Daily audits"
           DATE=$(date +%F)
-          pnpm webpack --json > stats.json
-          pnpm webpack-bundle-analyzer stats.json --mode static --report "Daily audits/bundle-size-report-$DATE.html"
+          pnpm exec source-map-explorer ".next/static/chunks/*.js" --html "Daily audits/bundle-size-$DATE.html"
 
       - name: Commit Bundle Size Report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "Daily audits/bundle-size-report-$(date +%F).html"
-          git commit -m "Bundle Size Report" || echo "No changes to commit"
+          git add "Daily audits/bundle-size-$(date +%F).html"
+          git commit -m "Bundle Size Report" || echo "No changes"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git push

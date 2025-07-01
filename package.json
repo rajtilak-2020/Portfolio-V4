@@ -62,6 +62,7 @@
     "eslint-config-next": "14.2.4",
     "linkinator": "^3.x",
     "postcss": "^8",
+    "source-map-explorer": "^2.5.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "webpack": "^5.99.9",
