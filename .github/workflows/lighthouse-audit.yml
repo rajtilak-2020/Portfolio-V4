@@ -37,11 +37,18 @@ jobs:
 
           REPORT=$(ls .lighthouseci/*.report.json | head -n 1)
 
-          echo "## Lighthouse Report – $DATE" > "Daily audits/lighthouse-audit-$DATE.md"
-          echo "URL: https://krajtilak.vercel.app" >> "Daily audits/lighthouse-audit-$DATE.md"
-          echo "" >> "Daily audits/lighthouse-audit-$DATE.md"
+          echo "## Lighthouse Report – $(date +%F)" > "Daily audits/lighthouse-audit-$(date +%F).md"
+          echo "URL: https://krajtilak.vercel.app" >> "Daily audits/lighthouse-audit-$(date +%F).md"
+          echo "" >> "Daily audits/lighthouse-audit-$(date +%F).md"
 
-          jq -r '{Performance: ((.categories.performance.score // 0) * 100) | floor, Accessibility: ((.categories.accessibility.score // 0) * 100) | floor, "Best Practices": ((.categories["best-practices"].score // 0) * 100) | floor, SEO: ((.categories.seo.score // 0) * 100) | floor} | to_entries[] | "- \\(.key): \\(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md"
+          jq '
+            {
+              Performance: ((.categories.performance.score // 0) * 100) | floor,
+              Accessibility: ((.categories.accessibility.score // 0) * 100) | floor,
+              "Best Practices": ((.categories["best-practices"].score // 0) * 100) | floor,
+              SEO: ((.categories.seo.score // 0) * 100) | floor
+            } | to_entries[] | "- \(.key): \(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$(date +%F).md"
+
 
 
       - name: Commit the report
