@@ -1,0 +1,23 @@
+name: Bundle Size Report
+on:
+  schedule:
+    - cron: '30 20 * * *'  # 02:00 IST
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate bundle report
+        run: |
+          mkdir -p "Daily audits"
+          DATE=$(date +%F)
+          npm ci
+          npx webpack --json > stats.json
+          npx webpack-bundle-analyzer stats.json --mode static --report "Daily audits/bundle-size-report-$DATE.html"
+      - name: Commit report
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git add "Daily audits/bundle-size-report-$(date +%F).html"
+          git commit -m "Bundle Size Report" || echo "No changes"
+          git push

@@ -1,0 +1,32 @@
+name: Daily Lighthouse Audit
+
+on:
+  schedule:
+    - cron: '30 21 * * *'  # 03:00 IST
+
+jobs:
+  lighthouse-audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install -g @lhci/cli
+
+      - name: Run Lighthouse CI
+        run: |
+          mkdir -p .lighthouseci
+          mkdir -p "Daily audits"
+          DATE=$(date +%F)
+          lhci autorun --collect.url=https://krajtilak.vercel.app --upload.target=filesystem --upload.outputDir="./.lighthouseci"
+          mv .lighthouseci/lhr-*.html "Daily audits/lighthouse-audit-$DATE.html"
+
+      - name: Commit the report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "Daily audits/lighthouse-audit-$(date +%F).html"
+          git commit -m "Daily Lighthouse Audit" || echo "No changes to commit"
+          git push

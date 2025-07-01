@@ -1,0 +1,23 @@
+name: ESLint Code Check
+on:
+  schedule:
+    - cron: '0 23 * * *'  # 04:30 IST
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ESLint
+        run: |
+          mkdir -p "Daily audits"
+          DATE=$(date +%F)
+          npx eslint . -f json -o eslint-report.json || true
+          echo "## ESLint Report – $DATE" > "Daily audits/eslint-report-$DATE.md"
+          jq -r '.[] | .filePath + ": " + (.messages | length|tostring) + " issues"' eslint-report.json >> "Daily audits/eslint-report-$DATE.md"
+      - name: Commit report
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git add "Daily audits/eslint-report-$(date +%F).md"
+          git commit -m "ESLint Code Check" || echo "No changes"
+          git push

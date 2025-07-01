@@ -1,0 +1,26 @@
+name: Blog Content Report
+on:
+  schedule:
+    - cron: '30 19 * * *'  # 01:00 IST daily (19:30 UTC)
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate blog content report
+        run: |
+          mkdir -p "Daily audits"
+          DATE=$(date +%F)
+          OUTPUT="Daily audits/blog-content-report-$DATE.md"
+          echo "## Blog Content Report – $DATE" > "$OUTPUT"
+          echo "- Total blog posts: $(ls content/ 2>/dev/null | wc -l)" >> "$OUTPUT"
+
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "Daily audits/blog-content-report-$(date +%F).md"
+          git commit -m "Blog Content Report" || echo "No changes"
+          git push

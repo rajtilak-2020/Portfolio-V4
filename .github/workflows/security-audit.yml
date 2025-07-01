@@ -1,0 +1,24 @@
+name: Security Audit
+on:
+  schedule:
+    - cron: '0 20 * * *'  # 01:30 IST
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - name: Audit
+        run: |
+          mkdir -p "Daily audits"
+          DATE=$(date +%F)
+          npm audit --json > audit.json || true
+          echo "## Security Audit – $DATE" > "Daily audits/security-audit-$DATE.md"
+          jq -r '.metadata.vulnerabilities|to_entries|map("* \(.key): \(.value)")|.[]' audit.json >> "Daily audits/security-audit-$DATE.md"
+      - name: Commit report
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git add "Daily audits/security-audit-$(date +%F).md"
+          git commit -m "Security Audit" || echo "No changes"
+          git push
