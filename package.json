@@ -56,15 +56,16 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-responsive-masonry": "^2.6.0",
+    "cspell": "^6.x",
+    "deadlink": "^1.x",
     "eslint": "^8.x",
     "eslint-config-next": "14.2.4",
+    "linkinator": "^3.x",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
-    "cspell": "^6.x",
-    "linkinator": "^3.x",
-    "deadlink": "^1.x",
-    "webpack": "^5.x",
-    "webpack-bundle-analyzer": "^4.x"
+    "webpack": "^5.99.9",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1"
   }
 }
