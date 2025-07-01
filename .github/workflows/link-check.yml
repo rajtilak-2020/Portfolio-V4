@@ -63,8 +63,8 @@ jobs:
           echo "### ❌ Broken Links" >> "Daily audits/link-check-$DATE.md"
           jq -r '.[] | select(.state != "OK") | "- \(.state) – \(.url)"' link-report.json >> "Daily audits/link-check-$DATE.md"
 
-          - name: Commit report
-          run: |
+      - name: Commit report
+        run: |
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -81,4 +81,3 @@ jobs:
               echo "Check if your jq block is producing content."
               exit 1
             fi
-
