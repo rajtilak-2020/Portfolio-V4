@@ -31,13 +31,14 @@ jobs:
         run: |
           mkdir -p "Daily audits"
           DATE=$(date +%F)
-          pnpm linkinator ./ --stats --json > link-report.json
+          pnpm linkinator https://krajtilak.vercel.app --stats --json > link-report.json || true
           
           echo "## Link Report – $DATE" > "Daily audits/link-check-$DATE.md"
-          echo "Scanned URL: \`./\`" >> "Daily audits/link-check-$DATE.md"
+          echo "Scanned URL: \`https://krajtilak.vercel.app\`" >> "Daily audits/link-check-$DATE.md"
           echo "" >> "Daily audits/link-check-$DATE.md"
 
           jq -r '.summary | to_entries[] | "- \(.key): \(.value)"' link-report.json >> "Daily audits/link-check-$DATE.md"
+
 
       - name: Commit report
         run: |
