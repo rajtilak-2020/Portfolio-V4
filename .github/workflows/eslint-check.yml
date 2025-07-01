@@ -1,25 +1,45 @@
 name: ESLint Code Check
+
 on:
   schedule:
-    - cron: '0 23 * * *'  # 04:30 IST
+    - cron: '0 23 * * *'  # 04:30 AM IST
   workflow_dispatch:
-    
+
 jobs:
   report:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: ESLint
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run ESLint
         run: |
           mkdir -p "Daily audits"
           DATE=$(date +%F)
-          npx eslint . -f json -o eslint-report.json || true
+          pnpm eslint . -f json -o eslint-report.json || true
           echo "## ESLint Report – $DATE" > "Daily audits/eslint-report-$DATE.md"
           jq -r '.[] | .filePath + ": " + (.messages | length|tostring) + " issues"' eslint-report.json >> "Daily audits/eslint-report-$DATE.md"
+
       - name: Commit report
         run: |
-          git config user.name github-actions[bot]
-          git config user.email github-actions[bot]@users.noreply.github.com
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "Daily audits/eslint-report-$(date +%F).md"
           git commit -m "ESLint Code Check" || echo "No changes"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git push

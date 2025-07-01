@@ -50,6 +50,7 @@
     "unified": "^11.0.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.30.0",
     "@lhci/cli": "^0.15.1",
     "@tailwindcss/typography": "^0.5.13",
     "@testing-library/jest-dom": "^6.6.3",
@@ -61,8 +62,10 @@
     "@types/react-responsive-masonry": "^2.6.0",
     "cspell": "^6.x",
     "deadlink": "^1.x",
-    "eslint": "^8.x",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.4",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.3.0",
     "jest": "^30.0.3",
     "jest-environment-jsdom": "^30.0.2",
     "linkinator": "^3.x",
@@ -70,6 +73,7 @@
     "source-map-explorer": "^2.5.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
+    "typescript-eslint": "^8.35.1",
     "webpack": "^5.99.9",
     "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^6.0.1"
