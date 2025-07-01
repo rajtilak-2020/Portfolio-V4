@@ -60,7 +60,7 @@ export const DATA = {
     locationLink: "https://www.google.com/maps/place/india",
     description: "I’m into building clean, functional, and creative tech whether it’s on the web or something experimental. Always exploring, always creating.🧑‍💻☕📈",
     summary: "I’m a developer from **India** exploring the world of tech, from creative designs to cybersecurity. Always building, always learning. I enjoy crafting smooth, meaningful **digital experiences** that are both functional and fun. Tech excites me because there's always something new to create or improve. Check out my [GitHub](https://github.com/rajtilak-2020) to see what I’ve been working on. Or connect with me on [LinkedIn](https://www.linkedin.com/in/krajtilak2020) for collaborations and updates!",
-    avatarUrl: "/me.webp",
+    avatarUrl: "/raj.webp",
 
     //work section
     work: [
