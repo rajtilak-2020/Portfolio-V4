@@ -13,15 +13,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install -g @lhci/cli
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: Install LHCI CLI locally
+        run: pnpm add -D @lhci/cli
 
       - name: Run Lighthouse CI
         run: |
           mkdir -p .lighthouseci
           mkdir -p "Daily audits"
           DATE=$(date +%F)
-          lhci autorun --collect.url=https://krajtilak.vercel.app --upload.target=filesystem --upload.outputDir="./.lighthouseci"
+          pnpm lhci autorun \
+            --collect.url=https://krajtilak.vercel.app \
+            --upload.target=filesystem \
+            --upload.outputDir="./.lighthouseci"
           mv .lighthouseci/lhr-*.html "Daily audits/lighthouse-audit-$DATE.html"
 
       - name: Commit the report
@@ -30,4 +44,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "Daily audits/lighthouse-audit-$(date +%F).html"
           git commit -m "Daily Lighthouse Audit" || echo "No changes to commit"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git push
