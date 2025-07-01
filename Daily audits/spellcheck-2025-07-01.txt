@@ -1,0 +1,5 @@
+README.md:1:8 - Unknown word (Rajtilak's)
+README.md:53:16 - Unknown word (Sharebutton)
+README.md:94:6 - Unknown word (Rajtilak)
+README.md:135:22 - Unknown word (Dillion)
+README.md:135:30 - Unknown word (Verma)
