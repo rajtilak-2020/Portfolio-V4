@@ -32,14 +32,14 @@ jobs:
           mkdir -p "Daily audits"
           DATE=$(date +%F)
 
-          # Run Linkinator and write JSON result
-          pnpm linkinator https://krajtilak.vercel.app --stats --json > link-report.json || true
+          # Run linkinator in silent mode and pipe clean JSON to file
+          pnpm linkinator https://krajtilak.vercel.app --json --silent > link-report.json || true
 
           echo "## Link Report – $DATE" > "Daily audits/link-check-$DATE.md"
           echo "Scanned URL: \`https://krajtilak.vercel.app\`" >> "Daily audits/link-check-$DATE.md"
           echo "" >> "Daily audits/link-check-$DATE.md"
 
-          # Count total and broken links from JSON array
+          # Count totals
           TOTAL=$(jq length link-report.json)
           BROKEN=$(jq '[.[] | select(.state != "OK")] | length' link-report.json)
 
@@ -47,9 +47,10 @@ jobs:
           echo "- Broken Links: $BROKEN" >> "Daily audits/link-check-$DATE.md"
           echo "" >> "Daily audits/link-check-$DATE.md"
 
-          # List broken links (optional)
+          # List broken links
           echo "### ❌ Broken Links" >> "Daily audits/link-check-$DATE.md"
           jq -r '.[] | select(.state != "OK") | "- \(.state) – \(.url)"' link-report.json >> "Daily audits/link-check-$DATE.md"
+
 
 
 
