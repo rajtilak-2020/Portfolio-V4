@@ -24,22 +24,27 @@ jobs:
           node-version: 18
           cache: 'pnpm'
 
-      - name: Install Lighthouse CI CLI
-        run: pnpm add -D @lhci/cli
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Run Lighthouse CI and create Markdown report
         run: |
+          set -e
           mkdir -p .lighthouseci
           mkdir -p "Daily audits"
           DATE=$(date +%F)
 
-          pnpm lhci autorun
+          pnpm dlx lhci autorun
 
-          REPORT=$(ls .lighthouseci/*.report.json | head -n 1)
+          REPORT=$(ls -t .lighthouseci/*.report.json | head -n 1)
+          if [ ! -f "$REPORT" ]; then
+            echo "Lighthouse report not found!" >&2
+            exit 1
+          fi
 
-          echo "## Lighthouse Report – $(date +%F)" > "Daily audits/lighthouse-audit-$(date +%F).md"
-          echo "URL: https://krajtilak.vercel.app" >> "Daily audits/lighthouse-audit-$(date +%F).md"
-          echo "" >> "Daily audits/lighthouse-audit-$(date +%F).md"
+          echo "## Lighthouse Report – $DATE" > "Daily audits/lighthouse-audit-$DATE.md"
+          echo "URL: https://krajtilak.vercel.app" >> "Daily audits/lighthouse-audit-$DATE.md"
+          echo "" >> "Daily audits/lighthouse-audit-$DATE.md"
 
           jq '
             {
@@ -47,9 +52,7 @@ jobs:
               Accessibility: ((.categories.accessibility.score // 0) * 100) | floor,
               "Best Practices": ((.categories["best-practices"].score // 0) * 100) | floor,
               SEO: ((.categories.seo.score // 0) * 100) | floor
-            } | to_entries[] | "- \(.key): \(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$(date +%F).md"
-
-
+            } | to_entries[] | "- \(.key): \(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md"
 
       - name: Commit the report
         run: |
