@@ -13,16 +13,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
 
       - name: Install Dependencies
         run: pnpm install
@@ -33,7 +33,7 @@ jobs:
           DATE=$(date +%F)
           pnpm audit --json > audit.json || true
           echo "## Security Audit – $DATE" > "Daily audits/security-audit-$DATE.md"
-          jq -r '.metadata.vulnerabilities|to_entries|map("* \(.key): \(.value)")|.[]' audit.json >> "Daily audits/security-audit-$DATE.md"
+          jq -r '.metadata.vulnerabilities|to_entries|map("* \\(.key): \\(.value)")|.[]' audit.json >> "Daily audits/security-audit-$DATE.md"
 
       - name: Commit and Push Report
         run: |
