@@ -1,6 +1,6 @@
 # Blog Content Report
 
-**Last Updated:** 2025-07-02 at 14:44:54 UTC
+**Last Updated:** 2025-07-02 at 19:36:27 UTC
 
 ## Overview
 
@@ -8,11 +8,11 @@
 
 ## Recent Posts
 
+- 📄 **13-state-level-polyfest.mdx** (Modified: 2025-07-02)
+- 📄 **14-infosys-seminar.mdx** (Modified: 2025-07-02)
 - 📄 **15-study-tour-AIC-NITF.mdx** (Modified: 2025-07-02)
 - 📄 **16-diploma-completion.mdx** (Modified: 2025-07-02)
 - 📄 **17-home-server.mdx** (Modified: 2025-07-02)
-- 📄 **2-meeting-it-secretary-of-odisha.mdx** (Modified: 2025-07-02)
-- 📄 **3-odisha-technological-conclave.mdx** (Modified: 2025-07-02)
 
 ## Content Statistics
 
