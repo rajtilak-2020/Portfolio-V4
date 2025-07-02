@@ -13,103 +13,108 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'pnpm'
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install Lighthouse globally
+        run: npm install -g lighthouse
 
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v1
-
-      - name: Print LHCI config and version
-        run: |
-          echo "Printing lighthouserc.json (if exists):"
-          cat lighthouserc.json || echo "No lighthouserc.json found!"
-          echo "LHCI version:"
-          pnpm dlx lhci --version
-
-      - name: Run Lighthouse CI and create Markdown report
+      - name: Run Lighthouse and create Markdown report
         run: |
           set -e
-          mkdir -p .lighthouseci
           mkdir -p "Daily audits"
           DATE=$(date +%F)
-
-          echo "Running LHCI with explicit Chrome path..."
-          export CHROME_PATH=$(which google-chrome-stable)
-          echo "Chrome path: $CHROME_PATH"
           
-          # Run LHCI with more verbose output and error handling
-          pnpm dlx lhci autorun --verbose 2>&1 | tee lhci-output.log || {
-            echo "LHCI failed. Output:"
-            cat lhci-output.log
-            echo "Checking for any generated files:"
-            find . -name "*.json" -type f | grep -E "(lighthouse|lhci)" || echo "No lighthouse files found"
-            exit 1
+          echo "Running Lighthouse directly..."
+          lighthouse https://krajtilak.vercel.app \
+            --output=json \
+            --output-path=lighthouse-report.json \
+            --chrome-flags="--no-sandbox --disable-dev-shm-usage --disable-gpu --headless --disable-web-security" \
+            --quiet || {
+            echo "Lighthouse failed, trying with different flags..."
+            lighthouse https://krajtilak.vercel.app \
+              --output=json \
+              --output-path=lighthouse-report.json \
+              --preset=desktop \
+              --chrome-flags="--no-sandbox --headless" \
+              --quiet
           }
 
-          echo "Listing .lighthouseci directory contents:"
-          ls -la .lighthouseci/ || {
-            echo "No .lighthouseci directory found. Checking current directory:"
-            ls -la . | grep -E "(lighthouse|lhci|\.json)" || echo "No lighthouse files in current directory"
-            exit 1
-          }
-
-          # Look for any report file (more flexible pattern)
-          REPORT=$(find .lighthouseci -name "*.json" -type f | head -n 1)
-          if [ -z "$REPORT" ]; then
-            echo "No JSON report found in .lighthouseci directory!" >&2
-            echo "Contents of .lighthouseci:"
-            ls -la .lighthouseci/
+          if [ ! -f "lighthouse-report.json" ]; then
+            echo "Lighthouse report not generated!"
             exit 1
           fi
-
-          echo "Using report file: $REPORT"
 
           echo "## Lighthouse Report – $DATE" > "Daily audits/lighthouse-audit-$DATE.md"
           echo "URL: https://krajtilak.vercel.app" >> "Daily audits/lighthouse-audit-$DATE.md"
           echo "" >> "Daily audits/lighthouse-audit-$DATE.md"
 
-          # More robust JSON parsing with error handling
-          if command -v jq > /dev/null; then
-            jq -r '
-              def safe_score(s): if s == null then 0 else (s * 100) | floor end;
-              {
-                Performance: .categories.performance.score | safe_score,
-                Accessibility: .categories.accessibility.score | safe_score,
-                "Best Practices": .categories["best-practices"].score | safe_score,
-                SEO: .categories.seo.score | safe_score
-              } | to_entries[] | "- \(.key): \(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md" || {
-              echo "Failed to parse JSON with jq. Report content:" >&2
-              head -20 "$REPORT" >&2
-              exit 1
+          # Extract scores using Node.js
+          node -e "
+            const fs = require('fs');
+            try {
+              const report = JSON.parse(fs.readFileSync('lighthouse-report.json', 'utf8'));
+              const categories = report.categories;
+              
+              if (!categories) {
+                console.log('- Error: No categories found in report');
+                process.exit(1);
+              }
+              
+              const scores = {
+                'Performance': Math.floor((categories.performance?.score || 0) * 100),
+                'Accessibility': Math.floor((categories.accessibility?.score || 0) * 100),
+                'Best Practices': Math.floor((categories['best-practices']?.score || 0) * 100),
+                'SEO': Math.floor((categories.seo?.score || 0) * 100)
+              };
+              
+              Object.entries(scores).forEach(([key, value]) => {
+                console.log(\`- \${key}: \${value}%\`);
+              });
+              
+              // Add some key metrics
+              const metrics = report.audits;
+              if (metrics['first-contentful-paint']) {
+                console.log(\`- First Contentful Paint: \${Math.round(metrics['first-contentful-paint'].numericValue)}ms\`);
+              }
+              if (metrics['largest-contentful-paint']) {
+                console.log(\`- Largest Contentful Paint: \${Math.round(metrics['largest-contentful-paint'].numericValue)}ms\`);
+              }
+              if (metrics['cumulative-layout-shift']) {
+                console.log(\`- Cumulative Layout Shift: \${metrics['cumulative-layout-shift'].numericValue.toFixed(3)}\`);
+              }
+              
+            } catch (error) {
+              console.log('- Error parsing report:', error.message);
+              process.exit(1);
             }
-          else
-            echo "jq not available, cannot parse scores" >> "Daily audits/lighthouse-audit-$DATE.md"
-          fi
+          " >> "Daily audits/lighthouse-audit-$DATE.md"
 
           echo "" >> "Daily audits/lighthouse-audit-$DATE.md"
           echo "Report generated at: $(date)" >> "Daily audits/lighthouse-audit-$DATE.md"
 
+          # Clean up
+          rm lighthouse-report.json
+
       - name: Commit the report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           DATE=$(date +%F)
+          
           if [ -f "Daily audits/lighthouse-audit-$DATE.md" ]; then
             git add "Daily audits/lighthouse-audit-$DATE.md"
-            git commit -m "Daily Lighthouse Audit - $DATE" || echo "No changes to commit"
-            git push
+            if git diff --staged --quiet; then
+              echo "No changes to commit"
+            else
+              git commit -m "Daily Lighthouse Audit - $DATE"
+              git push
+            fi
           else
             echo "Report file not found, nothing to commit"
             exit 1
