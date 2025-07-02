@@ -33,7 +33,7 @@ jobs:
           DATE=$(date +%F)
           pnpm audit --json > audit.json || true
           echo "## Security Audit – $DATE" > "Daily audits/security-audit-$DATE.md"
-          jq -r '.metadata.vulnerabilities|to_entries|map("* \\(.key): \\(.value)")|.[]' audit.json >> "Daily audits/security-audit-$DATE.md"
+          jq -r '.metadata.vulnerabilities | to_entries | map("* \(.key): \(.value)") | .[]' audit.json >> "Daily audits/security-audit-$DATE.md"
 
       - name: Commit and Push Report
         run: |
