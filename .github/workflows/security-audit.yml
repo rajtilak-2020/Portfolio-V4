@@ -1,22 +1,37 @@
 name: Security Audit
+
 on:
   schedule:
-    - cron: '0 20 * * *'  # 01:30 IST
+    - cron: '0 20 * * *'  # Runs daily at 01:30 AM IST (20:00 UTC)
   workflow_dispatch:
-    
+
 jobs:
   report:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci
-      - name: Audit
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # or your preferred Node version
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run audit and save report
         run: |
           mkdir -p "Daily audits"
           DATE=$(date +%F)
-          npm audit --json > audit.json || true
+          pnpm audit --json > audit.json || true
           echo "## Security Audit – $DATE" > "Daily audits/security-audit-$DATE.md"
           jq -r '.metadata.vulnerabilities|to_entries|map("* \(.key): \(.value)")|.[]' audit.json >> "Daily audits/security-audit-$DATE.md"
+
       - name: Commit report
         run: |
           git config user.name github-actions[bot]
