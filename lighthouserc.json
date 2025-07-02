@@ -1,16 +1,13 @@
 {
   "ci": {
     "collect": {
-      "url": ["https://krajtilak.vercel.app"],
-      "numberOfRuns": 1,
-      "settings": {
-        "output": ["json"]
-      },
-      "outputDir": "./.lighthouseci"
+      "url": ["https://krajtilak.vercel.app"]
+    },
+    "assert": {
+      "assertions": {}
     },
     "upload": {
-      "target": "filesystem",
-      "outputDir": "./.lighthouseci"
+      "target": "filesystem"
     }
   }
 }

@@ -27,6 +27,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Print LHCI config and version
+        run: |
+          echo "Printing lighthouserc.json (if exists):"
+          cat lighthouserc.json || echo "No lighthouserc.json found!"
+          echo "LHCI version:"
+          pnpm dlx lhci --version
+
       - name: Run Lighthouse CI and create Markdown report
         run: |
           set -e
@@ -35,7 +42,7 @@ jobs:
           DATE=$(date +%F)
 
           echo "Running LHCI..."
-          pnpm dlx lhci autorun || { echo "LHCI failed"; exit 1; }
+          pnpm dlx lhci autorun --verbose || { echo "LHCI failed"; exit 1; }
 
           echo "Listing .lighthouseci directory contents:"
           ls -l .lighthouseci || true
