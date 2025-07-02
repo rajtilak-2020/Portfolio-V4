@@ -2,7 +2,7 @@ name: Security Audit
 
 on:
   schedule:
-    - cron: '0 20 * * *'  # Runs daily at 01:30 AM IST (20:00 UTC)
+    - cron: '0 20 * * *'  # Runs daily at 01:30 AM IST
   workflow_dispatch:
 
 jobs:
@@ -10,21 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js with pnpm
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # or your preferred Node version
+          node-version: '20'
           cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Install pnpm (official)
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8 # or your preferred version
+          run_install: true
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Run audit and save report
+      - name: Run audit and generate report
         run: |
           mkdir -p "Daily audits"
           DATE=$(date +%F)
