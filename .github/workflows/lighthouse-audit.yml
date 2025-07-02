@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
+
       - name: Print LHCI config and version
         run: |
           echo "Printing lighthouserc.json (if exists):"
@@ -41,35 +44,73 @@ jobs:
           mkdir -p "Daily audits"
           DATE=$(date +%F)
 
-          echo "Running LHCI..."
-          pnpm dlx lhci autorun --verbose || { echo "LHCI failed"; exit 1; }
+          echo "Running LHCI with explicit Chrome path..."
+          export CHROME_PATH=$(which google-chrome-stable)
+          echo "Chrome path: $CHROME_PATH"
+          
+          # Run LHCI with more verbose output and error handling
+          pnpm dlx lhci autorun --verbose 2>&1 | tee lhci-output.log || {
+            echo "LHCI failed. Output:"
+            cat lhci-output.log
+            echo "Checking for any generated files:"
+            find . -name "*.json" -type f | grep -E "(lighthouse|lhci)" || echo "No lighthouse files found"
+            exit 1
+          }
 
           echo "Listing .lighthouseci directory contents:"
-          ls -l .lighthouseci || true
+          ls -la .lighthouseci/ || {
+            echo "No .lighthouseci directory found. Checking current directory:"
+            ls -la . | grep -E "(lighthouse|lhci|\.json)" || echo "No lighthouse files in current directory"
+            exit 1
+          }
 
-          REPORT=$(ls -t .lighthouseci/*.report.json | head -n 1)
-          if [ ! -f "$REPORT" ]; then
-            echo "Lighthouse report not found!" >&2
+          # Look for any report file (more flexible pattern)
+          REPORT=$(find .lighthouseci -name "*.json" -type f | head -n 1)
+          if [ -z "$REPORT" ]; then
+            echo "No JSON report found in .lighthouseci directory!" >&2
+            echo "Contents of .lighthouseci:"
+            ls -la .lighthouseci/
             exit 1
           fi
+
+          echo "Using report file: $REPORT"
 
           echo "## Lighthouse Report – $DATE" > "Daily audits/lighthouse-audit-$DATE.md"
           echo "URL: https://krajtilak.vercel.app" >> "Daily audits/lighthouse-audit-$DATE.md"
           echo "" >> "Daily audits/lighthouse-audit-$DATE.md"
 
-          jq '
-            {
-              Performance: ((.categories.performance.score // 0) * 100) | floor,
-              Accessibility: ((.categories.accessibility.score // 0) * 100) | floor,
-              "Best Practices": ((.categories["best-practices"].score // 0) * 100) | floor,
-              SEO: ((.categories.seo.score // 0) * 100) | floor
-            } | to_entries[] | "- \\(.key): \\(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md"
+          # More robust JSON parsing with error handling
+          if command -v jq > /dev/null; then
+            jq -r '
+              def safe_score(s): if s == null then 0 else (s * 100) | floor end;
+              {
+                Performance: .categories.performance.score | safe_score,
+                Accessibility: .categories.accessibility.score | safe_score,
+                "Best Practices": .categories["best-practices"].score | safe_score,
+                SEO: .categories.seo.score | safe_score
+              } | to_entries[] | "- \(.key): \(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md" || {
+              echo "Failed to parse JSON with jq. Report content:" >&2
+              head -20 "$REPORT" >&2
+              exit 1
+            }
+          else
+            echo "jq not available, cannot parse scores" >> "Daily audits/lighthouse-audit-$DATE.md"
+          fi
+
+          echo "" >> "Daily audits/lighthouse-audit-$DATE.md"
+          echo "Report generated at: $(date)" >> "Daily audits/lighthouse-audit-$DATE.md"
 
       - name: Commit the report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "Daily audits/lighthouse-audit-$(date +%F).md"
-          git commit -m "Daily Lighthouse Audit" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git push
+          
+          DATE=$(date +%F)
+          if [ -f "Daily audits/lighthouse-audit-$DATE.md" ]; then
+            git add "Daily audits/lighthouse-audit-$DATE.md"
+            git commit -m "Daily Lighthouse Audit - $DATE" || echo "No changes to commit"
+            git push
+          else
+            echo "Report file not found, nothing to commit"
+            exit 1
+          fi

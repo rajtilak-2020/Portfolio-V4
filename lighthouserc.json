@@ -1,13 +1,18 @@
 {
   "ci": {
     "collect": {
-      "url": ["https://krajtilak.vercel.app"]
+      "url": ["https://krajtilak.vercel.app"],
+      "numberOfRuns": 1,
+      "settings": {
+        "chromeFlags": "--no-sandbox --disable-dev-shm-usage --disable-gpu --headless"
+      }
     },
     "assert": {
       "assertions": {}
     },
     "upload": {
-      "target": "filesystem"
+      "target": "filesystem",
+      "outputDir": ".lighthouseci"
     }
   }
 }
