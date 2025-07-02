@@ -1,8 +1,9 @@
-name: Security Audit
+name: Automated Security Audit
 
 on:
   schedule:
-    - cron: '0 20 * * *'  # Runs daily at 01:30 AM IST
+    
+    - cron: '30 21 * * *'  # 03:00 AM IST
   workflow_dispatch:
 
 jobs:

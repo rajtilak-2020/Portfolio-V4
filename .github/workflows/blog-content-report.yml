@@ -1,7 +1,7 @@
 name: Blog Content Report
 on:
   schedule:
-    - cron: '30 19 * * *'  # 01:00 IST daily (19:30 UTC)
+    - cron: '30 19 * * *'  # 01:00 AM IST
   workflow_dispatch:
     
 jobs:
