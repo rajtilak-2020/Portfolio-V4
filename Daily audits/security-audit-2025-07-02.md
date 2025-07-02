@@ -1,6 +1,6 @@
 ## Security Audit – 2025-07-02
-* \(.key): \(.value)
-* \(.key): \(.value)
-* \(.key): \(.value)
-* \(.key): \(.value)
-* \(.key): \(.value)
+* info: 0
+* low: 2
+* moderate: 5
+* high: 2
+* critical: 1
