@@ -2,7 +2,7 @@ name: Security Audit
 
 on:
   schedule:
-    - cron: '0 20 * * *'  # Runs daily at 01:30 AM IST
+    - cron: '0 20 * * *'  # 01:30 AM IST
   workflow_dispatch:
 
 jobs:
@@ -10,23 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js with pnpm
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
           cache: 'pnpm'
-          cache-dependency-path: '**/pnpm-lock.yaml'
 
-      - name: Install pnpm (official)
+      - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8 # or your preferred version
+          version: 8
           run_install: true
 
-      - name: Run audit and generate report
+      - name: Run pnpm audit and generate report
         run: |
           mkdir -p "Daily audits"
           DATE=$(date +%F)
@@ -34,7 +33,7 @@ jobs:
           echo "## Security Audit – $DATE" > "Daily audits/security-audit-$DATE.md"
           jq -r '.metadata.vulnerabilities|to_entries|map("* \(.key): \(.value)")|.[]' audit.json >> "Daily audits/security-audit-$DATE.md"
 
-      - name: Commit report
+      - name: Commit and push report
         run: |
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
