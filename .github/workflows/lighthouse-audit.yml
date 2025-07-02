@@ -34,7 +34,11 @@ jobs:
           mkdir -p "Daily audits"
           DATE=$(date +%F)
 
-          pnpm dlx lhci autorun
+          echo "Running LHCI..."
+          pnpm dlx lhci autorun || { echo "LHCI failed"; exit 1; }
+
+          echo "Listing .lighthouseci directory contents:"
+          ls -l .lighthouseci || true
 
           REPORT=$(ls -t .lighthouseci/*.report.json | head -n 1)
           if [ ! -f "$REPORT" ]; then
@@ -52,7 +56,7 @@ jobs:
               Accessibility: ((.categories.accessibility.score // 0) * 100) | floor,
               "Best Practices": ((.categories["best-practices"].score // 0) * 100) | floor,
               SEO: ((.categories.seo.score // 0) * 100) | floor
-            } | to_entries[] | "- \(.key): \(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md"
+            } | to_entries[] | "- \\(.key): \\(.value)%"' "$REPORT" >> "Daily audits/lighthouse-audit-$DATE.md"
 
       - name: Commit the report
         run: |
