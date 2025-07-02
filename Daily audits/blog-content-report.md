@@ -1,6 +1,6 @@
 # Blog Content Report
 
-**Last Updated:** 2025-07-02 at 13:36:48 UTC
+**Last Updated:** 2025-07-02 at 14:44:54 UTC
 
 ## Overview
 
@@ -8,11 +8,11 @@
 
 ## Recent Posts
 
+- 📄 **15-study-tour-AIC-NITF.mdx** (Modified: 2025-07-02)
+- 📄 **16-diploma-completion.mdx** (Modified: 2025-07-02)
+- 📄 **17-home-server.mdx** (Modified: 2025-07-02)
+- 📄 **2-meeting-it-secretary-of-odisha.mdx** (Modified: 2025-07-02)
 - 📄 **3-odisha-technological-conclave.mdx** (Modified: 2025-07-02)
-- 📄 **4-driems-hackathon.mdx** (Modified: 2025-07-02)
-- 📄 **5-featured-in-sambad-newspaper.mdx** (Modified: 2025-07-02)
-- 📄 **6-student-ambassador-letsupgrade.mdx** (Modified: 2025-07-02)
-- 📄 **7-ugv-robot.mdx** (Modified: 2025-07-02)
 
 ## Content Statistics
 
