@@ -2,6 +2,7 @@ name: Automated Security Audit
 
 on:
   schedule:
+    
     - cron: '30 21 * * *'  # 03:00 AM IST
   workflow_dispatch:
 
@@ -31,32 +32,14 @@ jobs:
         run: |
           mkdir -p "Daily audits"
           DATE=$(date +%F)
-          TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S UTC')
-          
           pnpm audit --json > audit.json || true
-          
-          # Always update the same file
-          echo "# Security Audit Report" > "Daily audits/security-audit.md"
-          echo "**Last Updated:** $TIMESTAMP" >> "Daily audits/security-audit.md"
-          echo "" >> "Daily audits/security-audit.md"
-          
-          # Check if there are vulnerabilities
-          VULN_COUNT=$(jq '.metadata.vulnerabilities | add' audit.json 2>/dev/null || echo "0")
-          
-          if [ "$VULN_COUNT" -gt 0 ]; then
-            echo "## ⚠️ Vulnerabilities Found" >> "Daily audits/security-audit.md"
-            echo "" >> "Daily audits/security-audit.md"
-            jq -r '.metadata.vulnerabilities | to_entries | map("* **\(.key | ascii_upcase)**: \(.value) issue(s)") | .[]' audit.json >> "Daily audits/security-audit.md"
-          else
-            echo "## ✅ No Vulnerabilities Found" >> "Daily audits/security-audit.md"
-            echo "" >> "Daily audits/security-audit.md"
-            echo "All dependencies are secure!" >> "Daily audits/security-audit.md"
-          fi
+          echo "## Security Audit – $DATE" > "Daily audits/security-audit-$DATE.md"
+          jq -r '.metadata.vulnerabilities | to_entries | map("* \(.key): \(.value)") | .[]' audit.json >> "Daily audits/security-audit-$DATE.md"
 
       - name: Commit and Push Report
         run: |
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
-          git add "Daily audits/security-audit.md"
-          git commit -m "Update Security Audit - $(date +%F)" || echo "No changes to commit"
+          git add "Daily audits/security-audit-$(date +%F).md"
+          git commit -m "Security Audit - $(date +%F)" || echo "No changes to commit"
           git push
