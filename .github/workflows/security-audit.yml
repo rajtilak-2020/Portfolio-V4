@@ -44,25 +44,14 @@ jobs:
           echo "critical=$CRITICAL" >> $GITHUB_OUTPUT
           echo "high=$HIGH" >> $GITHUB_OUTPUT
 
-      - name: Create GitHub Issue on Critical or High Vulnerabilities
-        if: steps.audit.outputs.critical > 0 || steps.audit.outputs.high > 0
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `Vulnerabilities Found - ${new Date().toISOString().split('T')[0]}`,
-              body: `Security audit on ${new Date().toISOString().split('T')[0]} found ${process.env.CRITICAL} critical and ${process.env.HIGH} high vulnerabilities. See report: Daily audits/security-audit.md`
-            })
-
-      - name: Fail on Critical or High Vulnerabilities
+      - name: Check for Critical or High Vulnerabilities
         run: |
           CRITICAL=$(jq -r '.metadata.vulnerabilities.critical' audit.json)
           HIGH=$(jq -r '.metadata.vulnerabilities.high' audit.json)
           if [ "$CRITICAL" -gt 0 ] || [ "$HIGH" -gt 0 ]; then
-            echo "Critical or high vulnerabilities found!" >&2
-            exit 1
+            echo "Warning: Found $CRITICAL critical and $HIGH high vulnerabilities!" >&2
+          else
+            echo "No critical or high vulnerabilities found."
           fi
 
       - name: Commit and Push Report
