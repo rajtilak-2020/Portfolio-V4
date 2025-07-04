@@ -2,7 +2,6 @@ name: Automated Security Audit
 
 on:
   schedule:
-    
     - cron: '30 21 * * *'  # 03:00 AM IST
   workflow_dispatch:
 
@@ -28,18 +27,56 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Run pnpm audit and generate markdown report
+      - name: Run pnpm audit and update markdown report
+        id: audit
         run: |
           mkdir -p "Daily audits"
           DATE=$(date +%F)
           pnpm audit --json > audit.json || true
-          echo "## Security Audit – $DATE" > "Daily audits/security-audit-$DATE.md"
-          jq -r '.metadata.vulnerabilities | to_entries | map("* \(.key): \(.value)") | .[]' audit.json >> "Daily audits/security-audit-$DATE.md"
+          echo -e "\n## Security Audit – $DATE" >> "Daily audits/security-audit.md"
+          echo "| Severity | Count |" >> "Daily audits/security-audit.md"
+          echo "|----------|-------|" >> "Daily audits/security-audit.md"
+          jq -r '.metadata.vulnerabilities | to_entries | map("| \(.key) | \(.value) |") | .[]' audit.json >> "Daily audits/security-audit.md"
+          echo -e "\n### Details" >> "Daily audits/security-audit.md"
+          jq -r '.advisories | to_entries | map("**Advisory \(.key)**: \(.value.title)\n  - Package: \(.value.module_name)\n  - Severity: \(.value.severity)\n  - CVE: \(.value.cve)\n  - Recommendation: \(.value.recommendation)\n") | .[]' audit.json >> "Daily audits/security-audit.md"
+          CRITICAL=$(jq -r '.metadata.vulnerabilities.critical' audit.json)
+          HIGH=$(jq -r '.metadata.vulnerabilities.high' audit.json)
+          echo "critical=$CRITICAL" >> $GITHUB_OUTPUT
+          echo "high=$HIGH" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Issue on Critical or High Vulnerabilities
+        if: steps.audit.outputs.critical > 0 || steps.audit.outputs.high > 0
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Vulnerabilities Found - ${new Date().toISOString().split('T')[0]}`,
+              body: `Security audit on ${new Date().toISOString().split('T')[0]} found ${process.env.CRITICAL} critical and ${process.env.HIGH} high vulnerabilities. See report: Daily audits/security-audit.md`
+            })
+
+      - name: Fail on Critical or High Vulnerabilities
+        run: |
+          CRITICAL=$(jq -r '.metadata.vulnerabilities.critical' audit.json)
+          HIGH=$(jq -r '.metadata.vulnerabilities.high' audit.json)
+          if [ "$CRITICAL" -gt 0 ] || [ "$HIGH" -gt 0 ]; then
+            echo "Critical or high vulnerabilities found!" >&2
+            exit 1
+          fi
 
       - name: Commit and Push Report
         run: |
-          git config user.name github-actions[bot]
-          git config user.email github-actions[bot]@users.noreply.github.com
-          git add "Daily audits/security-audit-$(date +%F).md"
-          git commit -m "Security Audit - $(date +%F)" || echo "No changes to commit"
+          git config user.name "rajtilak-2020"
+          git config user.email "rajtilak1062020@gmail.com"
+          git add "Daily audits/security-audit.md"
+          git commit -m "Update Security Audit - $(date +%F)"
           git push
+
+      - name: Upload Audit Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-audit-${{ env.DATE }}
+          path: |
+            audit.json
+            Daily audits/security-audit.md
