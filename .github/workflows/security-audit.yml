@@ -27,6 +27,12 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Attempt Automatic Fixes
+        run: |
+          pnpm audit --fix || true
+          git add package.json pnpm-lock.yaml
+          git commit -m "Apply pnpm audit fixes - $(date +%F)" || true
+
       - name: Run pnpm audit and update markdown report
         id: audit
         run: |
@@ -38,7 +44,7 @@ jobs:
           echo "|----------|-------|" >> "Daily audits/security-audit.md"
           jq -r '.metadata.vulnerabilities | to_entries | map("| \(.key) | \(.value) |") | .[]' audit.json >> "Daily audits/security-audit.md"
           echo -e "\n### Details" >> "Daily audits/security-audit.md"
-          jq -r '.advisories | to_entries | map("**Advisory \(.key)**: \(.value.title)\n  - Package: \(.value.module_name)\n  - Severity: \(.value.severity)\n  - CVE: \(.value.cve)\n  - Recommendation: \(.value.recommendation)\n") | .[]' audit.json >> "Daily audits/security-audit.md"
+          jq -r '.advisories | to_entries | map("**Advisory \(.key)**: \(.value.title)\n  - Package: \(.value.module_name)\n  - Severity: \(.value.severity)\n  - Advisory ID: \(.key)\n  - Advisory URL: https://www.npmjs.com/advisories/\(.key)\n  - Recommendation: \(.value.recommendation)\n") | .[]' audit.json >> "Daily audits/security-audit.md"
           CRITICAL=$(jq -r '.metadata.vulnerabilities.critical' audit.json)
           HIGH=$(jq -r '.metadata.vulnerabilities.high' audit.json)
           echo "critical=$CRITICAL" >> $GITHUB_OUTPUT
