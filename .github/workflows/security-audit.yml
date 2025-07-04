@@ -27,12 +27,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Attempt Automatic Fixes
-        run: |
-          pnpm audit --fix || true
-          git add package.json pnpm-lock.yaml
-          git commit -m "Apply pnpm audit fixes - $(date +%F)" || true
-
       - name: Run pnpm audit and update markdown report
         id: audit
         run: |
