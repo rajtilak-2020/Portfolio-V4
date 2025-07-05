@@ -59,7 +59,7 @@ jobs:
           git config user.name "rajtilak-2020"
           git config user.email "rajtilak1062020@gmail.com"
           git add "Daily audits/security-audit.md"
-          git commit -m "Update Security Audit - $(date +%F)"
+          git commit -m "Automated Security Audit - $(date +%F)"
           git push
 
       - name: Upload Audit Reports
