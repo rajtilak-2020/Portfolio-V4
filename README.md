@@ -128,20 +128,18 @@ graph TD;
 
 ### Main Directories
 - **`content/`** – Stores .mdx blog posts and project documentation
-- **`public/`** – Static assets including images, icons, and favicons
+- **`public/`** – Static assets including images, videos, and preview
 - **`src/app/`** – Main application logic, routing, and page components
 - **`src/components/`** – Modular UI components organized by functionality
-- **`src/data/`** – Data files for blog, resume, projects, and skills
+- **`src/data/`** – Data files for blog, resume and projects
 - **`src/lib/`** – Utility functions and helper modules
-- **`src/types/`** – TypeScript type definitions
-- **`src/hooks/`** – Custom React hooks
+
 
 ### Configuration Files
 - **`tailwind.config.ts`** – Tailwind CSS configuration with custom theme
 - **`next.config.mjs`** – Next.js configuration with optimizations
 - **`tsconfig.json`** – TypeScript configuration
 - **`package.json`** – Project dependencies and scripts
-- **`.env.example`** – Environment variables template
 
 ---
 
@@ -251,8 +249,8 @@ NEXT_PUBLIC_ANALYTICS_ID=your-analytics-id
 3. Write your content using MDX syntax
 
 #### Projects
-1. Update `src/data/projects.ts` with project information
-2. Add project images to `public/images/projects/`
+1. Update `src/data/project-cards.tsx` with project information
+2. Add project images to `/public`
 3. Optionally create detailed project pages
 
 ### Styling
@@ -262,8 +260,7 @@ NEXT_PUBLIC_ANALYTICS_ID=your-analytics-id
 
 ### Configuration
 - Update site metadata in `src/app/layout.tsx`
-- Modify navigation in `src/components/Navbar.tsx`
-- Customize footer in `src/components/Footer.tsx`
+- Modify navigation in `src/components/magicui/navbar.tsx`
 
 ---
 
@@ -391,7 +388,7 @@ See the [LICENSE](./LICENSE) file for details.
 
 ## 🙏 Credits
 
-- Special thanks to [Dillion Verma](https://github.com/dillionverma/portfolio) for his base template!
+- Special thanks to [Dillion Verma](https://github.com/dillionverma/) for his base template!
 - Icons by [Lucide](https://lucide.dev/)
 - Animations by [Magic UI](https://magicui.design/)
 - UI Components by [ShadCN/UI](https://ui.shadcn.com/)
