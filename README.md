@@ -260,7 +260,7 @@ NEXT_PUBLIC_ANALYTICS_ID=your-analytics-id
 
 ### Configuration
 - Update site metadata in `src/app/layout.tsx`
-- Modify navigation in `src/components/magicui/navbar.tsx`
+- Modify navigation in `src/components/navbar.tsx`
 
 ---
 
