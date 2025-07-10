@@ -435,3 +435,35 @@
   - Advisory URL: https://www.npmjs.com/advisories/1097682
   - Recommendation: Upgrade to version 4.1.3 or later
 
+
+## Security Audit – 2025-07-10
+| Severity | Count |
+|----------|-------|
+| info | 0 |
+| low | 0 |
+| moderate | 3 |
+| high | 0 |
+| critical | 0 |
+
+### Details
+**Advisory 1088948**: Got allows a redirect to a UNIX socket
+  - Package: got
+  - Severity: moderate
+  - Advisory ID: 1088948
+  - Advisory URL: https://www.npmjs.com/advisories/1088948
+  - Recommendation: Upgrade to version 11.8.5 or later
+
+**Advisory 1096727**: Server-Side Request Forgery in Request
+  - Package: request
+  - Severity: moderate
+  - Advisory ID: 1096727
+  - Advisory URL: https://www.npmjs.com/advisories/1096727
+  - Recommendation: None
+
+**Advisory 1097682**: tough-cookie Prototype Pollution vulnerability
+  - Package: tough-cookie
+  - Severity: moderate
+  - Advisory ID: 1097682
+  - Advisory URL: https://www.npmjs.com/advisories/1097682
+  - Recommendation: Upgrade to version 4.1.3 or later
+
