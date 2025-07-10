@@ -2,20 +2,47 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+This is a personal portfolio project and does not involve user data, authentication, or sensitive logic. However, to maintain best practices, security reports are welcome.
 
 | Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+|---------|--------------------|
+| v4.x    | ✅ Yes              |
+| < v4.0  | ❌ No               |
+
+---
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a vulnerability or security concern in this repository, **please do not open a public issue**. Instead, follow the responsible disclosure procedure below:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+1. **Contact Me Directly**:  
+   Email: [krajtilak2020@gmail.com](mailto:krajtilak2020@gmail.com)  
+   Subject: `Security Issue Report - Portfolio V4`
+
+2. **Include the Following Details**:
+   - Description of the vulnerability
+   - Steps to reproduce the issue
+   - Impact assessment (what could an attacker achieve?)
+   - Suggested remediation or patch (if any)
+
+3. I will respond within **72 hours**, and work with you to verify the issue and release a patch as needed.
+
+---
+
+## Best Practices Followed
+
+This project adheres to general web security best practices:
+- No external user input is processed.
+- No form submissions or data storage are performed.
+- Deployed via [Vercel](https://vercel.com), which provides HTTPS and basic deployment security.
+- Dependencies are audited periodically via GitHub Actions and Dependabot.
+
+---
+
+## Notes
+
+- Since this project is static and does not handle backend logic or user data, security risks are minimal.
+- Always ensure you're cloning or forking from the official repository:  
+  [`https://github.com/rajtilak-2020/K-Rajtilak_s-Portfolio-V4`](https://github.com/rajtilak-2020/K-Rajtilak_s-Portfolio-V4)
+
+Thank you for helping improve the security of this project!
