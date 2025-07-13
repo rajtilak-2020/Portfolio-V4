@@ -2,7 +2,12 @@
 const nextConfig = {
   productionBrowserSourceMaps: true,
   images: {
-    domains: ["cdn.jsdelivr.net"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.jsdelivr.net',
+      },
+    ],
   },
 };
 
