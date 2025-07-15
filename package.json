@@ -24,7 +24,7 @@
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "dotenv": "^16.4.7",
+    "dotenv": "^17.2.0",
     "framer-motion": "^11.2.10",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.395.0",
