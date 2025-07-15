@@ -68,7 +68,7 @@
     "globals": "^16.3.0",
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.2",
-    "linkinator": "^3.x",
+    "linkinator": "^6.x",
     "postcss": "^8",
     "source-map-explorer": "^2.5.3",
     "tailwindcss": "^3.4.1",
