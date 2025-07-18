@@ -62,7 +62,7 @@
     "@types/react-responsive-masonry": "^2.6.0",
     "cspell": "^6.x",
     "deadlink": "^1.x",
-    "eslint": "^9.30.0",
+    "eslint": "^9.31.0",
     "eslint-config-next": "15.4.1",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.3.0",
