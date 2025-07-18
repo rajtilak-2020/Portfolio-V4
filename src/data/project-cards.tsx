@@ -30,9 +30,45 @@ export const DATA = {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     {
+      title: "ESP32-WiFi-Deception-Station",
+      href: "https://github.com/rajtilak-2020/ESP32-WiFi-Deception-Station.git",
+      dates: "July 2025",
+      active: true,
+      description: "ESP32-based fake SSID broadcaster with live web interface. Allows custom SSID injection and dynamic broadcasting over AP mode. Built for educational testing and wireless security awareness.",
+      technologies: ["C++","ESP32", "HTML", "CSS", "JavaScript"],
+      links: [
+              {
+                type: "Source Code",
+                href: "https://github.com/rajtilak-2020/ESP32-WiFi-Deception-Station.git",
+                icon: <Icons.github className="size-3" />,
+              },
+            ],
+      image: "/beacon.webp",
+      video: "",
+    },
+
+    {
+      title: "ESP32-Wi-Fi-Sniffer-Tool",
+      href: "https://github.com/rajtilak-2020/ESP32-wifi-sniffer-tool.git",
+      dates: "July 2025",
+      active: true,
+      description: "A real-time Wi-Fi packet sniffer built using ESP32. Captures MAC addresses, signal strength (RSSI), and packet types in promiscuous mode. Displays live packet data on a web dashboard hosted directly from the ESP32.",
+      technologies: ["C++","ESP32", "HTML", "CSS", "JavaScript"],
+      links: [
+              {
+                type: "Source Code",
+                href: "https://github.com/rajtilak-2020/ESP32-wifi-sniffer-tool.git",
+                icon: <Icons.github className="size-3" />,
+              },
+            ],
+      image: "/sniffer.webp",
+      video: "",
+    },
+
+    {
       title: "Portfolio",
       href: "https://krajtilak.vercel.app/",
-      dates: "Feb 2025 - Present",
+      dates: "Feb 2025 - Currently Active",
       active: true,
       description: "This is my personal developer portfolio built with Next.js 14, Tailwind CSS, ShadCN/UI, and MDX. It showcases my projects, skills, blogs, and more.",
       technologies: [
