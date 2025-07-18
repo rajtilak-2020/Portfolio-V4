@@ -16,7 +16,7 @@ This is a personal portfolio project and does not involve user data, authenticat
 If you discover a vulnerability or security concern in this repository, **please do not open a public issue**. Instead, follow the responsible disclosure procedure below:
 
 1. **Contact Me Directly**:  
-   Email: [krajtilak2020@gmail.com](mailto:krajtilak2020@gmail.com)  
+   Email: [rajtilak1062020@gmail.com](mailto:rajtilak1062020@gmail.com)  
    Subject: `Security Issue Report - Portfolio V4`
 
 2. **Include the Following Details**:
