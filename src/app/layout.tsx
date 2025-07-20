@@ -17,7 +17,7 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: "K Rajtilak",
+    default: "K Rajtilak's Portfolio",
     template: "%s | K Rajtilak",
   },
 
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "K Rajtilak",
+    title: "K Rajtilak's Portfolio",
     description: "K Rajtilak – Cybersecurity student exploring Web Dev and IoT with curiosity and code.",
     url: DATA.url,
     siteName: "K Rajtilak's Portfolio",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "K Rajtilak",
+    title: "K Rajtilak's Portfolio",
     description: "Cybersecurity student with passion for Web Dev & IoT – building for tomorrow.",
     creator: "@2020rajtilak",
     images: ["https://krajtilak.vercel.app/og-image.png"],
@@ -139,7 +139,7 @@ icons: {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "K Rajtilak",
+    title: "K Rajtilak's Portfolio",
   },
   category: "technology",
   classification: "Portfolio Website",

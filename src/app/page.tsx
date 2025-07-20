@@ -16,8 +16,11 @@ const BLUR_FADE_DELAY = 0.04;
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: "K Rajtilak's",
+    default: "K Rajtilak's Portfolio",
     template: "%s | K Rajtilak",
+  },
+  alternates: {
+    canonical: "https://krajtilak.vercel.app"
   },
 
   description: "K Rajtilak – Cybersecurity student exploring Web Dev and IoT with curiosity and code.",
@@ -48,7 +51,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "K Rajtilak",
+    title: "K Rajtilak's Portfolio",
     description: "K Rajtilak – Cybersecurity student exploring Web Dev and IoT with curiosity and code.",
     url: DATA.url,
     siteName: "K Rajtilak's Portfolio",
@@ -66,7 +69,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "K Rajtilak",
+    title: "K Rajtilak's Portfolio",
     description: "Cybersecurity student with passion for Web Dev & IoT – building for tomorrow.",
     creator: "@2020rajtilak",
     images: ["https://krajtilak.vercel.app/og-image.png"],
@@ -74,6 +77,7 @@ export const metadata: Metadata = {
 
 icons: {
   icon: [
+    { url: "/favicons/favicon.svg", type: "image/svg+xml" },
     { url: "/favicons/favicon-16x16.png", type: "image/png", sizes: "16x16" },
     { url: "/favicons/favicon-32x32.png", type: "image/png", sizes: "32x32" },
     { url: "/favicons/favicon-96x96.png", type: "image/png", sizes: "96x96" },
@@ -137,7 +141,7 @@ icons: {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "K Rajtilak",
+    title: "K Rajtilak's Portfolio",
   },
   category: "technology",
   classification: "Portfolio Website",
