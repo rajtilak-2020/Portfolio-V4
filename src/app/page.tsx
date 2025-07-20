@@ -79,6 +79,7 @@ icons: {
     { url: "/favicons/favicon-96x96.png", type: "image/png", sizes: "96x96" },
     { url: "/favicons/favicon-128.png", type: "image/png", sizes: "128x128" },
     { url: "/favicons/favicon-196x196.png", type: "image/png", sizes: "196x196" },
+    { url: "/favicons/android-chrome-512x512.png", type: "image/png", sizes: "512x512" },
     { url: "/favicon.ico", type: "image/x-icon" }
   ],
   shortcut: [
