@@ -227,15 +227,7 @@ NEXT_PUBLIC_ANALYTICS_ID=your-analytics-id
 
 | **Dark Mode** | **Light Mode** |
 |---------------|--------------|
-| ![Dark Mode](https://github.com/user-attachments/assets/5ec8fc81-e08b-47bb-a178-4266adafee1e) | ![Light Mode](https://github.com/user-attachments/assets/f0616c28-7d44-4817-a4ec-b097ba15a40e) |
-
----
-
-## 🔗 Live Preview
-
-<div align="center">
-<img alt="Preview" src="/public/preview.gif" width="90%">
-</div>
+| ![Dark Mode](https://github.com/user-attachments/assets/9a29b93a-d0d0-43ae-8a82-18caf9d539bc) | ![Light Mode](https://github.com/user-attachments/assets/4a7b8002-45aa-49f3-bfde-60fcbe58cb42) |
 
 ---
 
