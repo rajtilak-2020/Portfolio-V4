@@ -3,7 +3,6 @@ import { HomeIcon, ImageIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
 
-    //Navbar
     navbar: [
       { href: "/", icon: HomeIcon, label: "Home" },
       { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -11,9 +10,7 @@ export const DATA = {
     ],
 
     contact: {
-      
       social: {
-  
         GitHub: {
           name: "GitHub",
           url: "https://github.com/rajtilak-2020",
@@ -48,21 +45,18 @@ export const DATA = {
           icon: Icons.Email,
           navbar: false,
         },
-
       },
     },
 
-    //Hero Section Data
-    name: "K Rajtilak's Portfolio",
+    name: "K Rajtilak",
     initials: "KR",
     url: "https://krajtilak.vercel.app",
     location: "Odisha, India",
-    locationLink: "https://www.google.com/maps/place/india",
+    locationLink: "https://www.google.com/maps/place/odisha",
     description: "I’m into building clean, functional, and creative tech whether it’s on the web or something experimental. Always exploring, always creating.🧑‍💻☕📈",
     summary: "I’m a developer from **India** exploring the world of tech, from creative designs to cybersecurity. Always building, always learning. I enjoy crafting smooth, meaningful **digital experiences** that are both functional and fun. Tech excites me because there's always something new to create or improve. Check out my [GitHub](https://github.com/rajtilak-2020) to see what I’ve been working on. Or connect with me on [LinkedIn](https://www.linkedin.com/in/krajtilak2020) for collaborations and updates!",
     avatarUrl: "/raj.webp",
 
-    //work section
     work: [
       {
         company: "Alpha EV Technologies",
@@ -77,7 +71,6 @@ export const DATA = {
       },
     ],
   
-    //education section
     education: [
 
       {
@@ -119,10 +112,8 @@ export const DATA = {
         end: "2009",
         description: "Started my academic journey here with foundational education in reading, writing, and communication. Built early curiosity through engaging classroom activities and learning games. Laid the base for academic and social skills.",
       },
-
     ],
 
-  //skill section
   skills: [
     "Git" ,
     "React",
@@ -137,9 +128,7 @@ export const DATA = {
     "C++",
     "AI",
     "Arduino",
-  ],
-
- 
-
-  
+    "Linux",
+    "RestAPI",
+  ], 
 } as const;
