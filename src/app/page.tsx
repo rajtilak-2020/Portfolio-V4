@@ -142,7 +142,7 @@ icons: {
   classification: "Portfolio Website",
 
   verification: {
-    google: "LBY3bEQ2bpF5RRwS79krBooYGKyrauOTsQF7eegzqgM",
+    google: "cHz5zhEWQ9YHN99CF9o5D2MLqaYjVlyIVpfd6iahz68",
     yandex: "b9845d39c41c7887",
     me: ["mailto:rajtilak1062020@gmail.com"],
     other: {"facebook-domain-verification": "2w6954q16u00v8vpp20i4gl16evusn",
