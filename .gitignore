@@ -1,32 +1,8 @@
 # Dependency directories
 node_modules/
-.pnpm-store/
 
 # Build output
 .next/
-out/
-dist/
 
 # System and editor settings
-.DS_Store
-Thumbs.db
 .vscode/
-.idea/
-*.swp
-*.swo
-
-# Logs
-npm-debug.log*
-pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# TypeScript
-*.tsbuildinfo
