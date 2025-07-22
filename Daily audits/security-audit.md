@@ -777,3 +777,35 @@
   - Advisory URL: https://www.npmjs.com/advisories/1106509
   - Recommendation: Upgrade to version 2.5.4 or later
 
+
+## Security Audit – 2025-07-22
+| Severity | Count |
+|----------|-------|
+| info | 0 |
+| low | 0 |
+| moderate | 2 |
+| high | 0 |
+| critical | 1 |
+
+### Details
+**Advisory 1096727**: Server-Side Request Forgery in Request
+  - Package: request
+  - Severity: moderate
+  - Advisory ID: 1096727
+  - Advisory URL: https://www.npmjs.com/advisories/1096727
+  - Recommendation: None
+
+**Advisory 1097682**: tough-cookie Prototype Pollution vulnerability
+  - Package: tough-cookie
+  - Severity: moderate
+  - Advisory ID: 1097682
+  - Advisory URL: https://www.npmjs.com/advisories/1097682
+  - Recommendation: Upgrade to version 4.1.3 or later
+
+**Advisory 1106509**: form-data uses unsafe random function in form-data for choosing boundary
+  - Package: form-data
+  - Severity: critical
+  - Advisory ID: 1106509
+  - Advisory URL: https://www.npmjs.com/advisories/1106509
+  - Recommendation: Upgrade to version 2.5.4 or later
+
