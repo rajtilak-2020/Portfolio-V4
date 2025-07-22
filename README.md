@@ -15,6 +15,8 @@
 
 This portfolio represents the fourth iteration of my personal website, featuring a modern design system, optimized performance, and seamless user experience. It serves as a comprehensive showcase of my technical expertise, projects, and professional journey.
 
+![](https://repobeats.axiom.co/api/embed/f3794f44c2ba376464498ace2aee16211f6ced4a.svg "Repository Analytics")
+
 ---
 
 ## 🏗️ Tech Stack
@@ -392,7 +394,7 @@ See the [LICENSE](./LICENSE) file for details.
 📩 **Email:** [rajtilak1062020@gmail.com](mailto:rajtilak1062020@gmail.com)  
 🔗 **GitHub:** [rajtilak-2020](https://github.com/rajtilak-2020)  
 🔗 **LinkedIn:** [krajtilak2020](https://www.linkedin.com/in/krajtilak2020)  
-🌐 **Portfolio:** [krajtilak.vercel.app](https://krajtilak.vercel.app)
+🌐 **Website:** [krajtilak.vercel.app](https://krajtilak.vercel.app)
 
 ---
 
