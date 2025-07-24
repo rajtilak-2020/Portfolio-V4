@@ -62,7 +62,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-responsive-masonry": "^2.6.0",
-    "cspell": "^6.x",
+    "cspell": "^9.x",
     "deadlink": "^1.x",
     "eslint": "^9.31.0",
     "eslint-config-next": "15.4.1",
