@@ -73,7 +73,7 @@
     "linkinator": "^6.x",
     "postcss": "^8",
     "source-map-explorer": "^2.5.3",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5",
     "typescript-eslint": "^8.38.0",
     "webpack": "^5.100.2",
