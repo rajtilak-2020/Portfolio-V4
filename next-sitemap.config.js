@@ -3,5 +3,7 @@ module.exports = {
   siteUrl: 'https://krajtilak.vercel.app',
   generateRobotsTxt: true,
   sitemapSize: 5000,
-  generateIndexSitemap: true,
+  generateIndexSitemap: false, // disables index, only one sitemap
+  outDir: './public',
+  sitemapFilename: 'sitemap-main.xml', // <--- add this line
 };
