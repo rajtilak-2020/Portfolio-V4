@@ -5,5 +5,4 @@ module.exports = {
   sitemapSize: 5000,
   generateIndexSitemap: false, // disables index, only one sitemap
   outDir: './public',
-  sitemapFilename: 'sitemap-main.xml', // <--- add this line
 };
