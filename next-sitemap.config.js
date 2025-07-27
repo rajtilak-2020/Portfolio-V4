@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://krajtilak.vercel.app',
-  generateRobotsTxt: false,
+  generateRobotsTxt: true,
   sitemapSize: 5000,
   generateIndexSitemap: true,
 };
