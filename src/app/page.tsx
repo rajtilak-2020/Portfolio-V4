@@ -8,8 +8,8 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
-import Markdown from "react-markdown";
 import { Metadata } from 'next';
+import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -167,7 +167,7 @@ export default function Page() {
       <Particles className="md:block fixed inset-0 -z-10" quantity={50} />
       <Meteors className="fixed inset-0 -z-100" number={10} />
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
+        <div className="w-full space-y-8 px-4 md:px-6 lg:px-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
@@ -177,7 +177,7 @@ export default function Page() {
                 text={`Hi, I'm K Rajtilak`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="md:text-xl"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
@@ -194,7 +194,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" className="px-4 md:px-6 lg:px-8">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
         <hr className="my-2 border-black-100" />
           <h2 className="text-xl font-bold">About Me</h2>
@@ -205,7 +205,7 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
-      <section id="work">
+      <section id="work" className="px-4 md:px-6 lg:px-8">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
@@ -230,7 +230,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="education">
+      <section id="education" className="px-4 md:px-6 lg:px-8">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
@@ -254,7 +254,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="skills">
+      <section id="skills" className="px-4 md:px-6 lg:px-8">
         <div className="flex min-h-0 flex-col gap-y-2">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>

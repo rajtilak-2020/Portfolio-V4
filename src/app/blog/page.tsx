@@ -1,11 +1,12 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { MagicCard } from "@/components/magicui/magic-card";
 import Particles from "@/components/magicui/particles";
+import { Meteors } from "@/components/magicui/meteors";
+import { VideoText } from "@/components/magicui/video-text";
 import { getBlogPosts } from "@/data/blog";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { VideoText } from "@/components/magicui/video-text";
 
 
 export const metadata = {
@@ -20,13 +21,13 @@ export default async function BlogPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-background/95">
-      <Particles className="md:block fixed inset-0 -z-10" quantity={300} />
+      <Meteors className="fixed inset-0 -z-100" number={10} />
       <section className="container max-w-5xl mx-auto px-4 py-16 sm:py-24">
         <BlurFade delay={BLUR_FADE_DELAY}>
           <div className="space-y-6 mb-20 text-center">
             <div className="flex items-center justify-center">
             </div>
-            <h1 className="relative h-[159px] w-full overflow-hidden">✰
+            <h1 className="relative h-[230px] w-full overflow-hidden">✰
             <VideoText src="https://cdn.magicui.design/ocean-small.webm">Blogs</VideoText>
             </h1>
             <h2 className="max-w-2xl mx-auto text-lg text-muted-foreground md:text-xl">
