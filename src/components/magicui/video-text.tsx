@@ -39,9 +39,27 @@ export function VideoText({
 
   useEffect(() => {
     const updateSvgMask = () => {
-      const responsiveFontSize =
-        typeof fontSize === "number" ? `${fontSize}vw` : fontSize;
-      const newSvgMask = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><text x='50%' y='50%' font-size='${responsiveFontSize}' font-weight='${fontWeight}' text-anchor='${textAnchor}' dominant-baseline='${dominantBaseline}' font-family='${fontFamily}'>${content}</text></svg>`;
+      // Calculate responsive font size with better mobile support
+      let responsiveFontSize;
+      if (typeof fontSize === "number") {
+        // Use viewport units that work well in SVG
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+          // On mobile, use a larger vw value for better visibility
+          responsiveFontSize = `${Math.max(fontSize * 2, 24)}vw`;
+        } else {
+          // On desktop, use the original fontSize with vw units
+          responsiveFontSize = `${fontSize}vw`;
+        }
+      } else {
+        responsiveFontSize = fontSize;
+      }
+      
+      // Create a larger viewBox for better text rendering and positioning
+      // Using 800x200 viewBox for better text control
+      const newSvgMask = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 200' preserveAspectRatio='xMidYMid meet'>
+        <text x='400' y='120' font-size='${responsiveFontSize}' font-weight='${fontWeight}' text-anchor='${textAnchor}' dominant-baseline='${dominantBaseline}' font-family='${fontFamily}' fill='white'>${content}</text>
+      </svg>`;
       setSvgMask(newSvgMask);
     };
 
@@ -50,16 +68,18 @@ export function VideoText({
     return () => window.removeEventListener("resize", updateSvgMask);
   },
   [content, fontSize, fontWeight, textAnchor, dominantBaseline, fontFamily]);
+  
   const dataUrlMask = `url("data:image/svg+xml,${encodeURIComponent(svgMask)}")`;
+  
   return (
-    <Component className={cn(`relative size-full`, className)}>
+    <Component className={cn(`relative w-full h-full`, className)}>
       <div
-        className="absolute inset-0 flex items-center justify-center"
+        className="absolute inset-0 flex items-center justify-center overflow-hidden"
         style={{
           maskImage: dataUrlMask,
           WebkitMaskImage: dataUrlMask,
-          maskSize: "contain",
-          WebkitMaskSize: "contain",
+          maskSize: "100% 100%",
+          WebkitMaskSize: "100% 100%",
           maskRepeat: "no-repeat",
           WebkitMaskRepeat: "no-repeat",
           maskPosition: "center",

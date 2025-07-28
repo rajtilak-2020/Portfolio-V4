@@ -1,6 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { MagicCard } from "@/components/magicui/magic-card";
-import Particles from "@/components/magicui/particles";
 import { Meteors } from "@/components/magicui/meteors";
 import { VideoText } from "@/components/magicui/video-text";
 import { getBlogPosts } from "@/data/blog";
@@ -27,7 +26,7 @@ export default async function BlogPage() {
           <div className="space-y-6 mb-20 text-center">
             <div className="flex items-center justify-center">
             </div>
-            <h1 className="relative h-[233px] w-full overflow-hidden">✰
+            <h1 className="relative h-[329px] w-full overflow-hidden">✰
             <VideoText src="https://krajtilak.vercel.app/earthzoom.mp4">Blogs</VideoText>
             </h1>
             <h2 className="max-w-2xl mx-auto text-lg text-muted-foreground md:text-xl">
