@@ -84,10 +84,9 @@ export async function getPost(slug: string): Promise<BlogPost | null> {
       readingTime: calculateReadingTime(rawContent),
     };
 
-    const content = await markdownToHTML(rawContent);
-
+    // Return the raw MDX content instead of converting to HTML
     return {
-      source: content,
+      source: rawContent,
       metadata,
       slug,
     };
