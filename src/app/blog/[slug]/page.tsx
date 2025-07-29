@@ -57,7 +57,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             href="/blog"
             className="inline-flex items-center text-sm text-white/80 hover:text-white transition-colors group bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">
             <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-            Back to Blog
+            Back to Blogs
           </Link>
         </div>
 

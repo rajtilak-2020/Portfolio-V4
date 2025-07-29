@@ -246,7 +246,7 @@ export default function Page() {
             ))}
           </div>
         </section>
-        <section id="education" className="px-4 md:px-6 lg:px-8">
+        <section id="education" className="px-4 md:px-6 lg:px-8 mt-6">
           <div className="flex min-h-0 flex-col gap-y-3">
             <BlurFade delay={BLUR_FADE_DELAY * 7}>
               <h2 className="text-xl font-bold">Education</h2>
@@ -270,30 +270,48 @@ export default function Page() {
             ))}
           </div>
         </section>
-        <section id="skills" className="px-4 md:px-6 lg:px-8">
-          <div className="flex min-h-0 flex-col gap-y-2">
-            <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <hr className="my-10 border-black-100" />
-              <h2 className="text-xl font-bold">Skills</h2>
-            </BlurFade>
-            <div className="flex flex-wrap gap-1">
-              {DATA.skills.map((skill, id) => (
-                <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                  <Badge key={skill}>{skill}</Badge>
-                </BlurFade>
-              ))}
-            </div>
-            <BlurFade delay={BLUR_FADE_DELAY * 11}>
-              <div className=" w-full bg-background/80 rounded-lg overflow-hidden flex items-center justify-center">
-                <img
-                  src="https://raw.githubusercontent.com/rajtilak-2020/rajtilak-2020/main/profile-3d-contrib/profile-night-green.svg"
-                  alt="GitHub Contributions"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </BlurFade>
+
+        <section id="skills" className="px-4 md:px-6 lg:px-8 py-10">
+  <div className="flex flex-col gap-10 md:flex-row md:gap-12 items-center md:items-start">
+
+    {/* Skills Text & Badges */}
+    <div className="w-full md:flex-1">
+      <BlurFade delay={BLUR_FADE_DELAY * 9}>
+        <h2 className="text-2xl font-bold mb-4">Skills</h2>
+        <p className="text-muted-foreground mb-6">
+          A mix of what I enjoy and what I excel at — from development to design and tech tinkering.
+        </p>
+      </BlurFade>
+
+      <div className="flex flex-wrap gap-2">
+        {DATA.skills.map((skill, id) => (
+          <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+            <Badge>{skill}</Badge>
+          </BlurFade>
+        ))}
+      </div>
+    </div>
+
+    {/* GitHub Contribution Graph */}
+    <BlurFade delay={BLUR_FADE_DELAY * 11}>
+      <div className="w-full md:flex-1 flex justify-center">
+        <div className="w-full max-w-md sm:max-w-lg bg-background/80 rounded-xl shadow-md p-2">
+          <div className="aspect-auto w-full">
+            <img
+              src="https://raw.githubusercontent.com/rajtilak-2020/rajtilak-2020/main/profile-3d-contrib/profile-night-green.svg"
+              alt="GitHub Contributions"
+              className="w-full h-full object-contain rounded-xl"
+            />
           </div>
-        </section>
+        </div>
+      </div>
+    </BlurFade>
+
+  </div>
+</section>
+
+
+
         <section id="contact">
           <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
             <BlurFade delay={BLUR_FADE_DELAY * 16}>
