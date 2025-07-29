@@ -1,0 +1,16 @@
+{
+    "name": "K Rajtilak Portfolio",
+    "version": "4.0.0",
+    "framework": "Next.js",
+    "features": [
+      "react",
+      "typescript",
+      "tailwind",
+      "websocket"
+    ],
+    "sourceMaps": true,
+    "devtools": {
+      "customPanels": false
+    }
+  }
+  
