@@ -162,7 +162,7 @@ icons: {
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10 relative">
+    <main className="flex flex-col min-h-[100dvh] space-y-1 relative">
       <div className="fixed inset-0 pointer-events-none z-0">
         <LightRays
           raysOrigin="top-right"
@@ -181,7 +181,6 @@ export default function Page() {
         />
       </div>
       
-      {/* Content with relative positioning */}
       <div className="relative z-10">
         <section id="hero">
           <div className="w-full space-y-8 px-4 md:px-6 lg:px-8">
@@ -213,7 +212,7 @@ export default function Page() {
         </section>
         <section id="about" className="px-4 md:px-6 lg:px-8">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <hr className="my-2 border-black-100" />
+          <hr className="my-10 border-black-100" />
             <h2 className="text-xl font-bold">About Me</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
@@ -274,6 +273,7 @@ export default function Page() {
         <section id="skills" className="px-4 md:px-6 lg:px-8">
           <div className="flex min-h-0 flex-col gap-y-2">
             <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <hr className="my-10 border-black-100" />
               <h2 className="text-xl font-bold">Skills</h2>
             </BlurFade>
             <div className="flex flex-wrap gap-1">
@@ -286,7 +286,7 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 11}>
               <div className=" w-full bg-background/80 rounded-lg overflow-hidden flex items-center justify-center">
                 <img
-                  src="https://raw.githubusercontent.com/rajtilak-2020/rajtilak-2020/main/profile-3d-contrib/profile-green-animate.svg"
+                  src="https://raw.githubusercontent.com/rajtilak-2020/rajtilak-2020/main/profile-3d-contrib/profile-night-green.svg"
                   alt="GitHub Contributions"
                   className="w-full h-full object-contain"
                 />
