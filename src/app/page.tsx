@@ -167,16 +167,16 @@ export default function Page() {
         <LightRays
           raysOrigin="top-right"
           raysColor="#ffffff"
-          raysSpeed={0.8}
+          raysSpeed={0.4}
           lightSpread={1.2}
-          rayLength={5.5}
+          rayLength={8}
           pulsating={true}
-          fadeDistance={0.8}
-          saturation={0.7}
+          fadeDistance={5}
+          saturation={1}
           followMouse={false}
           mouseInfluence={0.15}
           noiseAmount={0.1}
-          distortion={0.05}
+          distortion={0}
           className="w-full h-full"
         />
       </div>
