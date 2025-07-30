@@ -278,6 +278,10 @@ export default function Page() {
         <h2 className="text-2xl font-bold mb-4">Skills</h2>
         <p className="text-muted-foreground mb-6">
           A mix of what I enjoy and what I excel at — from development to design and tech tinkering.
+          I'm proficient in building responsive UIs with modern frameworks like React and Next.js,
+          styling them with TailwindCSS, and adding interactivity with TypeScript and JavaScript.
+          I also dive into backend development using Node.js and FastAPI, and enjoy experimenting with IoT using Arduino and ESP32.
+          Whether it's creating APIs, controlling hardware over Wi-Fi, or optimizing performance with GitHub Actions, I love turning ideas into functional and efficient systems.
         </p>
       </BlurFade>
       <div className="flex flex-wrap gap-2">
