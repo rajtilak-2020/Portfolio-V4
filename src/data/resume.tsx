@@ -74,13 +74,23 @@ export const DATA = {
     education: [
 
       {
+        institute: "Sri Sri University",
+        href: "https://srisriuniversity.edu.in/",
+        degree: "Btech In CSE-Cyber Security",
+        logoUrl: "/ssu.webp",
+        start: "2025",
+        end: "2028",
+        description: "Recently enrolled in Sri Sri University for the B.Tech program in Computer Engineering with specialization in Cybersecurity & Cyber Defence. Excited to deepen my knowledge in digital security and ethical hacking, while exploring opportunities to contribute to research, open-source communities, and tech-driven campus initiatives.",
+      },
+      
+      {
         institute: "DRIEMS Polytechnic",
         href: "https://www.driemspolytechnic.org/",
         degree: "Diploma In CSE",
         logoUrl: "/driemspoly.webp",
         start: "2022",
         end: "2025",
-        description: "Completed a Diploma in Computer Science and Engineering with a CGPA of 8.2. Served as a Student Innovation Ambassador and represented the college at multiple state-level events. Gained hands-on experience in software development, IoT, and robotics through impactful projects and internships.",
+        description: "Completed a Diploma in Computer Science and Engineering with a CGPA of 8.2. Served as a Student Innovation Ambassador and represented the college at multiple state-level events. Authored a research paper and gained hands-on experience in web development, IoT, and open-source projects through impactful internships and personal initiatives.",
       },
 
       {
