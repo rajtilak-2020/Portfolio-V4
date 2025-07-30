@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 
   description: "K Rajtilak – Cybersecurity student exploring Web Dev and IoT with curiosity and code.",
-  applicationName: "K Rajtilak Portfolio",
+  applicationName: "K Rajtilak's Portfolio",
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
   keywords: ["K Rajtilak","Rajtilak2020","Portfolio","Full Stack Developer","IoT Developer","Cybersecurity","Web Developer","Cybersecurity Student","K Rajtilak Projects","Personal Website","Next.js Developer","Open Source","ESP32","GitHub Portfolio","Tech Portfolio","IoT Projects","Security Projects","Tailwind Developer"],
@@ -273,8 +273,6 @@ export default function Page() {
 
         <section id="skills" className="px-4 md:px-6 lg:px-8 py-10">
   <div className="flex flex-col gap-10 md:flex-row md:gap-12 items-center md:items-start">
-
-    {/* Skills Text & Badges */}
     <div className="w-full md:flex-1">
       <BlurFade delay={BLUR_FADE_DELAY * 9}>
         <h2 className="text-2xl font-bold mb-4">Skills</h2>
@@ -282,7 +280,6 @@ export default function Page() {
           A mix of what I enjoy and what I excel at — from development to design and tech tinkering.
         </p>
       </BlurFade>
-
       <div className="flex flex-wrap gap-2">
         {DATA.skills.map((skill, id) => (
           <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
@@ -291,8 +288,6 @@ export default function Page() {
         ))}
       </div>
     </div>
-
-    {/* GitHub Contribution Graph */}
     <BlurFade delay={BLUR_FADE_DELAY * 11}>
       <div className="w-full md:flex-1 flex justify-center">
         <div className="w-full max-w-md sm:max-w-lg bg-background/80 rounded-xl shadow-md p-2">
@@ -306,11 +301,8 @@ export default function Page() {
         </div>
       </div>
     </BlurFade>
-
   </div>
 </section>
-
-
 
         <section id="contact">
           <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
@@ -319,13 +311,10 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Contact
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Get in Touch
-                </h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl"> Get in Touch </h2>
                 <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Want to connect? Just shoot me a {" "}
-                  <span
-                    className="text-green-500 hover:italic">message with a direct question or topic</span>{" "}
+                  <span className="text-green-500 hover:italic">message with a direct question or topic</span>{" "}
                   and I&apos;ll respond whenever I can. You can also{" "}
                 <span className="text-red-500 hover:italic">schedule a meeting directly</span> from
                 <a href="https://cal.com/k-rajtilak" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:italic"> here</a>.

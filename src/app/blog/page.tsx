@@ -27,7 +27,7 @@ export default async function BlogPage() {
             <div className="flex items-center justify-center">
             </div>
             <h1 className="relative h-[233px] w-full overflow-hidden">✰
-            <VideoText src="https://krajtilak.vercel.app/earthzoom.mp4">Blogs</VideoText>
+            <VideoText src="https://krajtilak.vercel.app/earthzoom.webm">Blogs</VideoText>
             </h1>
             <h2 className="max-w-2xl mx-auto text-lg text-muted-foreground md:text-xl">
               Exploring tech, life, and everything in between. Dive into a collection of thoughtfully crafted articles.

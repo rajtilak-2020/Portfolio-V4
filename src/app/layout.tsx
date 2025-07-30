@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
 
   description: "K Rajtilak – Cybersecurity student exploring Web Dev and IoT with curiosity and code.",
-  applicationName: "K Rajtilak Portfolio",
+  applicationName: "K Rajtilak's Portfolio",
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
   keywords: ["K Rajtilak","Rajtilak2020","Portfolio","Full Stack Developer","IoT Developer","Cybersecurity","Web Developer","Cybersecurity Student","K Rajtilak Projects","Personal Website","Next.js Developer","Open Source","ESP32","GitHub Portfolio","Tech Portfolio","IoT Projects","Security Projects","Tailwind Developer"],
