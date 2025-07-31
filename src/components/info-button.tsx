@@ -8,34 +8,50 @@ interface InfoButtonProps {
 }
 
 export const InfoButton = ({ className }: InfoButtonProps) => {
+  const glassStyle = cn(
+    "rounded-xl px-4 py-1.5 text-sm font-medium",
+    "backdrop-blur-2xl backdrop-saturate-150",
+    "border border-white/20 dark:border-white/10",
+    "bg-white/20 dark:bg-white/5",
+    "transition-all duration-300 ease-in-out",
+    "text-black dark:text-white",
+    "hover:bg-white/30 dark:hover:bg-white/10",
+    "hover:text-black dark:hover:text-white",
+    "shadow-[inset_-0.5px_0.5px_0px_rgba(255,255,255,0.3)]",
+    "ring-1 ring-inset ring-white/10 dark:ring-white/5"
+  );
+
+  const contentStyle = "flex items-center gap-2 group";
+
   return (
     <div className={cn("flex flex-wrap items-center gap-2", className)}>
-      {/* Non-clickable location button with identical style to RippleButton */}
-      <div
-        className={cn(
-          "rounded-md border px-4 py-1.5 text-sm text-foreground transition-colors hover:bg-accent",
-          "bg-background dark:bg-background/50 cursor-default select-none flex items-center gap-2 group"
-        )}
-      >
-        <MapPin
-          size={16}
-          className="text-muted-foreground transition-colors duration-300 group-hover:text-green-500"
-        />
-        <span>East Odisha, India</span>
+      {/* Location Button */}
+      <div className={cn(glassStyle, "cursor-default select-none")}>
+        <div className={contentStyle}>
+          <MapPin
+            size={16}
+            className="text-black/70 dark:text-white/60 group-hover:text-green-500"
+          />
+          <span>East Odisha, India</span>
+        </div>
       </div>
 
-      <InteractiveHoverButton className="px-4 py-1.5 text-sm">
+      {/* Sponsor Me Button (preserving hover animation) */}
+      <InteractiveHoverButton
+        className={cn(glassStyle, "relative overflow-hidden")}
+      >
         Sponsor Me
       </InteractiveHoverButton>
 
+      {/* Schedule Meeting Button */}
       <RippleButton
         rippleColor="#ffffff"
-        className="rounded-md border px-4 py-1.5 text-sm text-foreground transition-colors hover:bg-accent"
+        className={glassStyle}
       >
-        <div className="flex items-center gap-2 group">
+        <div className={contentStyle}>
           <CalendarDays
             size={16}
-            className="text-muted-foreground transition-colors duration-300 group-hover:text-blue-500"
+            className="text-black/70 dark:text-white/60 group-hover:text-blue-500"
           />
           <span>Schedule Meeting</span>
         </div>

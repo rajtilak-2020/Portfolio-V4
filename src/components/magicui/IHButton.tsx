@@ -31,7 +31,7 @@ export const InteractiveHoverButton = React.forwardRef<
           </span>
         </div>
         <div className="absolute top-0 z-10 flex h-full w-full translate-x-10 items-center justify-center gap-2 text-primary-foreground opacity-0 transition-all duration-500 group-hover:-translate-x-4 group-hover:opacity-100">
-          <span>{children}</span>
+          <span className="text-sm font-medium">Sponsor Me</span>
           <HeartHandshake size={16} />
         </div>
       </button>
