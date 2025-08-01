@@ -22,7 +22,7 @@ export const InfoButton = ({ className }: InfoButtonProps) => {
     "before:bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.3),_transparent_70%)]",
     "after:absolute after:inset-0 after:opacity-[0.03] after:pointer-events-none",
     "after:content-[''] after:absolute after:top-[-1px] after:right-[-1px]",
-    "after:w-[80px] after:h-[2px] after:rotate-45",
+    "after:w-[1px] after:h-[1px] after:rotate-45",
     "after:bg-gradient-to-r after:from-white/0 after:via-white/60 after:to-white/0",
     "after:animate-glow-shine"
   );
