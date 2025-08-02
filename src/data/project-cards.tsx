@@ -109,7 +109,7 @@ export const DATA = {
                 icon: <Icons.github className="size-3" />,
               },
             ],
-      image: "/portfolio.webp",
+      image: "/og-image.png",
       video: "",
     },
 
