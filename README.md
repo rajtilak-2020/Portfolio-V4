@@ -229,7 +229,7 @@ NEXT_PUBLIC_ANALYTICS_ID=your-analytics-id
 
 | **Dark Mode** | **Light Mode** |
 |---------------|--------------|
-| ![Dark Mode](https://github.com/user-attachments/assets/9a29b93a-d0d0-43ae-8a82-18caf9d539bc) | ![Light Mode](https://github.com/user-attachments/assets/4a7b8002-45aa-49f3-bfde-60fcbe58cb42) |
+| ![Dark Mode](https://github.com/user-attachments/assets/3cb7efe8-d998-43ac-a584-d2d9fb92dba1) | ![Light Mode](https://github.com/user-attachments/assets/bad2efa4-2d82-4823-9f81-1fdd36be8aa4) |
 
 ---
 
