@@ -13,28 +13,28 @@ export const DATA = {
       social: {
         GitHub: {
           name: "GitHub",
-          url: "https://github.com/rajtilak-2020",
+          url: "https://dub.sh/krajtilak-gh",
           icon: Icons.github,
           navbar: true,
         },
   
         LinkedIn: {
           name: "LinkedIn",
-          url: "https://www.linkedin.com/in/krajtilak2020",
+          url: "https://dub.sh/krajtilak-lin",
           icon: Icons.linkedin,
           navbar: true,
         },
   
         X: {
           name: "X",
-          url: "https://x.com/2020rajtilak",
+          url: "https://dub.sh/krajtilak-x",
           icon: Icons.X,
           navbar: true,
         },
   
         Instagram: {
           name: "Instagram",
-          url: "https://instagram.com/k.raj_tilak2020",
+          url: "https://dub.sh/krajtilak-ig",
           icon: Icons.Instagram,
           navbar: true,
         },
