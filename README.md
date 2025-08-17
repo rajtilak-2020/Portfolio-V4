@@ -1,10 +1,10 @@
 # 🌐 K Rajtilak's Portfolio V4
 
-[![Website](https://img.shields.io/badge/Live%20Website-krajtilak.vercel.app-blue?style=flat-square&logo=vercel)](https://krajtilak.vercel.app)  
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)  
-[![ShadCN/UI](https://img.shields.io/badge/ShadCN/UI-Stylish-blueviolet?style=flat-square)](https://ui.shadcn.com/)  
-[![Magic UI](https://img.shields.io/badge/Magic%20UI-Dynamic-purple?style=flat-square)](https://magicui.design/)  
-[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)  
+[![Website](https://img.shields.io/badge/Live%20Website-krajtilak.vercel.app-blue?style=flat-square&logo=vercel)](https://krajtilak.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![ShadCN/UI](https://img.shields.io/badge/ShadCN/UI-Stylish-blueviolet?style=flat-square)](https://ui.shadcn.com/)
+[![Magic UI](https://img.shields.io/badge/Magic%20UI-Dynamic-purple?style=flat-square)](https://magicui.design/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
@@ -59,69 +59,83 @@ This portfolio represents the fourth iteration of my personal website, featuring
 ## 🏛️ Project Structure
 
 ```mermaid
-graph TD;
-    A[Root Directory] --> B[content] 
-    A --> C[public] 
-    A --> D[src] 
-    A --> E[Configuration Files]
-
-    B --> B1[blog posts]
-    B --> B2[projects]
-
-    C --> C1[images]
-    C --> C2[icons]
-    C --> C3[favicon]
-    C --> C4[preview.gif]
-
-    D --> D1[app] 
-    D --> D2[components] 
-    D --> D3[data] 
-    D --> D4[lib] 
-    D --> D5[types]
-    D --> D6[hooks]
-
-    D1 --> D1a[globals.css]
-    D1 --> D1b[layout.tsx]
-    D1 --> D1c[page.tsx]
-    D1 --> D1d[blog/page.tsx]
-    D1 --> D1e[blog/slug/page.tsx]
-    D1 --> D1f[projects/page.tsx]
-    D1 --> D1g[about/page.tsx]
-
-    D2 --> D2a[ContactSection.tsx]
-    D2 --> D2b[Sharebutton.tsx]
-    D2 --> D2c[Navbar.tsx]
-    D2 --> D2d[ThemeProvider.tsx]
-    D2 --> D2e[ProjectCard.tsx]
-    D2 --> D2f[Footer.tsx]
-    D2 --> D2g[Hero.tsx]
+graph TB
+    %% Root Level
+    A[📁 K-Rajtilak Portfolio V4]
     
-    D2 --> D2h[MagicUI]
-    D2h --> D2h1[BlurFade.tsx]
-    D2h --> D2h2[Dock.tsx]
-    D2h --> D2h3[AnimatedText.tsx]
+    %% Main Directories - Level 1
+    A --> B[📦 content]
+    A --> C[🌍 public]
+    A --> D[💻 src]
+    A --> E[⚙️ config]
 
-    D2 --> D2i[UI Components]
-    D2i --> D2i1[Avatar.tsx]
-    D2i --> D2i2[Badge.tsx]
-    D2i --> D2i3[Button.tsx]
-    D2i --> D2i4[Card.tsx]
-    D2i --> D2i5[Dialog.tsx]
+    %% Content Structure - Level 2
+    B --> B1[📄 blog]
+    B --> B2[📄 projects]
 
-    D3 --> D3a[blog.ts]
-    D3 --> D3b[resume.tsx]
-    D3 --> D3c[projects.ts]
-    D3 --> D3d[skills.ts]
+    %% Public Assets - Level 2
+    C --> C1[🖼️ images]
+    C --> C2[🎨 icons]
+    C --> C3[📄 favicon]
 
-    D4 --> D4a[utils.ts]
-    D4 --> D4b[mdx.ts]
-    D4 --> D4c[analytics.ts]
+    %% Source Structure - Level 2
+    D --> D1[📁 app]
+    D --> D2[📁 components]
+    D --> D3[📁 data]
+    D --> D4[📁 lib]
 
-    E --> E1[next.config.mjs]
-    E --> E2[tailwind.config.ts]
-    E --> E3[tsconfig.json]
-    E --> E4[package.json]
-    E --> E5[.env.example]
+    %% App Pages - Level 3
+    D1 --> D1a[📄 layout.tsx]
+    D1 --> D1b[📄 page.tsx]
+    D1 --> D1c[📄 blog pages]
+    D1 --> D1d[📄 about.tsx]
+
+    %% Components Structure - Level 3
+    D2 --> D2a[🧩 Hero]
+    D2 --> D2b[🧩 Navbar]
+    D2 --> D2c[🧩 Footer]
+    D2 --> D2d[📁 MagicUI]
+    D2 --> D2e[📁 UI Kit]
+
+    %% MagicUI Components - Level 4
+    D2d --> D2d1[✨ BlurFade]
+    D2d --> D2d2[✨ Dock]
+    D2d --> D2d3[✨ AnimatedText]
+
+    %% UI Kit Components - Level 4
+    D2e --> D2e1[💠 Avatar]
+    D2e --> D2e2[💠 Button]
+    D2e --> D2e3[💠 Card]
+
+    %% Data Files - Level 3
+    D3 --> D3a[📊 blog.ts]
+    D3 --> D3b[📊 projects.ts]
+    D3 --> D3c[📊 resume.ts]
+
+    %% Utility Files - Level 3
+    D4 --> D4a[🔧 utils.ts]
+    D4 --> D4b[🔧 mdx.ts]
+
+    %% Configuration Files - Level 2
+    E --> E1[⚙️ next.config]
+    E --> E2[🎨 tailwind.config]
+    E --> E3[📦 package.json]
+
+    %% Enhanced Visual Styling
+    classDef root fill:#667eea,color:#fff,stroke:#4c51bf,stroke-width:4px,font-weight:bold,font-size:14px
+    classDef level1 fill:#4fd1c7,color:#1a202c,stroke:#319795,stroke-width:3px,font-weight:bold,font-size:13px
+    classDef level2 fill:#fed7d7,color:#742a2a,stroke:#e53e3e,stroke-width:2px,font-weight:500,font-size:12px
+    classDef level3 fill:#c6f6d5,color:#22543d,stroke:#38a169,stroke-width:2px,font-size:11px
+    classDef level4 fill:#fbb6ce,color:#702459,stroke:#d53f8c,stroke-width:2px,font-size:11px
+    classDef config fill:#e9d8fd,color:#44337a,stroke:#805ad5,stroke-width:2px,font-size:11px
+
+    %% Apply Classes by Hierarchy
+    class A root
+    class B,C,D,E level1
+    class D1,D2,D3,D4,D2d,D2e level2
+    class B1,B2,C1,C2,C3,D1a,D1b,D1c,D1d,D2a,D2b,D2c,D3a,D3b,D3c,D4a,D4b level3
+    class D2d1,D2d2,D2d3,D2e1,D2e2,D2e3 level4
+    class E1,E2,E3 config
 ```
 
 ---
@@ -391,9 +405,9 @@ See the [LICENSE](./LICENSE) file for details.
 
 ## 📞 Contact
 
-📩 **Email:** [rajtilak1062020@gmail.com](mailto:rajtilak1062020@gmail.com)  
-🔗 **GitHub:** [rajtilak-2020](https://github.com/rajtilak-2020)  
-🔗 **LinkedIn:** [krajtilak2020](https://www.linkedin.com/in/krajtilak2020)  
+📩 **Email:** [rajtilak1062020@gmail.com](mailto:rajtilak1062020@gmail.com)
+🔗 **GitHub:** [rajtilak-2020](https://github.com/rajtilak-2020)
+🔗 **LinkedIn:** [krajtilak2020](https://www.linkedin.com/in/krajtilak2020)
 🌐 **Website:** [krajtilak.vercel.app](https://krajtilak.vercel.app)
 
 ---
