@@ -1,10 +1,10 @@
 # 🌐 K Rajtilak's Portfolio V4
 
-[![Website](https://img.shields.io/badge/Live%20Website-krajtilak.vercel.app-blue?style=flat-square&logo=vercel)](https://krajtilak.vercel.app)  
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)  
-[![ShadCN/UI](https://img.shields.io/badge/ShadCN/UI-Stylish-blueviolet?style=flat-square)](https://ui.shadcn.com/)  
-[![Magic UI](https://img.shields.io/badge/Magic%20UI-Dynamic-purple?style=flat-square)](https://magicui.design/)  
-[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)  
+[![Website](https://img.shields.io/badge/Live%20Website-krajtilak.vercel.app-blue?style=flat-square&logo=vercel)](https://krajtilak.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![ShadCN/UI](https://img.shields.io/badge/ShadCN/UI-Stylish-blueviolet?style=flat-square)](https://ui.shadcn.com/)
+[![Magic UI](https://img.shields.io/badge/Magic%20UI-Dynamic-purple?style=flat-square)](https://magicui.design/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
@@ -59,69 +59,110 @@ This portfolio represents the fourth iteration of my personal website, featuring
 ## 🏛️ Project Structure
 
 ```mermaid
-graph TD;
-    A[Root Directory] --> B[content] 
-    A --> C[public] 
-    A --> D[src] 
-    A --> E[Configuration Files]
+graph TD
+    A[📁 K-Rajtilak_s-Portfolio-V4]
 
-    B --> B1[blog posts]
-    B --> B2[projects]
+    A --> B[📦 content]
+    A --> C[🌍 public]
+    A --> D[💻 src]
+    A --> E[⚙️ Configuration]
 
-    C --> C1[images]
-    C --> C2[icons]
-    C --> C3[favicon]
-    C --> C4[preview.gif]
+    subgraph content
+        direction TD
+        B --> B1["📄 blog posts"]
+        B --> B2["📄 projects"]
+    end
 
-    D --> D1[app] 
-    D --> D2[components] 
-    D --> D3[data] 
-    D --> D4[lib] 
-    D --> D5[types]
-    D --> D6[hooks]
+    subgraph public
+        direction TD
+        C --> C1["🖼️ images"]
+        C --> C2["🎨 icons"]
+        C --> C3["favicon.ico"]
+        C --> C4["preview.gif"]
+    end
 
-    D1 --> D1a[globals.css]
-    D1 --> D1b[layout.tsx]
-    D1 --> D1c[page.tsx]
-    D1 --> D1d[blog/page.tsx]
-    D1 --> D1e[blog/slug/page.tsx]
-    D1 --> D1f[projects/page.tsx]
-    D1 --> D1g[about/page.tsx]
+    subgraph src
+        direction TD
+        D --> D1[📁 app]
+        D --> D2[📁 components]
+        D --> D3[📁 data]
+        D --> D4[📁 lib]
+        D --> D5[📁 hooks]
+        D --> D6[📁 types]
+    end
 
-    D2 --> D2a[ContactSection.tsx]
-    D2 --> D2b[Sharebutton.tsx]
-    D2 --> D2c[Navbar.tsx]
-    D2 --> D2d[ThemeProvider.tsx]
-    D2 --> D2e[ProjectCard.tsx]
-    D2 --> D2f[Footer.tsx]
-    D2 --> D2g[Hero.tsx]
-    
-    D2 --> D2h[MagicUI]
-    D2h --> D2h1[BlurFade.tsx]
-    D2h --> D2h2[Dock.tsx]
-    D2h --> D2h3[AnimatedText.tsx]
+    subgraph app
+        direction TD
+        D1 --> D1a["📄 globals.css"]
+        D1 --> D1b["📄 layout.tsx"]
+        D1 --> D1c["📄 page.tsx"]
+        D1 --> D1d["📄 blog/page.tsx"]
+        D1 --> D1e["📄 blog/[slug]/page.tsx"]
+        D1 --> D1f["📄 projects/page.tsx"]
+        D1 --> D1g["📄 about/page.tsx"]
+    end
 
-    D2 --> D2i[UI Components]
-    D2i --> D2i1[Avatar.tsx]
-    D2i --> D2i2[Badge.tsx]
-    D2i --> D2i3[Button.tsx]
-    D2i --> D2i4[Card.tsx]
-    D2i --> D2i5[Dialog.tsx]
+    subgraph components
+        direction TD
+        D2 --> D2a["🧩 ContactSection.tsx"]
+        D2 --> D2b["🧩 Sharebutton.tsx"]
+        D2 --> D2c["🧩 Navbar.tsx"]
+        D2 --> D2d["🧩 ThemeProvider.tsx"]
+        D2 --> D2e["🧩 ProjectCard.tsx"]
+        D2 --> D2f["🧩 Footer.tsx"]
+        D2 --> D2g["🧩 Hero.tsx"]
+        D2 --> D2h[📁 MagicUI]
+        D2 --> D2i[📁 UI Components]
+    end
 
-    D3 --> D3a[blog.ts]
-    D3 --> D3b[resume.tsx]
-    D3 --> D3c[projects.ts]
-    D3 --> D3d[skills.ts]
+    subgraph MagicUI
+        direction TD
+        D2h --> D2h1["✨ BlurFade.tsx"]
+        D2h --> D2h2["✨ Dock.tsx"]
+        D2h --> D2h3["✨ AnimatedText.tsx"]
+    end
 
-    D4 --> D4a[utils.ts]
-    D4 --> D4b[mdx.ts]
-    D4 --> D4c[analytics.ts]
+    subgraph UI Components
+        direction TD
+        D2i --> D2i1["💠 Avatar.tsx"]
+        D2i --> D2i2["💠 Badge.tsx"]
+        D2i --> D2i3["💠 Button.tsx"]
+        D2i --> D2i4["💠 Card.tsx"]
+        D2i --> D2i5["💠 Dialog.tsx"]
+    end
 
-    E --> E1[next.config.mjs]
-    E --> E2[tailwind.config.ts]
-    E --> E3[tsconfig.json]
-    E --> E4[package.json]
-    E --> E5[.env.example]
+    subgraph data
+        direction TD
+        D3 --> D3a["📊 blog.ts"]
+        D3 --> D3b["📊 resume.ts"]
+        D3 --> D3c["📊 projects.ts"]
+        D3 --> D3d["📊 skills.ts"]
+    end
+
+    subgraph lib
+        direction TD
+        D4 --> D4a["🔧 utils.ts"]
+        D4 --> D4b["🔧 mdx.ts"]
+        D4 --> D4c["🔧 analytics.ts"]
+    end
+
+    subgraph Configuration
+        direction TD
+        E --> E1["⚙️ next.config.mjs"]
+        E --> E2["🎨 tailwind.config.ts"]
+        E --> E3["📋 tsconfig.json"]
+        E --> E4["📦 package.json"]
+        E --> E5["🔑 .env.example"]
+    end
+
+    %% Styling
+    classDef root fill:#000,color:#fff,stroke:#fff,stroke-width:2px;
+    classDef folder fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    classDef file fill:#e6f7ff,stroke:#007acc,stroke-width:1px;
+
+    class A root;
+    class B,C,D,E,D1,D2,D3,D4,D5,D6,D2h,D2i folder;
+    class B1,B2,C1,C2,C3,C4,D1a,D1b,D1c,D1d,D1e,D1f,D1g,D2a,D2b,D2c,D2d,D2e,D2f,D2g,D2h1,D2h2,D2h3,D2i1,D2i2,D2i3,D2i4,D2i5,D3a,D3b,D3c,D3d,D4a,D4b,D4c,E1,E2,E3,E4,E5 file;
 ```
 
 ---
@@ -391,9 +432,9 @@ See the [LICENSE](./LICENSE) file for details.
 
 ## 📞 Contact
 
-📩 **Email:** [rajtilak1062020@gmail.com](mailto:rajtilak1062020@gmail.com)  
-🔗 **GitHub:** [rajtilak-2020](https://github.com/rajtilak-2020)  
-🔗 **LinkedIn:** [krajtilak2020](https://www.linkedin.com/in/krajtilak2020)  
+📩 **Email:** [rajtilak1062020@gmail.com](mailto:rajtilak1062020@gmail.com)
+🔗 **GitHub:** [rajtilak-2020](https://github.com/rajtilak-2020)
+🔗 **LinkedIn:** [krajtilak2020](https://www.linkedin.com/in/krajtilak2020)
 🌐 **Website:** [krajtilak.vercel.app](https://krajtilak.vercel.app)
 
 ---
