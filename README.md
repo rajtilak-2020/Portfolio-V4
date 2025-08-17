@@ -59,122 +59,83 @@ This portfolio represents the fourth iteration of my personal website, featuring
 ## 🏛️ Project Structure
 
 ```mermaid
-graph TD
-    A[📁 K-Rajtilak_s-Portfolio-V4]
-
+graph TB
+    %% Root Level
+    A[📁 K-Rajtilak Portfolio V4]
+    
+    %% Main Directories - Level 1
     A --> B[📦 content]
     A --> C[🌍 public]
     A --> D[💻 src]
-    A --> E[⚙️ Configuration]
+    A --> E[⚙️ config]
 
-    subgraph content
-        direction TD
-        B1["📄 blog posts"]
-        B2["📄 projects"]
-        B --> B1 & B2
-    end
+    %% Content Structure - Level 2
+    B --> B1[📄 blog]
+    B --> B2[📄 projects]
 
-    subgraph public
-        direction TD
-        C1["🖼️ images"]
-        C2["🎨 icons"]
-        C3["favicon.ico"]
-        C4["preview.gif"]
-        C --> C1 & C2 & C3 & C4
-    end
+    %% Public Assets - Level 2
+    C --> C1[🖼️ images]
+    C --> C2[🎨 icons]
+    C --> C3[📄 favicon]
 
-    subgraph src
-        direction TD
-        D1[📁 app]
-        D2[📁 components]
-        D3[📁 data]
-        D4[📁 lib]
-        D5[📁 hooks]
-        D6[📁 types]
-        D --> D1 & D2 & D3 & D4 & D5 & D6
-    end
+    %% Source Structure - Level 2
+    D --> D1[📁 app]
+    D --> D2[📁 components]
+    D --> D3[📁 data]
+    D --> D4[📁 lib]
 
-    subgraph app
-        direction TD
-        D1a["📄 globals.css"]
-        D1b["📄 layout.tsx"]
-        D1c["📄 page.tsx"]
-        D1d["📄 blog/page.tsx"]
-        D1e["📄 blog/[slug]/page.tsx"]
-        D1f["📄 projects/page.tsx"]
-        D1g["📄 about/page.tsx"]
-        D1 --> D1a & D1b & D1c & D1d & D1e & D1f & D1g
-    end
+    %% App Pages - Level 3
+    D1 --> D1a[📄 layout.tsx]
+    D1 --> D1b[📄 page.tsx]
+    D1 --> D1c[📄 blog pages]
+    D1 --> D1d[📄 about.tsx]
 
-    subgraph components
-        direction TD
-        D2a["🧩 ContactSection.tsx"]
-        D2b["🧩 Sharebutton.tsx"]
-        D2c["🧩 Navbar.tsx"]
-        D2d["🧩 ThemeProvider.tsx"]
-        D2e["🧩 ProjectCard.tsx"]
-        D2f["🧩 Footer.tsx"]
-        D2g["🧩 Hero.tsx"]
-        D2h[📁 MagicUI]
-        D2i[📁 UI Components]
+    %% Components Structure - Level 3
+    D2 --> D2a[🧩 Hero]
+    D2 --> D2b[🧩 Navbar]
+    D2 --> D2c[🧩 Footer]
+    D2 --> D2d[📁 MagicUI]
+    D2 --> D2e[📁 UI Kit]
 
-        D2 --> D2a & D2b & D2c & D2d & D2e & D2f & D2g
-        D2 --> D2h & D2i
-    end
+    %% MagicUI Components - Level 4
+    D2d --> D2d1[✨ BlurFade]
+    D2d --> D2d2[✨ Dock]
+    D2d --> D2d3[✨ AnimatedText]
 
-    subgraph MagicUI
-        direction TD
-        D2h1["✨ BlurFade.tsx"]
-        D2h2["✨ Dock.tsx"]
-        D2h3["✨ AnimatedText.tsx"]
-        D2h --> D2h1 & D2h2 & D2h3
-    end
+    %% UI Kit Components - Level 4
+    D2e --> D2e1[💠 Avatar]
+    D2e --> D2e2[💠 Button]
+    D2e --> D2e3[💠 Card]
 
-    subgraph UI Components
-        direction TD
-        D2i1["💠 Avatar.tsx"]
-        D2i2["💠 Badge.tsx"]
-        D2i3["💠 Button.tsx"]
-        D2i4["💠 Card.tsx"]
-        D2i5["💠 Dialog.tsx"]
-        D2i --> D2i1 & D2i2 & D2i3 & D2i4 & D2i5
-    end
+    %% Data Files - Level 3
+    D3 --> D3a[📊 blog.ts]
+    D3 --> D3b[📊 projects.ts]
+    D3 --> D3c[📊 resume.ts]
 
-    subgraph data
-        direction TD
-        D3a["📊 blog.ts"]
-        D3b["📊 resume.ts"]
-        D3c["📊 projects.ts"]
-        D3d["📊 skills.ts"]
-        D3 --> D3a & D3b & D3c & D3d
-    end
+    %% Utility Files - Level 3
+    D4 --> D4a[🔧 utils.ts]
+    D4 --> D4b[🔧 mdx.ts]
 
-    subgraph lib
-        direction TD
-        D4a["🔧 utils.ts"]
-        D4b["🔧 mdx.ts"]
-        D4c["🔧 analytics.ts"]
-        D4 --> D4a & D4b & D4c
-    end
+    %% Configuration Files - Level 2
+    E --> E1[⚙️ next.config]
+    E --> E2[🎨 tailwind.config]
+    E --> E3[📦 package.json]
 
-    subgraph Configuration
-        direction TD
-        E1["⚙️ next.config.mjs"]
-        E2["🎨 tailwind.config.ts"]
-        E3["📋 tsconfig.json"]
-        E4["📦 package.json"]
-        E5["🔑 .env.example"]
-        E --> E1 & E2 & E3 & E4 & E5
-    end
+    %% Enhanced Visual Styling
+    classDef root fill:#667eea,color:#fff,stroke:#4c51bf,stroke-width:4px,font-weight:bold,font-size:14px
+    classDef level1 fill:#4fd1c7,color:#1a202c,stroke:#319795,stroke-width:3px,font-weight:bold,font-size:13px
+    classDef level2 fill:#fed7d7,color:#742a2a,stroke:#e53e3e,stroke-width:2px,font-weight:500,font-size:12px
+    classDef level3 fill:#c6f6d5,color:#22543d,stroke:#38a169,stroke-width:2px,font-size:11px
+    classDef level4 fill:#fbb6ce,color:#702459,stroke:#d53f8c,stroke-width:2px,font-size:11px
+    classDef config fill:#e9d8fd,color:#44337a,stroke:#805ad5,stroke-width:2px,font-size:11px
 
-    %% Styling
-    classDef root fill:#000,color:#fff,stroke:#fff,stroke-width:2px;
-    classDef folder fill:#f9f9f9,stroke:#333,stroke-width:2px;
-    classDef file fill:#e6f7ff,stroke:#007acc,stroke-width:1px;
-
-    class A root;
-    class B,C,D,E,D1,D2,D3,D4,D5,D6,D2h,D2i folder;
-    class B1,B2,C1,C2,C3,C4,D1a,D1b,D1c,D1d,D1e,D1f,D1g,D2a,D2b,D2c,D2d,D2e,D2f,D2g,D2h1,D2h2,D2h3,D2i1,D2i2,D2i3,D2i4,D2i5,D3a,D3b,D3c,D3d,D4a,D4b,D4c,E1,E2,E3,E4,E5 file;
+    %% Apply Classes by Hierarchy
+    class A root
+    class B,C,D,E level1
+    class D1,D2,D3,D4,D2d,D2e level2
+    class B1,B2,C1,C2,C3,D1a,D1b,D1c,D1d,D2a,D2b,D2c,D3a,D3b,D3c,D4a,D4b level3
+    class D2d1,D2d2,D2d3,D2e1,D2e2,D2e3 level4
+    class E1,E2,E3 config
 ```
 
 ---
