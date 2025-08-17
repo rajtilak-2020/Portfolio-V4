@@ -69,90 +69,102 @@ graph TD
 
     subgraph content
         direction TD
-        B --> B1["📄 blog posts"]
-        B --> B2["📄 projects"]
+        B1["📄 blog posts"]
+        B2["📄 projects"]
+        B --> B1 & B2
     end
 
     subgraph public
         direction TD
-        C --> C1["🖼️ images"]
-        C --> C2["🎨 icons"]
-        C --> C3["favicon.ico"]
-        C --> C4["preview.gif"]
+        C1["🖼️ images"]
+        C2["🎨 icons"]
+        C3["favicon.ico"]
+        C4["preview.gif"]
+        C --> C1 & C2 & C3 & C4
     end
 
     subgraph src
         direction TD
-        D --> D1[📁 app]
-        D --> D2[📁 components]
-        D --> D3[📁 data]
-        D --> D4[📁 lib]
-        D --> D5[📁 hooks]
-        D --> D6[📁 types]
+        D1[📁 app]
+        D2[📁 components]
+        D3[📁 data]
+        D4[📁 lib]
+        D5[📁 hooks]
+        D6[📁 types]
+        D --> D1 & D2 & D3 & D4 & D5 & D6
     end
 
     subgraph app
         direction TD
-        D1 --> D1a["📄 globals.css"]
-        D1 --> D1b["📄 layout.tsx"]
-        D1 --> D1c["📄 page.tsx"]
-        D1 --> D1d["📄 blog/page.tsx"]
-        D1 --> D1e["📄 blog/[slug]/page.tsx"]
-        D1 --> D1f["📄 projects/page.tsx"]
-        D1 --> D1g["📄 about/page.tsx"]
+        D1a["📄 globals.css"]
+        D1b["📄 layout.tsx"]
+        D1c["📄 page.tsx"]
+        D1d["📄 blog/page.tsx"]
+        D1e["📄 blog/[slug]/page.tsx"]
+        D1f["📄 projects/page.tsx"]
+        D1g["📄 about/page.tsx"]
+        D1 --> D1a & D1b & D1c & D1d & D1e & D1f & D1g
     end
 
     subgraph components
         direction TD
-        D2 --> D2a["🧩 ContactSection.tsx"]
-        D2 --> D2b["🧩 Sharebutton.tsx"]
-        D2 --> D2c["🧩 Navbar.tsx"]
-        D2 --> D2d["🧩 ThemeProvider.tsx"]
-        D2 --> D2e["🧩 ProjectCard.tsx"]
-        D2 --> D2f["🧩 Footer.tsx"]
-        D2 --> D2g["🧩 Hero.tsx"]
-        D2 --> D2h[📁 MagicUI]
-        D2 --> D2i[📁 UI Components]
+        D2a["🧩 ContactSection.tsx"]
+        D2b["🧩 Sharebutton.tsx"]
+        D2c["🧩 Navbar.tsx"]
+        D2d["🧩 ThemeProvider.tsx"]
+        D2e["🧩 ProjectCard.tsx"]
+        D2f["🧩 Footer.tsx"]
+        D2g["🧩 Hero.tsx"]
+        D2h[📁 MagicUI]
+        D2i[📁 UI Components]
+
+        D2 --> D2a & D2b & D2c & D2d & D2e & D2f & D2g
+        D2 --> D2h & D2i
     end
 
     subgraph MagicUI
         direction TD
-        D2h --> D2h1["✨ BlurFade.tsx"]
-        D2h --> D2h2["✨ Dock.tsx"]
-        D2h --> D2h3["✨ AnimatedText.tsx"]
+        D2h1["✨ BlurFade.tsx"]
+        D2h2["✨ Dock.tsx"]
+        D2h3["✨ AnimatedText.tsx"]
+        D2h --> D2h1 & D2h2 & D2h3
     end
 
     subgraph UI Components
         direction TD
-        D2i --> D2i1["💠 Avatar.tsx"]
-        D2i --> D2i2["💠 Badge.tsx"]
-        D2i --> D2i3["💠 Button.tsx"]
-        D2i --> D2i4["💠 Card.tsx"]
-        D2i --> D2i5["💠 Dialog.tsx"]
+        D2i1["💠 Avatar.tsx"]
+        D2i2["💠 Badge.tsx"]
+        D2i3["💠 Button.tsx"]
+        D2i4["💠 Card.tsx"]
+        D2i5["💠 Dialog.tsx"]
+        D2i --> D2i1 & D2i2 & D2i3 & D2i4 & D2i5
     end
 
     subgraph data
         direction TD
-        D3 --> D3a["📊 blog.ts"]
-        D3 --> D3b["📊 resume.ts"]
-        D3 --> D3c["📊 projects.ts"]
-        D3 --> D3d["📊 skills.ts"]
+        D3a["📊 blog.ts"]
+        D3b["📊 resume.ts"]
+        D3c["📊 projects.ts"]
+        D3d["📊 skills.ts"]
+        D3 --> D3a & D3b & D3c & D3d
     end
 
     subgraph lib
         direction TD
-        D4 --> D4a["🔧 utils.ts"]
-        D4 --> D4b["🔧 mdx.ts"]
-        D4 --> D4c["🔧 analytics.ts"]
+        D4a["🔧 utils.ts"]
+        D4b["🔧 mdx.ts"]
+        D4c["🔧 analytics.ts"]
+        D4 --> D4a & D4b & D4c
     end
 
     subgraph Configuration
         direction TD
-        E --> E1["⚙️ next.config.mjs"]
-        E --> E2["🎨 tailwind.config.ts"]
-        E --> E3["📋 tsconfig.json"]
-        E --> E4["📦 package.json"]
-        E --> E5["🔑 .env.example"]
+        E1["⚙️ next.config.mjs"]
+        E2["🎨 tailwind.config.ts"]
+        E3["📋 tsconfig.json"]
+        E4["📦 package.json"]
+        E5["🔑 .env.example"]
+        E --> E1 & E2 & E3 & E4 & E5
     end
 
     %% Styling
