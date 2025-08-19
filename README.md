@@ -187,7 +187,6 @@ sequenceDiagram
 
 ## 🔧 Technology Stack
 
-<div align="center">
 
 ### 🎯 Core Technologies
 
@@ -216,7 +215,6 @@ sequenceDiagram
 | **Vercel Edge Network** | CDN | Global performance |
 | **Next.js Analytics** | Performance Monitoring | Real user metrics |
 
-</div>
 
 ## 🚀 Quick Start
 
