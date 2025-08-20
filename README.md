@@ -487,8 +487,8 @@ K-Rajtilak-Portfolio-V4/
 <td align="center">🖥️ Desktop</td>
 </tr>
 <tr>
-<td><img src="https://github.com/user-attachments/assets/18cf161d-9177-457f-b2e4-30baff553152" width="200"/></td>
-<td><img src="https://via.placeholder.com/600x400/4fd1c7/ffffff?text=Tablet+View" width="300"/></td>
+<td><img src="https://github.com/user-attachments/assets/76a033b4-ff71-4757-8ba4-b1ffaea3a4a1" width="200"/></td>
+<td><img src="https://github.com/user-attachments/assets/ac41176a-b59b-4255-9cdb-efcc41e10c08" width="300"/></td>
 <td><img src="https://github.com/user-attachments/assets/1223dc16-b66c-430c-90d2-68e74597e57e" width="400"/></td>
 </tr>
 </table>
