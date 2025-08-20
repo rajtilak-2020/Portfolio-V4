@@ -29,7 +29,7 @@
     "framer-motion": "^11.2.10",
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
-    "lucide-react": "^0.539.0",
+    "lucide-react": "^0.540.0",
     "motion": "^12.23.12",
     "next": "14.2.31",
     "next-mdx-remote": "^5.0.0",
