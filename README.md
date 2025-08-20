@@ -18,22 +18,6 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [🎯 Overview](#-overview)
-- [✨ Key Features](#-key-features)
-- [🏗️ System Architecture](#️-system-architecture)
-- [🔧 Technology Stack](#-technology-stack)
-- [🚀 Quick Start](#-quick-start)
-- [📂 Project Structure](#-project-structure)
-- [🎨 Design System](#-design-system)
-- [📱 Screenshots](#-screenshots)
-- [⚡ Performance](#-performance)
-- [🛠️ Development](#️-development)
-- [📚 Documentation](#-documentation)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-
 ## 🎯 Overview
 
 > **A modern, performant, and visually stunning portfolio website that represents the pinnacle of contemporary web development.**
@@ -581,16 +565,35 @@ graph LR
 ### 🎯 Development Workflow
 
 ```mermaid
-gitgraph
-    commit id: "Initial Setup"
-    branch feature
-    checkout feature
-    commit id: "Add Component"
-    commit id: "Write Tests"
-    commit id: "Update Docs"
-    checkout main
-    merge feature
-    commit id: "Deploy to Vercel"
+graph LR
+    A[🚀 Initial Setup] --> B[📝 Create Feature Branch]
+    B --> C[⚡ Add Component]
+    C --> D[🧪 Write Tests]
+    D --> E[📚 Update Docs]
+    E --> F[🔄 Switch to Main]
+    F --> G[🔗 Merge Feature]
+    G --> H[🌐 Deploy to Vercel]
+
+    %% Branch styling
+    A --> I[📋 main branch]
+    B --> J[🌿 feature branch]
+    C --> J
+    D --> J
+    E --> J
+    F --> I
+    G --> I
+    H --> I
+
+    classDef mainBranch fill:#e6f7ff,color:#0066cc,stroke:#0052cc,stroke-width:3px,font-weight:bold
+    classDef featureBranch fill:#f0f8e6,color:#2d5016,stroke:#52c41a,stroke-width:2px
+    classDef commit fill:#fff2e6,color:#d46b08,stroke:#fa8c16,stroke-width:2px
+    classDef deploy fill:#f6ffed,color:#389e0d,stroke:#52c41a,stroke-width:3px,font-weight:bold
+
+    class I mainBranch
+    class J featureBranch
+    class A,C,D,E,G commit
+    class B,F commit
+    class H deploy
 ```
 
 ### 🧪 Testing Strategy
