@@ -1,6 +1,6 @@
 <div align="center">
     
-![Portfolio Banner](https://github.com/user-attachments/assets/dce7aa06-c09d-4cde-8a40-f28f209eab51)
+![Portfolio Banner](https://github.com/user-attachments/assets/ef338a9b-c22b-4961-9040-20cea83b6a28)
 
 **A cutting-edge, high-performance portfolio showcasing modern web development excellence**
 
