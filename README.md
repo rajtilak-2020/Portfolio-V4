@@ -489,7 +489,7 @@ K-Rajtilak-Portfolio-V4/
 <tr>
 <td><img src="https://github.com/user-attachments/assets/76a033b4-ff71-4757-8ba4-b1ffaea3a4a1" width="200"/></td>
 <td><img src="https://github.com/user-attachments/assets/ac41176a-b59b-4255-9cdb-efcc41e10c08" width="300"/></td>
-<td><img src="https://github.com/user-attachments/assets/62e8dcb7-6cae-47dd-babc-cc4d646332e4" width="400"/></td>
+<td><img src="https://github.com/user-attachments/assets/419d3c0f-ffdf-43db-b367-8100d64636ea" width="400"/></td>
 </tr>
 </table>
 
