@@ -38,6 +38,29 @@ export const DATA = {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     {
+      title: "SRAAS Smart Rural Analytics and Alert System",
+      href: "https://github.com/rajtilak-2020/SRAAS.git",
+      dates: "Aug 2025 - Present",
+      active: true,
+      description: "SRAAS (Smart Rural Analytic And Alert System) is an intelligent IoT-based platform designed to provide real-time analytics and automated alerts for rural infrastructure monitoring and management.",
+      technologies: ["React","Typescript","Vercel","Node.js","Express.js","REST API","FastAPI","Python","Java","Rasberry Pi","WebSockets","Linux","AI","IoT","OpenWebUI","HTML","CSS","Javascript"],
+      links: [
+              {
+                type: "Source Code",
+                href: "https://github.com/rajtilak-2020/sraas.git",
+                icon: <Icons.github className="size-3" />,
+              },
+              {
+                type: "Preview",
+                href: "https://sraas.vercel.app/",
+                icon: <Icons.globe className="size-3" />,
+              },
+            ],
+      image: "/sraas.png",
+      video: "",
+    },
+
+    {
       title: "ESP32-WiFi-Deception-Station",
       href: "https://github.com/rajtilak-2020/ESP32-WiFi-Deception-Station.git",
       dates: "July 2025",
