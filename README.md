@@ -752,14 +752,14 @@ flowchart TD
     J -->|Yes| K[🎉 Merge to Main]
     J -->|No| L[🔄 Address Feedback]
     L --> I
-
+    
     classDef process fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#01579b
     classDef decision fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
     classDef success fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#1b5e20
     classDef feedback fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#880e4f
-
+    
     class A,B,C,D,E,F,G,H,I process
-    class J decision  
+    class J decision
     class K success
     class L feedback
 ```
