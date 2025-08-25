@@ -1208,6 +1208,12 @@ Join our growing community of developers and creators!
 - 📢 **Share with others** who might benefit
 - 🤝 **Contribute** to make it even better
 
+### 🚀 Ready to build your own portfolio?
+
+Feel free to fork this repository and make it your own. Don't forget to:
+- ⭐ Star the repo if you found it helpful
+- 🔄 Share it with your network  
+- 🤝 Contribute improvements back to the community
 
 ---
 
@@ -1218,22 +1224,22 @@ Join our growing community of developers and creators!
 **Thank you for checking out my portfolio project!**
 
 This portfolio represents my journey as a developer and my passion for creating beautiful, performant web experiences. Whether you're here to learn, contribute, or just browse, I appreciate your time and interest.
+
 </div>
 
-### 🚀 Ready to build your own portfolio?
-
-Feel free to fork this repository and make it your own. Don't forget to:
-- ⭐ Star the repo if you found it helpful
-- 🔄 Share it with your network  
-- 🤝 Contribute improvements back to the community
-
 ---
+
+<div align="center">
 
 ### 💫 *"Code is poetry, and every portfolio tells a story"*
 
 **Happy coding! 🚀**
 
 *Made with ❤️, ☕, and countless hours of debugging*
+
+</div>
+
+<div align="right">
 
 ![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=rajtilak-2020.K-Rajtilak_s-Portfolio-V4)
 
