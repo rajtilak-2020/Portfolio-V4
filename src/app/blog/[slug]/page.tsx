@@ -74,7 +74,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
                 quality={100}
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent" />
             </div>
             <div className="absolute inset-0 flex flex-col justify-end">
               <div className="container max-w-4xl mx-auto px-6 pb-8 md:pb-12">
@@ -141,12 +141,10 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <h3 className="text-lg font-semibold mb-2">Share this article</h3>
-                <p className="text-sm text-muted-foreground">
-                  If you found this helpful, consider sharing it with others!
-                </p>
+                <p className="text-sm text-muted-foreground">If you found this helpful or intresting, consider sharing it with others!</p>
               </div>
               <div className="flex items-center gap-3">
-                <ShareButton 
+                <ShareButton
                   title={post.metadata.title}
                   text={post.metadata.summary}
                   url={`${DATA.url}/blog/${post.slug}`}
