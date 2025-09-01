@@ -4,83 +4,117 @@ import Link from "next/link";
 import React from "react";
 
 function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
-  let headers = data.headers.map((header, index) => (
-    <th key={index}>{header}</th>
+  const headers = data.headers.map((header, index) => (
+    <th key={index} className="px-4 py-3 text-left font-semibold bg-muted/50 border-b">
+      {header}
+    </th>
   ));
-  let rows = data.rows.map((row, index) => (
-    <tr key={index}>
+  
+  const rows = data.rows.map((row, index) => (
+    <tr key={index} className="border-b hover:bg-muted/30 transition-colors">
       {row.map((cell, cellIndex) => (
-        <td key={cellIndex}>{cell}</td>
+        <td key={cellIndex} className="px-4 py-3">
+          {cell}
+        </td>
       ))}
     </tr>
   ));
 
   return (
-    <table>
-      <thead>
-        <tr>{headers}</tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </table>
+    <div className="overflow-x-auto my-8">
+      <table className="w-full border-collapse border border-border rounded-lg">
+        <thead>
+          <tr>{headers}</tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
   );
 }
 
 function CustomLink(props: any) {
-  let href = props.href;
+  const { href, children, ...rest } = props;
 
-  if (href.startsWith("/")) {
+  if (href?.startsWith("/")) {
     return (
-      <Link href={href} {...props}>
-        {props.children}
+      <Link 
+        href={href} 
+        className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
+        {...rest}
+      >
+        {children}
       </Link>
     );
   }
 
-  if (href.startsWith("#")) {
-    return <a {...props} />;
+  if (href?.startsWith("#")) {
+    return (
+      <a 
+        className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
+        {...props} 
+      />
+    );
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />;
+  return (
+    <a 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
+      {...props} 
+    />
+  );
 }
 
 function RoundedImage(props: any) {
   const { className, alt, src, width, height, ...rest } = props;
   
-  // Check if image should float left or right based on alt text
-  const shouldFloatLeft = alt?.toLowerCase().match(/\b(left|float-left)\b/);
-  const shouldFloatRight = alt?.toLowerCase().match(/\b(right|float-right)\b/);
-  const isCentered = alt?.toLowerCase().match(/\b(center|centered|float-center)\b/);
+  // Handle cases where alt might be undefined
+  const altText = alt || '';
   
-  // Determine image size based on alt text or props
+  // Extract positioning and sizing from alt text
+  const shouldFloatLeft = altText.toLowerCase().includes('left');
+  const shouldFloatRight = altText.toLowerCase().includes('right');
+  const isCentered = altText.toLowerCase().includes('center');
+  
+  // Extract size from alt text
   const getImageSize = () => {
-    if (alt?.toLowerCase().match(/\bsmall\b/)) return 'max-w-xs';
-    if (alt?.toLowerCase().match(/\bmedium\b/)) return 'max-w-md';
-    if (alt?.toLowerCase().match(/\blarge\b/)) return 'max-w-2xl';
-    if (alt?.toLowerCase().match(/\bfull\b/)) return 'w-full';
+    const altLower = altText.toLowerCase();
+    if (altLower.includes('small')) return 'max-w-xs';
+    if (altLower.includes('medium')) return 'max-w-md';
+    if (altLower.includes('large')) return 'max-w-2xl';
+    if (altLower.includes('full')) return 'w-full';
     return 'max-w-lg'; // default size
   };
 
   const imageSize = getImageSize();
   
+  // Clean alt text for display (remove positioning keywords)
+  const cleanAlt = altText.replace(/\b(left|right|center|centered|float-left|float-right|float-center|small|medium|large|full)\b/gi, '').trim();
+  
   // Create wrapper classes based on float direction
-  const wrapperClasses = [
-    'my-6',
-    shouldFloatLeft && 'float-left',
-    shouldFloatRight && 'float-right',
-    isCentered && 'mx-auto block',
-    !shouldFloatLeft && !shouldFloatRight && !isCentered && 'block'
-  ].filter(Boolean).join(' ');
+  const getWrapperClasses = () => {
+    if (shouldFloatLeft) {
+      return 'float-left mr-6 mb-4 mt-2 clear-left';
+    } else if (shouldFloatRight) {
+      return 'float-right ml-6 mb-4 mt-2 clear-right';
+    } else if (isCentered) {
+      return 'mx-auto block my-8 clear-both';
+    } else {
+      return 'block my-8 clear-both';
+    }
+  };
 
   const imageClasses = [
-    'rounded-xl shadow-lg',
+    'rounded-xl shadow-lg transition-shadow hover:shadow-xl block',
     imageSize,
     className
   ].filter(Boolean).join(' ');
 
   return (
-    <span className={wrapperClasses}>
+    <div className={getWrapperClasses()}>
       <Image 
-        alt={alt} 
+        alt={cleanAlt || 'Image'} 
         className={imageClasses}
         src={src}
         width={width || 800}
@@ -89,61 +123,146 @@ function RoundedImage(props: any) {
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         {...rest} 
       />
-
-    </span>
+      {cleanAlt && (
+        <div className="mt-3 text-sm text-muted-foreground text-center italic leading-relaxed">
+          {cleanAlt}
+        </div>
+      )}
+    </div>
   );
 }
 
-// This replaces rehype-slug
-function slugify(str: string) {
+// Simple and reliable slug generation
+function slugify(str: string): string {
+  if (!str || typeof str !== 'string') return '';
+  
   return str
-    .toString()
     .toLowerCase()
-    .trim() // Remove whitespace from both ends of a string
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/&/g, "-and-") // Replace & with 'and'
-    .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
-    .replace(/\-\-+/g, "-"); // Replace multiple - with single -
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+    .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+}
+
+// Extract plain text from React children
+function getTextContent(children: React.ReactNode): string {
+  if (typeof children === 'string') return children;
+  if (typeof children === 'number') return children.toString();
+  if (Array.isArray(children)) {
+    return children.map(getTextContent).join('');
+  }
+  if (React.isValidElement(children)) {
+    return getTextContent(children.props.children);
+  }
+  return '';
 }
 
 function createHeading(level: number) {
   const Heading = (props: any) => {
-    const { children, ...rest } = props;
-    let slug = slugify(children as string);
-    return React.createElement(
-      `h${level}`,
-      { id: slug, ...rest },
-      [
-        React.createElement("a", {
-          href: `#${slug}`,
-          key: `link-${slug}`,
-          className: "anchor",
-        }),
-      ],
-      children
+    const { children, className, ...rest } = props;
+    
+    // Extract text content from children for slug generation
+    const textContent = getTextContent(children);
+    const slug = slugify(textContent);
+    
+    // Simplified heading styles
+    const getHeadingClasses = () => {
+      const baseClasses = 'scroll-mt-20 group relative';
+      const styles = {
+        1: 'text-4xl font-bold mt-12 mb-8',
+        2: 'text-3xl font-semibold mt-10 mb-6', 
+        3: 'text-2xl font-semibold mt-8 mb-4',
+        4: 'text-xl font-medium mt-6 mb-3',
+        5: 'text-lg font-medium mt-4 mb-2',
+        6: 'text-base font-medium mt-4 mb-2'
+      };
+      
+      const levelStyle = styles[level as keyof typeof styles] || styles[6];
+      return `${baseClasses} ${levelStyle} text-foreground`;
+    };
+
+    const HeadingTag = `h${level}` as keyof JSX.IntrinsicElements;
+    
+    return (
+      <HeadingTag
+        {...(slug && { id: slug })}
+        className={`${getHeadingClasses()} ${className || ''}`.trim()}
+        {...rest}
+      >
+        {slug && (
+          <a 
+            href={`#${slug}`}
+            className="anchor absolute -left-8 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-muted-foreground hover:text-primary no-underline"
+            aria-label={`Link to ${textContent}`}
+          >
+            #
+          </a>
+        )}
+        {children}
+      </HeadingTag>
     );
   };
+  
   Heading.displayName = `Heading${level}`;
   return Heading;
 }
 
-// Enhanced paragraph component for better text wrapping
+// Improved paragraph component with better text wrapping
 function EnhancedParagraph(props: any) {
+  const { children, ...rest } = props;
+  
+  if (!children) {
+    return null;
+  }
+  
+  // Check if paragraph contains images
+  const childrenArray = React.Children.toArray(children);
+  const containsImages = childrenArray.some(child => {
+    if (React.isValidElement(child)) {
+      return child.type === RoundedImage || 
+             child.props?.mdxType === 'img' ||
+             (child.type && typeof child.type === 'function' && 
+              (child.type.name === 'RoundedImage' || (child.type as any)?.displayName === 'RoundedImage'));
+    }
+    return false;
+  });
+  
+  // Use div for image-containing content, p for text-only
+  const Tag = containsImages ? 'div' : 'p';
+  
   return (
-    <p className="leading-relaxed mb-6" {...props}>
-      {props.children}
-    </p>
+    <Tag 
+      className="leading-7 mb-6 text-foreground/90 break-words hyphens-auto" 
+      style={{ 
+        textAlign: 'justify',
+        textJustify: 'inter-word',
+        wordWrap: 'break-word',
+        overflowWrap: 'break-word'
+      }}
+      {...rest}
+    >
+      {children}
+    </Tag>
   );
 }
 
-// Enhanced blockquote component
+// Enhanced blockquote with better text handling
 function EnhancedBlockquote(props: any) {
   return (
     <blockquote 
-      className="border-l-4 border-l-primary pl-6 italic bg-muted/50 py-4 px-6 rounded-r-lg my-8" 
+      className="border-l-4 border-l-primary pl-6 italic bg-muted/50 py-6 px-6 rounded-r-lg my-8 overflow-hidden clear-both" 
+      style={{ 
+        display: 'flow-root',
+        textAlign: 'left',
+        hyphens: 'auto',
+        wordWrap: 'break-word'
+      }}
       {...props}
     >
-      {props.children}
+      <div className="text-foreground/80 leading-7">
+        {props.children}
+      </div>
     </blockquote>
   );
 }
@@ -152,11 +271,88 @@ function EnhancedBlockquote(props: any) {
 function EnhancedCode(props: any) {
   return (
     <code 
-      className="text-primary bg-muted rounded px-1.5 py-0.5 text-sm font-mono" 
+      className="text-primary bg-muted rounded px-2 py-1 text-sm font-mono border break-all" 
       {...props}
     >
       {props.children}
     </code>
+  );
+}
+
+// Enhanced pre component for code blocks
+function EnhancedPre(props: any) {
+  return (
+    <pre 
+      className="bg-muted border rounded-lg p-4 overflow-x-auto my-6 clear-both text-sm"
+      style={{ 
+        display: 'flow-root',
+        whiteSpace: 'pre-wrap',
+        wordBreak: 'break-all'
+      }}
+      {...props}
+    >
+      {props.children}
+    </pre>
+  );
+}
+
+// Enhanced list components with better spacing
+function EnhancedUl(props: any) {
+  return (
+    <ul 
+      className="list-disc pl-6 mb-6 space-y-3 clear-both" 
+      style={{ 
+        display: 'flow-root'
+      }}
+      {...props}
+    >
+      {props.children}
+    </ul>
+  );
+}
+
+function EnhancedOl(props: any) {
+  return (
+    <ol 
+      className="list-decimal pl-6 mb-6 space-y-3 clear-both"
+      style={{ 
+        display: 'flow-root'
+      }}
+      {...props}
+    >
+      {props.children}
+    </ol>
+  );
+}
+
+function EnhancedLi(props: any) {
+  return (
+    <li 
+      className="text-foreground/90 leading-7 break-words"
+      style={{
+        hyphens: 'auto',
+        wordWrap: 'break-word'
+      }}
+      {...props}
+    >
+      {props.children}
+    </li>
+  );
+}
+
+// Enhanced hr component
+function EnhancedHr(props: any) {
+  return (
+    <hr className="border-t border-border my-12 clear-both" {...props} />
+  );
+}
+
+// Enhanced strong component
+function EnhancedStrong(props: any) {
+  return (
+    <strong className="font-semibold text-foreground" {...props}>
+      {props.children}
+    </strong>
   );
 }
 
@@ -168,10 +364,16 @@ export const globalComponents: MDXComponents = {
   h5: createHeading(5),
   h6: createHeading(6),
   Image: RoundedImage,
-  img: RoundedImage, // Also handle regular img tags
+  img: RoundedImage,
   a: CustomLink,
   p: EnhancedParagraph,
   blockquote: EnhancedBlockquote,
   code: EnhancedCode,
+  pre: EnhancedPre,
+  ul: EnhancedUl,
+  ol: EnhancedOl,
+  li: EnhancedLi,
+  hr: EnhancedHr,
+  strong: EnhancedStrong,
   Table,
 };
