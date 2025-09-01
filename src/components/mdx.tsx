@@ -69,30 +69,25 @@ function CustomLink(props: any) {
 function RoundedImage(props: any) {
   const { className, alt, src, width, height, ...rest } = props;
   
-  // Handle cases where alt might be undefined
   const altText = alt || '';
   
-  // Extract positioning and sizing from alt text
   const shouldFloatLeft = altText.toLowerCase().includes('left');
   const shouldFloatRight = altText.toLowerCase().includes('right');
   const isCentered = altText.toLowerCase().includes('center');
   
-  // Extract size from alt text
   const getImageSize = () => {
     const altLower = altText.toLowerCase();
     if (altLower.includes('small')) return 'max-w-xs';
     if (altLower.includes('medium')) return 'max-w-md';
     if (altLower.includes('large')) return 'max-w-2xl';
     if (altLower.includes('full')) return 'w-full';
-    return 'max-w-lg'; // default size
+    return 'max-w-lg';
   };
 
   const imageSize = getImageSize();
   
-  // Clean alt text for display (remove positioning keywords)
   const cleanAlt = altText.replace(/\b(left|right|center|centered|float-left|float-right|float-center|small|medium|large|full)\b/gi, '').trim();
   
-  // Create wrapper classes based on float direction
   const getWrapperClasses = () => {
     if (shouldFloatLeft) {
       return 'float-left mr-6 mb-4 mt-2 clear-left';
@@ -132,20 +127,18 @@ function RoundedImage(props: any) {
   );
 }
 
-// Simple and reliable slug generation
 function slugify(str: string): string {
   if (!str || typeof str !== 'string') return '';
   
   return str
     .toLowerCase()
     .trim()
-    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
-    .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
-    .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
-// Extract plain text from React children
 function getTextContent(children: React.ReactNode): string {
   if (typeof children === 'string') return children;
   if (typeof children === 'number') return children.toString();
@@ -162,11 +155,8 @@ function createHeading(level: number) {
   const Heading = (props: any) => {
     const { children, className, ...rest } = props;
     
-    // Extract text content from children for slug generation
     const textContent = getTextContent(children);
     const slug = slugify(textContent);
-    
-    // Simplified heading styles
     const getHeadingClasses = () => {
       const baseClasses = 'scroll-mt-20 group relative';
       const styles = {
@@ -208,7 +198,6 @@ function createHeading(level: number) {
   return Heading;
 }
 
-// Improved paragraph component with better text wrapping
 function EnhancedParagraph(props: any) {
   const { children, ...rest } = props;
   
@@ -216,7 +205,6 @@ function EnhancedParagraph(props: any) {
     return null;
   }
   
-  // Check if paragraph contains images
   const childrenArray = React.Children.toArray(children);
   const containsImages = childrenArray.some(child => {
     if (React.isValidElement(child)) {
@@ -228,7 +216,6 @@ function EnhancedParagraph(props: any) {
     return false;
   });
   
-  // Use div for image-containing content, p for text-only
   const Tag = containsImages ? 'div' : 'p';
   
   return (
@@ -247,7 +234,6 @@ function EnhancedParagraph(props: any) {
   );
 }
 
-// Enhanced blockquote with better text handling
 function EnhancedBlockquote(props: any) {
   return (
     <blockquote 
@@ -267,7 +253,6 @@ function EnhancedBlockquote(props: any) {
   );
 }
 
-// Enhanced code component
 function EnhancedCode(props: any) {
   return (
     <code 
@@ -279,7 +264,6 @@ function EnhancedCode(props: any) {
   );
 }
 
-// Enhanced pre component for code blocks
 function EnhancedPre(props: any) {
   return (
     <pre 
@@ -296,7 +280,6 @@ function EnhancedPre(props: any) {
   );
 }
 
-// Enhanced list components with better spacing
 function EnhancedUl(props: any) {
   return (
     <ul 
@@ -340,14 +323,12 @@ function EnhancedLi(props: any) {
   );
 }
 
-// Enhanced hr component
 function EnhancedHr(props: any) {
   return (
     <hr className="border-t border-border my-12 clear-both" {...props} />
   );
 }
 
-// Enhanced strong component
 function EnhancedStrong(props: any) {
   return (
     <strong className="font-semibold text-foreground" {...props}>
