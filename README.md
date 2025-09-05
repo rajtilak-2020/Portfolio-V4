@@ -1218,9 +1218,7 @@ Feel free to fork this repository and make it your own. Don't forget to:
 ---
 
 <div align="center">
-
-## 🎉 Thank You!
-
+    
 **Thank you for checking out my portfolio project!**
 
 This portfolio represents my journey as a developer and my passion for creating beautiful, performant web experiences. Whether you're here to learn, contribute, or just browse, I appreciate your time and interest.
