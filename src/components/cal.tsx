@@ -4,7 +4,6 @@ import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { CalendarDays } from "lucide-react";
-import { useTheme } from "next-themes";
 
 export function ScheduleCallFloat() {
   useEffect(() => {
