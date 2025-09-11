@@ -24,12 +24,12 @@
 			"com.tldraw.shape.note": 9,
 			"com.tldraw.shape.line": 5,
 			"com.tldraw.shape.frame": 1,
-			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.arrow": 7,
 			"com.tldraw.shape.highlight": 1,
 			"com.tldraw.shape.embed": 4,
 			"com.tldraw.shape.image": 5,
-			"com.tldraw.shape.video": 3,
-			"com.tldraw.binding.arrow": 0
+			"com.tldraw.shape.video": 4,
+			"com.tldraw.binding.arrow": 1
 		}
 	},
 	"records": [
@@ -50,9 +50,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 24.35769271850586,
-			"y": 57.18461608886719,
-			"lastActivityTimestamp": 1745774652057,
+			"x": 1144,
+			"y": 478,
+			"lastActivityTimestamp": 1757615274257,
 			"meta": {}
 		},
 		{
@@ -64,7 +64,7 @@
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "default",
+				"type": "cross",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -74,8 +74,8 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 841.1077270507812,
-				"h": 649.1077270507812
+				"w": 1620,
+				"h": 596
 			},
 			"insets": [
 				false,
@@ -90,7 +90,7 @@
 			"isChatting": false,
 			"highlightedUserIds": [],
 			"isFocused": true,
-			"devicePixelRatio": 1.3541666269302368,
+			"devicePixelRatio": 1,
 			"isCoarsePointer": false,
 			"isHoveringCanvas": true,
 			"openMenus": [],
@@ -105,8 +105,10 @@
 		{
 			"editingShapeId": null,
 			"croppingShapeId": null,
-			"selectedShapeIds": [],
-			"hoveredShapeId": null,
+			"selectedShapeIds": [
+				"shape:PMwPjw6tLLfOtMBkADqsg"
+			],
+			"hoveredShapeId": "shape:PMwPjw6tLLfOtMBkADqsg",
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -122,6 +124,43 @@
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
+		},
+		{
+			"x": 347,
+			"y": 112,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:PMwPjw6tLLfOtMBkADqsg",
+			"type": "geo",
+			"props": {
+				"w": 797,
+				"h": 366,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
 		}
 	]
 }
