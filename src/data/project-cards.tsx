@@ -37,6 +37,24 @@ export const DATA = {
     // },                                                                                          ////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        {
+      title: "Stellar Ignition System",
+      href: "https://github.com/rajtilak-2020/Stellar-Ignition-System",
+      dates: "Sep 2025",
+      active: true,
+      description: "A wireless firework launch controller featuring ESP32 web interface and Arduino countdown sequencer. Control rocket launches remotely through a mission control dashboard with real-time status monitoring and PWM fuse ignition.",
+      technologies: ["C++","HTML","CSS","Javascript","ESP32","Arduino"],
+      links: [
+              {
+                type: "Source Code",
+                href: "https://github.com/rajtilak-2020/Stellar-Ignition-System",
+                icon: <Icons.github className="size-3" />,
+              },
+            ],
+      image: "/sis.webp",
+      video: "",
+    },
+
     {
       title: "SRAAS Smart Rural Analytics and Alert System",
       href: "https://github.com/rajtilak-2020/SRAAS.git",
