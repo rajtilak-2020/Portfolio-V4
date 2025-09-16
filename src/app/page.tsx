@@ -173,7 +173,7 @@ export default function Page() {
           pulsating={true}
           fadeDistance={5}
           saturation={1}
-          followMouse={false}
+          followMouse={true}
           mouseInfluence={0.15}
           noiseAmount={0.1}
           distortion={0}
