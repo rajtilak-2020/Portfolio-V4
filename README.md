@@ -4,7 +4,7 @@
 
 **A cutting-edge, high-performance portfolio showcasing modern web development excellence**
 
-[![Website](https://img.shields.io/badge/🌐%20Live%20Website-krajtilak.vercel.app-blue?style=for-the-badge&logo=vercel)](https://krajtilak.vercel.app)
+[![Website](https://img.shields.io/badge/🌐%20Live%20Website-krajtilak.dev-blue?style=for-the-badge&logo=vercel)](https://krajtilak.vercel.app)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -1242,3 +1242,4 @@ This portfolio represents my journey as a developer and my passion for creating 
 ![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=rajtilak-2020.K-Rajtilak_s-Portfolio-V4)
 
 </div>
+
