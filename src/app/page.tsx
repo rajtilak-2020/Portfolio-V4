@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | K Rajtilak",
   },
   alternates: {
-    canonical: "https://krajtilak.vercel.app"
+    canonical: "https://krajtilak.dev"
   },
 
   description: "K Rajtilak – Cybersecurity student exploring Web Dev and IoT with curiosity and code.",
