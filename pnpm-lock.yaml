@@ -130,8 +130,8 @@ importers:
         version: 11.0.5
     devDependencies:
       '@eslint/js':
-        specifier: ^9.35.0
-        version: 9.35.0
+        specifier: ^9.36.0
+        version: 9.36.0
       '@lhci/cli':
         specifier: ^0.15.1
         version: 0.15.1
