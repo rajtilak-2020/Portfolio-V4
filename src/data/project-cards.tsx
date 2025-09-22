@@ -43,7 +43,7 @@ export const DATA = {
       dates: "Under Development",
       active: true,
       description: "A React-powered content management system that leverages Supabase's real-time database for instant site updates. Free, fast, and built specifically for developers who want seamless content management.",
-      technologies: ["React","Typescript","Vercel","Node.js","Express.js","REST API","FastAPI","Supabase","SQL","OpenWebUI","HTML","CSS","Javascript"],
+      technologies: ["React","Typescript","Vercel","Node.js","REST API","FastAPI","Supabase","SQL","OpenWebUI","HTML","CSS","Javascript","CMS"],
       links: [
               {
                 type: "Source Code",
