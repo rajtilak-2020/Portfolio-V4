@@ -4,7 +4,7 @@ export const metadata = {
   title: "Projects | K Rajtilak",
   description: "Learn more about me.",
   alternates: {
-    canonical: "https://krajtilak.vercel.app/projects"
+    canonical: "https://krajtilak.dev/projects"
   }
 };
 
