@@ -40,7 +40,7 @@ export const DATA = {
     {
       title: "Suraksha Mirage",
       href: "https://github.com/rajtilak-2020/Suraksha-Mirage_NexTech1.0",
-      dates: "Sept 2025",
+      dates: "Sep 2025",
       active: true,
       description: "A real-time cybersecurity honeypot dashboard built with React and TypeScript. Monitors and visualizes login/signup attempts with comprehensive analytics, threat detection, and admin management capabilities.",
       technologies: ["React","Typescript","Vercel","Node.js","Express.js","REST API","FastAPI","Supabase","SQL","OpenWebUI","HTML","CSS","Javascript"],
