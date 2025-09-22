@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "K Rajtilak's Portfolio",
     images: [
       {
-        url: "https://krajtilak.vercel.app/og-image.png",
+        url: "https://krajtilak.dev/og-image.png",
         width: 1200,
         height: 630,
         alt: "K Rajtilak – Portfolio",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "K Rajtilak's Portfolio",
     description: "Cybersecurity student with passion for Web Dev & IoT – building for tomorrow.",
     creator: "@2020rajtilak",
-    images: ["https://krajtilak.vercel.app/og-image.png"],
+    images: ["https://krajtilak.dev/og-image.png"],
   },
 
 icons: {
