@@ -6,3 +6,4 @@ node_modules/
 
 # System and editor settings
 .vscode/
+!.vscode/settings.json\
