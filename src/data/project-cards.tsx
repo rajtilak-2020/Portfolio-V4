@@ -37,6 +37,29 @@ export const DATA = {
     // },                                                                                          ////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+{
+      title: "Nexus Manager",
+      href: "https://github.com/rajtilak-2020/Nexus-Manager",
+      dates: "Under Development",
+      active: true,
+      description: "A React-powered content management system that leverages Supabase's real-time database for instant site updates. Free, fast, and built specifically for developers who want seamless content management.",
+      technologies: ["React","Typescript","Vercel","Node.js","Express.js","REST API","FastAPI","Supabase","SQL","OpenWebUI","HTML","CSS","Javascript"],
+      links: [
+              {
+                type: "Source Code",
+                href: "https://github.com/rajtilak-2020/Nexus-Manager",
+                icon: <Icons.github className="size-3" />,
+              },
+              {
+                type: "Preview",
+                href: "",
+                icon: <Icons.globe className="size-3" />,
+              },
+            ],
+      image: "",
+      video: "nexuxmanagerpreview.mp4",
+    },
+
     {
       title: "Suraksha Mirage",
       href: "https://github.com/rajtilak-2020/Suraksha-Mirage_NexTech1.0",
@@ -80,7 +103,7 @@ export const DATA = {
 
     {
       title: "SRAAS Smart Rural Analytics and Alert System",
-      href: "https://github.com/rajtilak-2020/SRAAS.git",
+      href: "https://github.com/rajtilak-2020/SRAAS",
       dates: "Aug 2025 - Present",
       active: true,
       description: "SRAAS (Smart Rural Analytic And Alert System) is an intelligent IoT-based platform designed to provide real-time analytics and automated alerts for rural infrastructure monitoring and management.",
@@ -88,7 +111,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/sraas.git",
+                href: "https://github.com/rajtilak-2020/sraas",
                 icon: <Icons.github className="size-3" />,
               },
               {
@@ -103,7 +126,7 @@ export const DATA = {
 
     {
       title: "ESP32-WiFi-Deception-Station",
-      href: "https://github.com/rajtilak-2020/ESP32-WiFi-Deception-Station.git",
+      href: "https://github.com/rajtilak-2020/ESP32-WiFi-Deception-Station",
       dates: "July 2025",
       active: true,
       description: "ESP32-based fake SSID broadcaster with live web interface. Allows custom SSID injection and dynamic broadcasting over AP mode. Built for educational testing and wireless security awareness.",
@@ -111,7 +134,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/ESP32-WiFi-Deception-Station.git",
+                href: "https://github.com/rajtilak-2020/ESP32-WiFi-Deception-Station",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -121,7 +144,7 @@ export const DATA = {
 
     {
       title: "ESP32-Wi-Fi-Sniffer-Tool",
-      href: "https://github.com/rajtilak-2020/ESP32-wifi-sniffer-tool.git",
+      href: "https://github.com/rajtilak-2020/ESP32-wifi-sniffer-tool",
       dates: "July 2025",
       active: true,
       description: "A real-time Wi-Fi packet sniffer built using ESP32. Captures MAC addresses, signal strength (RSSI), and packet types in promiscuous mode. Displays live packet data on a web dashboard hosted directly from the ESP32.",
@@ -129,7 +152,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/ESP32-wifi-sniffer-tool.git",
+                href: "https://github.com/rajtilak-2020/ESP32-wifi-sniffer-tool",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -169,7 +192,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/K-Rajtilak_s-Portfolio-V4.git",
+                href: "https://github.com/rajtilak-2020/K-Rajtilak_s-Portfolio-V4",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -187,7 +210,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/whatsaap-mcp-server.git",
+                href: "https://github.com/rajtilak-2020/whatsaap-mcp-server",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -197,7 +220,7 @@ export const DATA = {
 
     {
       title: "Robotic Arm",
-      href: "https://github.com/rajtilak-2020/Robotic_Arm.git",
+      href: "https://github.com/rajtilak-2020/Robotic_Arm",
       dates: "[Diploma Final Year Project] Jul 2024 - Jun 2025",
       active: true,
       description: "This project involves designing and developing a robotic arm powered by the ESP32 microcontroller. The arm is programmed for precision control and task automation, incorporating advanced features such as wireless connectivity for real-time command execution. This project demonstrates expertise in robotics, IoT, and microcontroller programming.",
@@ -205,7 +228,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Robotic_Arm.git",
+                href: "https://github.com/rajtilak-2020/Robotic_Arm",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -228,7 +251,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/SpeedyBites.git",
+                href: "https://github.com/rajtilak-2020/SpeedyBites",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -251,7 +274,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/StegoWeb.git",
+                href: "https://github.com/rajtilak-2020/StegoWeb",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -274,7 +297,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/DraftForge.git",
+                href: "https://github.com/rajtilak-2020/DraftForge",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -297,7 +320,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/github-insight-explorer.git",
+                href: "https://github.com/rajtilak-2020/github-insight-explorer",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -320,7 +343,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Noted.git",
+                href: "https://github.com/rajtilak-2020/Noted",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -343,7 +366,7 @@ export const DATA = {
                 },
                 {
                   type: "Source Code",
-                  href: "https://github.com/rajtilak-2020/Institution-Robot-UI.git",
+                  href: "https://github.com/rajtilak-2020/Institution-Robot-UI",
                   icon: <Icons.github className="size-3" />,
                 },
       ],
@@ -366,7 +389,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Weather-App.git",
+                href: "https://github.com/rajtilak-2020/Weather-App",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -376,7 +399,7 @@ export const DATA = {
 
     {
       title: "Morsecode Converter",
-      href: "https://github.com/rajtilak-2020/Morsecode_converter.git",
+      href: "https://github.com/rajtilak-2020/Morsecode_converter",
       dates: "Jan 2025",
       active: true,
       description: "This project converts user-input words into Morse code. Each letter or digit in the input is translated into its corresponding Morse code representation using a predefined dictionary.",
@@ -384,7 +407,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Morsecode_converter.git",
+                href: "https://github.com/rajtilak-2020/Morsecode_converter",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -394,7 +417,7 @@ export const DATA = {
 
     {
       title: "Currency Converter",
-      href: "https://github.com/rajtilak-2020/Currency-Converter.git",
+      href: "https://github.com/rajtilak-2020/Currency-Converter",
       dates: "Jan 2025",
       active: true,
       description: "A simple and interactive python based command-line tool that helps you convert currencies using real-time exchange rates provided by the Fixer.io API",
@@ -402,7 +425,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Currency-Converter.git",
+                href: "https://github.com/rajtilak-2020/Currency-Converter",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -412,7 +435,7 @@ export const DATA = {
 
     {
       title: "TXT Analyzer",
-      href: "https://github.com/rajtilak-2020/Text-File-Analysis.git",
+      href: "https://github.com/rajtilak-2020/Text-File-Analysis",
       dates: "Jan 2025",
       active: true,
       description: "It is a Python script that processes text files to provide statistics such as line count, character count, word count, unique words, and special character count.",
@@ -420,7 +443,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Text-File-Analysis.git",
+                href: "https://github.com/rajtilak-2020/Text-File-Analysis",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -443,7 +466,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/ISRO-Launch-Statistics.git",
+                href: "https://github.com/rajtilak-2020/ISRO-Launch-Statistics",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -466,7 +489,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/News-Portal.git",
+                href: "https://github.com/rajtilak-2020/News-Portal",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -476,7 +499,7 @@ export const DATA = {
 
     {
       title: "Temprature and Humidity Monitoring System",
-      href: "https://github.com/rajtilak-2020/IoT_based-Temprature-and-Humidity-Monitoring-System.git",
+      href: "https://github.com/rajtilak-2020/IoT_based-Temprature-and-Humidity-Monitoring-System",
       dates: "Jan 2025",
       active: true,
       description: "This project showcases a simple and effective IoT solution for real-time temperature and humidity monitoring using an ESP32-S microcontroller and a DHT11 sensor. The data is displayed on a smartphone via the Blynk App, making it perfect for applications such as environmental monitoring, smart homes, and agricultural automation.",
@@ -484,7 +507,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/IoT_based-Temprature-and-Humidity-Monitoring-System.git",
+                href: "https://github.com/rajtilak-2020/IoT_based-Temprature-and-Humidity-Monitoring-System",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -494,7 +517,7 @@ export const DATA = {
 
     {
       title: "IR Breaking System",
-      href: "https://github.com/rajtilak-2020/IR-Breaking-System.git",
+      href: "https://github.com/rajtilak-2020/IR-Breaking-System",
       dates: "Jan 2025",
       active: true,
       description: "This project is an Arduino-based automatic braking system. It uses a servo motor, IR sensors, and a relay to detect obstacles or engage the braking mechanism based on user input. The system can be utilized in small robotic vehicles or other applications requiring automatic braking.",
@@ -502,7 +525,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/IR-Breaking-System.git",
+                href: "https://github.com/rajtilak-2020/IR-Breaking-System",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -512,7 +535,7 @@ export const DATA = {
 
     {
       title: "ESP-32-Pishing-Tool",
-      href: "https://github.com/rajtilak-2020/ESP-32-Pishing-Tool.git",
+      href: "https://github.com/rajtilak-2020/ESP-32-Pishing-Tool",
       dates: "Jan 2025",
       active: true,
       description: "This project creates a WiFi login portal for the mentioned SSID Network , allowing victims to log in with their email and password to gain access to the fake network. The portal runs on an ESP32 board and utilizes the WiFiMulti, DNSServer, and WebServer libraries to handle network requests and DNS spoofing.",
@@ -520,7 +543,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/ESP-32-Pishing-Tool.git",
+                href: "https://github.com/rajtilak-2020/ESP-32-Pishing-Tool",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -543,7 +566,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Quantum-coin-flip.git",
+                href: "https://github.com/rajtilak-2020/Quantum-coin-flip",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -566,7 +589,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Audio-Controlled-Particles.git",
+                href: "https://github.com/rajtilak-2020/Audio-Controlled-Particles",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -589,7 +612,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/SSTV-Encoder.git",
+                href: "https://github.com/rajtilak-2020/SSTV-Encoder",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -599,7 +622,7 @@ export const DATA = {
 
     {
       title: "ASCII Rickroll",
-      href: "https://github.com/rajtilak-2020/Rick-Roll.git",
+      href: "https://github.com/rajtilak-2020/Rick-Roll",
       dates: "Jan 2025",
       active: true,
       description: "This project utilizes a simple batch file (.bat) to fetch an ASCII art of the Rickroll using the curl command, directly from the ascii.live/rick endpoint. This demonstrates the ability to automate terminal commands and leverage external APIs through scripting.",
@@ -607,7 +630,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Rick-Roll.git",
+                href: "https://github.com/rajtilak-2020/Rick-Roll",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -630,7 +653,7 @@ export const DATA = {
                 },
                 {
                   type: "Source Code",
-                  href: "https://github.com/rajtilak-2020/HTML-CSS-JS-compiler.git",
+                  href: "https://github.com/rajtilak-2020/HTML-CSS-JS-compiler",
                   icon: <Icons.github className="size-3" />,
                 },
       ],
@@ -653,7 +676,7 @@ export const DATA = {
                 },
                 {
                   type: "Source Code",
-                  href: "https://github.com/rajtilak-2020/Joke-Generator.git",
+                  href: "https://github.com/rajtilak-2020/Joke-Generator",
                   icon: <Icons.github className="size-3" />,
                 },
       ],
@@ -676,7 +699,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/QR-Code-Generator.git",
+                href: "https://github.com/rajtilak-2020/QR-Code-Generator",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -699,7 +722,7 @@ export const DATA = {
               },
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Attendance-Management-System.git",
+                href: "https://github.com/rajtilak-2020/Attendance-Management-System",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -709,7 +732,7 @@ export const DATA = {
 
     {
       title: "3D Renderer",
-      href: "https://github.com/rajtilak-2020/3D_Renderer.git",
+      href: "https://github.com/rajtilak-2020/3D_Renderer",
       dates: "Nov 2024",
       active: true,
       description: "A simple yet powerful 3D rendering program written in Java using Swing. Rotate 3D objects interactively with sliders to control horizontal and vertical angles, and experience dynamic rendering with smooth real-time updates.",
@@ -717,7 +740,7 @@ export const DATA = {
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/3D_Renderer.git",
+                href: "https://github.com/rajtilak-2020/3D_Renderer",
                 icon: <Icons.github className="size-3" />,
               },
             ],
@@ -727,14 +750,14 @@ export const DATA = {
 
     {
       title: "Simple Calculator",
-      href: "https://github.com/rajtilak-2020/Java_Calculator.git",
+      href: "https://github.com/rajtilak-2020/Java_Calculator",
       dates: "Nov 2024",
       description: "A simple yet elegant calculator application developed in Java using Swing. This project demonstrates basic calculator functionalities and a clean user interface.",
       technologies: ["Java"],
       links: [
               {
                 type: "Source Code",
-                href: "https://github.com/rajtilak-2020/Java_Calculator.git",
+                href: "https://github.com/rajtilak-2020/Java_Calculator",
                 icon: <Icons.github className="size-3" />,
               },
             ],
