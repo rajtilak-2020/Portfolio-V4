@@ -70,7 +70,28 @@ const config = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		keyframes: {
+			keyframes: {
+				/**
+				 * Slow aurora-like drift for layered backgrounds
+				 * Animates background-position to create motion in gradients
+				 */
+				aurora: {
+					'0%': {
+						'background-position': '50% 50%, 50% 50%'
+					},
+					'25%': {
+						'background-position': '40% 60%, 60% 40%'
+					},
+					'50%': {
+						'background-position': '60% 45%, 45% 60%'
+					},
+					'75%': {
+						'background-position': '45% 55%, 55% 45%'
+					},
+					'100%': {
+						'background-position': '50% 50%, 50% 50%'
+					}
+				},
   			'accordion-down': {
   				from: {
   					height: '0'
@@ -109,7 +130,9 @@ const config = {
   				}
   			}
   		},
-  		animation: {
+			animation: {
+				/** Slow, continuous aurora drift */
+				aurora: 'aurora 20s ease-in-out infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			meteor: 'meteor 5s linear infinite',

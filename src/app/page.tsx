@@ -165,7 +165,7 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh] space-y-1 relative">
       <div className="fixed inset-0 pointer-events-none z-0">
         <LightRays
-          raysOrigin="top-right"
+          raysOrigin="top-left"
           raysColor="#ffffff"
           raysSpeed={0.4}
           lightSpread={1.2}
