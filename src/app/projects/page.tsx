@@ -27,8 +27,8 @@ const Page = () => {
 
   return (
     <>
-      {/* Fixed Aurora background overlay (does not scroll) */}
-      <AuroraBackground className="fixed inset-0 -z-10 pointer-events-none h-screen" showRadialGradient>
+      {/* Fixed Aurora background overlay (hidden on mobile) */}
+      <AuroraBackground className="fixed inset-0 -z-10 pointer-events-none h-screen hidden md:block" showRadialGradient>
         <></>
       </AuroraBackground>
 
