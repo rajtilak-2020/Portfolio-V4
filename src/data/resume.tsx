@@ -20,7 +20,7 @@ export const DATA = {
   
         LinkedIn: {
           name: "LinkedIn",
-          url: "https://dub.sh/krajtilak-lin",
+          url: "https://dub.sh/krajtilak-ln",
           icon: Icons.linkedin,
           navbar: true,
         },
